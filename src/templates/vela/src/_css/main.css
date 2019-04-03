@@ -10,14 +10,6 @@ body {
     color: black;
 }
 
-/* minor adjustments to Pure/side-bar css */
-
-.header h2 {
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 10px;
-}
-
 /* ==================================================================
     BASIC GRID FOR PROFILE PIC
 ================================================================== */
@@ -60,7 +52,9 @@ body {
     TEXT GEOMETRY
 ================================================================== */
 
-.jd-content {
+.jd-content,
+h1.page.title,
+hr {
     position: relative;
     padding-left: 12.5%;
     padding-right: 12.5%;
@@ -68,7 +62,9 @@ body {
 
 /* on wide screens, fix content width to a max value */
 @media (min-width: 940px) {
-    .jd-content {
+    .jd-content,
+    h1.page.title,
+    hr {
         width: 705px;
         margin-left: auto;
         margin-right: auto; }
@@ -76,13 +72,14 @@ body {
 
 /* on narrow device, reduce margins */
 @media (max-width: 480px) {
-    header {
-        padding-left: 6%;
-        padding-right: 6%; }
-    .jd-content {
+    header,
+    .jd-content,
+    h1.page.title,
+    hr {
         padding-left: 6%;
         padding-right: 6%; }
     }
+
 
 /* ==================================================================
     TITLES
@@ -264,7 +261,7 @@ span#underline { text-decoration: underline; }
 ================================================================== */
 
 nav {
-    width: 64%;
+    width: 100%;
     display: inline-block; }
 
 nav ul {

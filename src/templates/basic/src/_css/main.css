@@ -64,13 +64,10 @@ html {
 
 /* on narrow device, reduce margins */
 @media (max-width: 480px) {
-    header {
+    header,
+    .jd_contents {
         padding-left: 6%;
         padding-right: 6%; }
-    .jd-content {
-        padding-left: 6%;
-        padding-right: 6%; }
-    }
 
 /* ==================================================================
     TITLES

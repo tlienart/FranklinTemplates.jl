@@ -81,9 +81,7 @@ body {
 
 /* on narrow device, reduce margins */
 @media (max-width: 480px) {
-    header {
-        padding-left: 6%;
-        padding-right: 6%; }
+    header,
     .jd-content {
         padding-left: 6%;
         padding-right: 6%; }
