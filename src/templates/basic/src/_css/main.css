@@ -64,10 +64,13 @@ html {
 
 /* on narrow device, reduce margins */
 @media (max-width: 480px) {
-    header,
-    .jd_contents {
+    header {
         padding-left: 6%;
         padding-right: 6%; }
+    .jd-content {
+        padding-left: 6%;
+        padding-right: 6%; }
+    }
 
 /* ==================================================================
     TITLES
@@ -163,7 +166,6 @@ code {
 
 /*
 NOTE if update `highlight.pack.js`, look for `julia>`, replace by (so that pkg and shell are recognised)
-
 return{c:[{cN:"metaj",b:/^julia>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]},{cN:"metas",b:/^shell>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"bash"},aliases:["jldoctest"]},{cN:"metap",b:/^\(.*\)\spkg>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]}]}})
 */
 
