@@ -7,9 +7,9 @@ When directly copied from a person's website (not a repo or a template aggregato
 
 The sources are listed below.
 
-| Name | Source | License | Available |
-| ---- | ------ | ------- | --------- |
-| `basic`  | N/A    | MIT     | ✔ |
-| `pure-sm` | [pure css](https://purecss.io/layouts/side-menu/) | [Yahoo BSD](https://github.com/pure-css/pure-site/blob/master/LICENSE.md) | ✔ |
-| `vela` | [grav theme vela](https://github.com/danzinger/grav-theme-vela) | MIT | ✔ |
-| `hypertext` | [grav theme hypertext](https://github.com/artofthesmart/hypertext) | MIT | ✘ |
+| Name | Source | License |
+| ---- | ------ | ------- |
+| `"basic"`  | N/A    | MIT     |
+| `"hypertext"` | [grav theme hypertext](https://github.com/artofthesmart/hypertext) | MIT |
+| `"pure-sm"` | [pure css](https://purecss.io/layouts/side-menu/) | [Yahoo BSD](https://github.com/pure-css/pure-site/blob/master/LICENSE.md) |
+| `"vela"` | [grav theme vela](https://github.com/danzinger/grav-theme-vela) | MIT |
