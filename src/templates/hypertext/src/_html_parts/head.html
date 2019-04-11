@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{if hasmath}} {{insert head_katex.html }}     {{end}}
+        {{if hascode}} {{insert head_highlight.html }}   {{end}}
+    <link rel="stylesheet" href="/css/hypertext.css">
+    <link rel="stylesheet" href="/css/judoc.css">
+        <link rel="icon" href="/assets/infra/favicon.png">
+    {{isdef title}} <title>{{fill title}}</title>  {{end}}
+  </head>
+    <body>
+      <header>
+        <h1><a href="/">Hypertext Theme</a></h1>
+        <nav>
+          <a href="/" class="current">Home</a>
+        | <a href="/pub/menu1.html">Menu 1</a>
+        | <a href="/pub/menu2.html">Menu 2</a>
+        | <a href="/pub/menu3.html">Menu 3</a>
+          <hr/>
+        </nav>
+      </header>
+
+<!-- Content appended here -->
