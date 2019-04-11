@@ -6,6 +6,11 @@ html {
     font-family: Helvetica, Arial, sans-serif;
     font-size  : 17px; }
 
+body {
+    color: #2B2B2B;
+    background: #fff;
+}
+
 /* ==================================================================
     BASIC GRID FOR PROFILE PIC
 ================================================================== */

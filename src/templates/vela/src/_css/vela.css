@@ -1,3 +1,34 @@
+/*
+small alterations for JuDoc
+*/
+h1.page.title,
+hr {
+    position; relative;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    line-height: 1.35em;
+}
+@media (min-width: 940px) {
+    h1.page.title,
+    hr {
+        width: 705px;
+        margin-left: auto;
+        margin-right: auto; }
+    }
+@media (max-width: 480px) {
+    h1.page.title,
+    hr {
+        padding-left: 6%;
+        padding-right: 6%; }
+}
+nav {
+    width: 100%;
+}
+
+/*
+Below is vela from https://github.com/danzinger/grav-theme-vela
+*/
+
 .pure-button:focus,
 a:active,
 a:hover {
