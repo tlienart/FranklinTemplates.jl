@@ -13,3 +13,4 @@ The sources are listed below.
 | `"hypertext"` | [grav theme hypertext](https://github.com/artofthesmart/hypertext) | MIT |
 | `"pure-sm"` | [pure css](https://purecss.io/layouts/side-menu/) | [Yahoo BSD](https://github.com/pure-css/pure-site/blob/master/LICENSE.md) |
 | `"vela"` | [grav theme vela](https://github.com/danzinger/grav-theme-vela) | MIT |
+| `"tufte"` | [Tufte CSS](https://github.com/edwardtufte/tufte-css) | MIT |
