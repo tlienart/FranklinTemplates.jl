@@ -35,7 +35,9 @@ struct PointR3{T<:Real} <: Point
     y::T
     z::T
 end
-len(p::T) where T<:Point = sqrt(sum(getfield(p, η)^2 for η ∈ fieldnames(T)))
+function len(p::T) where T<:Point
+  sqrt(sum(getfield(p, η)^2 for η ∈ fieldnames(T)))
+end
 ```
 
 You can also quote stuff
