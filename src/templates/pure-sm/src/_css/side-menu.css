@@ -1,5 +1,10 @@
 body {
-    color: #777;
+    background: #fff;
+    color: #363636;
+}
+
+.header h2 {
+    text-align: center;
 }
 
 .pure-img-responsive {
