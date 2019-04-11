@@ -239,9 +239,8 @@ fieldset {
     border: 1px solid silver
 }
 
-legend,
-td,
-th {
+legend
+{
     padding: 0
 }
 

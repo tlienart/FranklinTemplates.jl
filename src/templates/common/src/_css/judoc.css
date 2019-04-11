@@ -4,11 +4,7 @@
 
 html {
     font-family: Helvetica, Arial, sans-serif;
-    font-size  : 17px; }
-
-body {
-    color: #2B2B2B;
-    background: #fff;
+    font-size  : 17px;
 }
 
 /* ==================================================================
@@ -103,6 +99,8 @@ body {
 .jd-content table {
     margin-left: auto;
     margin-right: auto;
+    border-collapse: collapse;
+    text-align: center;
 }
 
 /* ==================================================================
