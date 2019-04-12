@@ -14,3 +14,7 @@ The sources are listed below.
 | `"pure-sm"` | [pure css](https://purecss.io/layouts/side-menu/) | [Yahoo BSD](https://github.com/pure-css/pure-site/blob/master/LICENSE.md) |
 | `"vela"` | [grav theme vela](https://github.com/danzinger/grav-theme-vela) | MIT |
 | `"tufte"` | [Tufte CSS](https://github.com/edwardtufte/tufte-css), and a bit of [Lawler.io](https://github.com/Eiriksmal/lawler-dot-io) for the menu | both MIT |
+
+## Contributing
+
+A guide on how to contribute your own template will be added soon.
