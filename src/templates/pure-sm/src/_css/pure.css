@@ -224,9 +224,7 @@ fieldset {
     padding: .35em .625em .75em
 }
 
-legend,
-td,
-th {
+legend {
     padding: 0
 }
 

@@ -1,0 +1,3 @@
+/* adjustments for JuDoc */
+.jd-content code { font-size: 75% !important; }
+.jd-content pre code { font-size: 100% !important; }

@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      {{if hasmath}} {{insert head_katex.html }}     {{end}}
-      {{if hascode}} {{insert head_highlight.html }}   {{end}}
-      <link rel="stylesheet" href="/css/judoc.css">
-      <link rel="stylesheet" href="/css/tufte.css">
-      <link rel="stylesheet" href="/css/latex.css">
-      <link rel="icon" href="/assets/infra/favicon.png">
-      {{isdef title}} <title>{{fill title}}</title>  {{end}}
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{if hasmath}} {{insert head_katex.html }}     {{end}}
+    {{if hascode}} {{insert head_highlight.html }}   {{end}}
+    <link rel="stylesheet" href="/css/judoc.css">
+    <link rel="stylesheet" href="/css/tufte.css">
+    <link rel="stylesheet" href="/css/latex.css">
+    <link rel="stylesheet" href="/css/adjust.css"> <!-- sheet to overwrite some clashing styles -->
+    <link rel="icon" href="/assets/infra/favicon.png">
+    {{isdef title}} <title>{{fill title}}</title>  {{end}}
+</head>
+<body>
 
 <!-- Content appended here -->
