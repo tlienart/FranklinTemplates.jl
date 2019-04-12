@@ -65,7 +65,7 @@ end
 
 Internal function to looks at what's inside `src/` and put it in `dst/`. If there are paths that
 match, the files are merged. It is assumed that files will not clash, if they clash files in `dst`
-are preserved. See also [`newsite`](@ref).
+are replaced. See also [`newsite`](@ref).
 """
 function mergefolders(src, dst)
     for (root, _, files) ∈ walkdir(src)
@@ -73,7 +73,7 @@ function mergefolders(src, dst)
             newpath = replace(root, Regex("^$src")=>"$dst")
             isdir(newpath) || mkpath(newpath)
             newpathfile = joinpath(newpath, file)
-            isfile(newpathfile) || cp(joinpath(root, file), newpathfile)
+            cp(joinpath(root, file), newpathfile; force=true)
         end
     end
 end
