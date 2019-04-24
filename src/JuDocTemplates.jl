@@ -70,7 +70,7 @@ are replaced. See also [`newsite`](@ref).
 function mergefolders(src, dst)
     for (root, _, files) ∈ walkdir(src)
         for file ∈ files
-            newpath = replace(root, Regex("^$src")=>"$dst")
+            newpath = replace(root, Regex("^$(escape_string(src))")=>"$dst")
             isdir(newpath) || mkpath(newpath)
             newpathfile = joinpath(newpath, file)
             cp(joinpath(root, file), newpathfile; force=true)
