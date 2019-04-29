@@ -50,7 +50,7 @@ function newsite(topdir::String="TestWebsite";
     verbose && begin
         print("✓ Website folder generated at \"$(topdir)\"")
         println(ifelse(changedir, " (now the current directory)." , "."))
-        println("→ Use `serve()` from `JuDoc` to see the website in your browser.")
+        println("→ Use serve() from JuDoc to see the website in your browser.")
     end
 
     return nothing
