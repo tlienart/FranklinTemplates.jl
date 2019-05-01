@@ -47,7 +47,7 @@ begin
     # One card per template
     for τ ∈ JuDocTemplates.LIST_OF_TEMPLATES
         c = """
-            <a href="/templates/$τ/index.html">
+            <a href="/templates/$τ/index.html" target="_blank" rel="noopener noreferrer">
             <div class="card">
               <div class="descr">
                 <h2>$τ</h2>
