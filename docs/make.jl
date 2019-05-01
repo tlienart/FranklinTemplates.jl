@@ -33,7 +33,7 @@ begin
     cd(templates)
     for τ ∈ JuDocTemplates.LIST_OF_TEMPLATES
         newsite(τ; template=τ, changedir=true, verbose=false)
-        serve(; clear=true, verb=false, single=true, prerender=true)
+        optimize()
         cd("..")
         fixdir(τ)
     end
