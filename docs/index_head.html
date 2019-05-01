@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    background: hsl(0,0%,95%);
+    font-size: 17px;
+    width: 80%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 2em;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card {
+    background: #fff;
+    flex: 0 1 24%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .card .code {
+    width: 100%;
+  }
+  .card .descr {
+    margin-left: 1em;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  pre {
+    background: #eee;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em;
+    border-radius: 5px;
+  }
+  </style>
+</head>
+<body>
+<h1>JuDoc themes</h1>
+<div class="cards">
