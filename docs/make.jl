@@ -33,7 +33,7 @@ begin
     cd(templates)
     for τ ∈ JuDocTemplates.LIST_OF_TEMPLATES
         newsite(τ; template=τ, changedir=true, verbose=false)
-        optimize()
+        optimize(minify=(τ != "vela")) # see issue #7
         cd("..")
         fixdir(τ)
     end
