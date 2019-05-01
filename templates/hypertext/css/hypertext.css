@@ -1,0 +1,23 @@
+/* Simple css to follow the geometry of jd-content (see judoc.css) */
+
+header {
+  margin-top: 75px;
+  position: relative;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+  margin-bottom: 50px; }
+
+/* on wide screens, fix content width to a max value */
+@media (min-width: 940px) {
+  header {
+    width: 705px;
+    margin-left: auto;
+    margin-right: auto; }
+  }
+
+/* on narrow device, reduce margins */
+@media (max-width: 480px) {
+  header {
+    padding-left: 6%;
+    padding-right: 6%; }
+  }
