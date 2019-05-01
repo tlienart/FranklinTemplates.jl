@@ -12,7 +12,8 @@ function fixdir(τ::String)
             endswith(file, ".html") || continue
             fp   = joinpath(root, file)
             html = read(fp, String)
-            html = replace(html, r"href=\"\/" => "href=\"/templates/$τ/")
+            html = replace(html, "href=\"/" => "href=\"/templates/$τ/")
+            html = replace(html, "src=\"/" => "src=\"/templates/$τ/")
             write(fp, html)
         end
     end
@@ -33,7 +34,7 @@ begin
     cd(templates)
     for τ ∈ JuDocTemplates.LIST_OF_TEMPLATES
         newsite(τ; template=τ, changedir=true, verbose=false)
-        optimize() # see issue #7
+        optimize(minify=(τ!="vela")) # see issue #7
         cd("..")
         fixdir(τ)
     end

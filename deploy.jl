@@ -9,6 +9,7 @@ for (root, _, files) ∈ walkdir(joinpath(@__DIR__, "docs", "build"))
         path = joinpath(root, file)
         html = read(path, String)
         html = replace(html, "href=\"/" => "href=\"/JuDocTemplates.jl/")
+        html = replace(html, "src=\"/" => "src=\"/JuDocTemplates.jl/")
         write(path, html)
     end
 end
