@@ -4,7 +4,7 @@ export newsite
 
 const JUDOC_PATH = splitdir(pathof(JuDocTemplates))[1] # .../JuDocTemplates/src
 const TEMPL_PATH = joinpath(JUDOC_PATH, "templates")
-const LIST_OF_TEMPLATES = ("basic", "pure-sm", "vela", "hypertext", "tufte", "hyde")
+const LIST_OF_TEMPLATES = ("basic", "pure-sm", "vela", "hypertext", "tufte", "hyde", "lanyon")
 
 """
     newsite(topdir; template="basic", cd=true)
