@@ -6,10 +6,41 @@
   {{if hasmath}} {{insert head_katex.html }}     {{end}}
   {{if hascode}} {{insert head_highlight.html }}   {{end}}
   <link rel="stylesheet" href="/css/judoc.css">
-  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="stylesheet" href="/css/poole_lanyon.css">
+  <link rel="stylesheet" href="/css/adjust.css">
   <link rel="icon" href="/assets/infra/favicon.png">
   {{isdef title}} <title>{{fill title}}</title>  {{end}}
 </head>
 <body>
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>.</p>
+  </div>
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item {{ispage /index.html}}active{{end}}" href="/">Home</a>
+    <a class="sidebar-nav-item {{ispage /pub/menu1.html}}active{{end}}" href="/pub/menu1.html">Menu 1</a>
+    <a class="sidebar-nav-item {{ispage /pub/menu2.html}}active{{end}}" href="/pub/menu2.html">Menu 2</a>
+    <a class="sidebar-nav-item {{ispage /pub/menu3.html}}active{{end}}" href="/pub/menu3.html">Menu 3</a>
+  </nav>
+  <div class="sidebar-item">
+    <p>&copy; {{fill author}}.</p>
+  </div>
+</div>
+
+<!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+content to avoid any CSS collisions with our real content. -->
+<div class="wrap">
+  <div class="masthead">
+    <div class="container">
+      <h3 class="masthead-title">
+        <a href="/" title="Home">Lanyon</a>
+        <small>Description of your site</small>
+      </h3>
+    </div>
+  </div>
+
+  <div class="container content">
 <!-- Content appended here -->
