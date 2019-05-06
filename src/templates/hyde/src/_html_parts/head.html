@@ -7,7 +7,17 @@
   {{if hascode}} {{insert head_highlight.html }}   {{end}}
   <link rel="stylesheet" href="/css/judoc.css">
   <link rel="stylesheet" href="/css/poole_hyde.css">
-  <link rel="stylesheet" href="/css/adjust.css">
+  <!-- style adjustments -->
+  <style>
+    html {font-size: 17px;}
+    .jd-content {position: relative; padding-left: 8%; padding-right: 5%; line-height: 1.35em;}
+    @media (min-width: 940px) {
+      .jd-content {width: 100%; margin-left: auto; margin-right: auto;}
+    }
+    @media (max-width: 768px) {
+      .jd-content {padding-left: 6%; padding-right: 6%;}
+    }
+  </style>
   <link rel="icon" href="/assets/infra/favicon.png">
   {{isdef title}} <title>{{fill title}}</title>  {{end}}
 </head>
