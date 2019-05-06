@@ -1,0 +1,24 @@
+html {
+    font-size: 17px;
+}
+
+.jd-content {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 1.35em; }
+
+/* on wide screens, fix content width to a max value */
+@media (min-width: 940px) {
+    .jd-content {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto; }
+    }
+
+/* on narrow device, reduce margins */
+@media (max-width: 768px) {
+    .jd-content {
+        padding-left: 6%;
+        padding-right: 6%; }
+    }

@@ -52,7 +52,7 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
-@media (min-width: 38em) {
+@media (min-width: 38rem) {
   html {
     font-size: 20px;
   }
@@ -69,9 +69,6 @@ body {
 a {
   color: #268bd2;
   text-decoration: none;
-}
-a strong {
-  color: inherit;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
@@ -147,26 +144,8 @@ abbr[title] {
   border-bottom: 1px dotted #e5e5e5;
 }
 
-/* Quotes */
-blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
-  color: #7a7a7a;
-  border-left: .25rem solid #e5e5e5;
-}
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-@media (min-width: 30em) {
-  blockquote {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
-  }
-}
-
 img {
   display: block;
-  max-width: 100%;
   margin: 0 0 1rem;
   border-radius: 5px;
 }
@@ -186,6 +165,47 @@ th {
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
+}
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  /* max-width: 38rem;
+  padding-left:  1rem;
+  padding-right: 1rem; */
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+
+/*
+ * Masthead
+ *
+ * Super small header above the content for site name and short description.
+ */
+
+.masthead {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #505050;
+}
+.masthead-title a {
+  color: #505050;
+}
+.masthead-title small {
+  font-size: 75%;
+  font-weight: 400;
+  color: #c0c0c0;
+  letter-spacing: 0;
 }
 
 /*
@@ -312,6 +332,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+
 
 /*
  * Sidebar
