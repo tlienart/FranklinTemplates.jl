@@ -132,7 +132,7 @@
 
 <div class="row">
   <div class="container">
-    <img class="left" src="assets/infra/rndimg.jpg">
+    <img class="left" src="/JuDocTemplates.jl/templates/vela/assets/infra/rndimg.jpg">
     <p>
     Marine iguanas are truly splendid creatures. They're found on the Gálapagos islands, have skin that basically acts as a solar panel, can swim and may have the ability to adapt their body size depending on whether there's food or not.
     </p>
@@ -145,7 +145,7 @@
 
 <p><strong>Note 1</strong>: again, entire such blocks can be made into latex-like commands via <code>\newcommand&#123;\mynewblock&#125;&#91;1&#93;&#123;...&#125;</code>.</p>
 <p><strong>Note 2</strong>: whatever is in a raw HTML block is <em>not</em> further processed &#40;so you can&#39;t have LaTeX in there for instance&#41;. A partial way around this is to use <code>@@...</code> blocks which <em>will</em> be recursively parsed. The following code gives the same result as above with the small difference that there is LaTeX being processed in the inner div.</p>
-<div class="row"><div class="container"><div class="left"><img src="assets/infra/rndimg.jpg" alt="" /> </div>
+<div class="row"><div class="container"><div class="left"><img src="/JuDocTemplates.jl/templates/vela/assets/infra/rndimg.jpg" alt="" /> </div>
 </div>
  Marine iguanas are <strong>truly splendid</strong> creatures. They&#39;re not found in equations like 
 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>exp</mi><mo>⁡</mo><mo>(</mo><mo>−</mo><mi>i</mi><mi>π</mi><mo>)</mo><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\exp(-i\pi)+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">π</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>
@@ -177,7 +177,7 @@
 <h2>Header and Footer</h2>
 <p>As you can see here at the bottom of the page, there is a footer which you may want on all pages but for instance you may want the date of last modification to be displayed. In a fashion heavily inspired by <a href="https://gohugo.io">Hugo</a>, you can write things like</p>
 
-<pre><code class="html hljs">Last modified: May 06, 2019.
+<pre><code class="html hljs">Last modified: May 20, 2019.
 </code></pre>
 
 <p>&#40;cf. <code>src/_html_parts/page_foot.html</code>&#41; which will then replace these braces with the content of a dictionary of variables at the key <code>jd_mtime</code>. This dictionary of variables is accessed locally by pages through <code>@def varname &#61; value</code> and globally through the <code>config.md</code> page via the same syntax.</p>
@@ -213,10 +213,10 @@ savefig(joinpath(<span class="hljs-meta">@__DIR__</span>, <span class="hljs-stri
 </code></pre>
 
 <p>and then</p>
-<img src="assets/scripts/output/script2.svg" id="judoc-out-plot"/>
+<img src="/JuDocTemplates.jl/templates/vela/assets/scripts/output/script2.svg" id="judoc-out-plot"/>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: May 06, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
+    &copy; Septimia Zenobia. Last modified: May 20, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
   </div>
 </div>
 
