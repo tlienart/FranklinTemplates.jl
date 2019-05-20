@@ -2,6 +2,8 @@ using JuDocTemplates, JuDoc
 
 build = joinpath(@__DIR__, "build")
 
+isdir(build) || mkdir(build)
+
 function fixdir(τ::String)
     # 1. remove src folder (not needed anymore)
     rm(joinpath(τ, "src"), recursive=true)
