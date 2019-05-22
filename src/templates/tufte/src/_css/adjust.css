@@ -3,61 +3,25 @@
 .jd-content code { font-size: 75% !important; }
 .jd-content { font-size: 1.4rem; }
 
-#menu {
-    margin-top: 100px;
-    float: left;
-    width: 15%;
-    text-align: right;
-}
 #main {
     float:left;
 }
-
-.jd-content { padding-left: 10%;}
-.jd-content { padding-right: 5%;}
-
-@media (max-width: 940px){
-    #menu {
-        width: 100%;
-        margin-top: 75px;
-        margin-bottom:25px;
-    }
-    #menu li {
-        display: inline-block;
-        line-height: 30px;
-    }
-    #main {
-        width: 100%;
-    }
-}
-
-@media (min-width: 940px) {
-    .jd-content {
-        width: 650px;
-        margin-left: auto;
-        margin-right: auto; }
-}
-
-
 #menu ul {
     text-align: center;
     margin: 0;
     padding: 0
 }
-
 #menu ul li {
     margin: 0 0 20px 0;
     padding: 0;
     list-style: none
 }
-
 #menu ul li a {
     color: #111;
     text-decoration: none;
     position: relative;
     padding: 10px 10px
 }
-
 #menu ul li a:after {
     content: "";
     position: absolute;
@@ -70,12 +34,42 @@
     transform: scaleX(0);
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
 }
-
 #menu ul li a:hover {
     text-decoration: none
 }
-
 #menu ul li a:hover:after {
     visibility: visible;
     transform: scaleX(1)
+}
+
+.jd-content { padding-left: 10%;}
+.jd-content { padding-right: 5%;}
+
+@media (max-width: 940px){
+    /* narrow display: menu is at the top */
+    #menu {
+        width: 100%;
+        margin-top: 75px;
+        margin-bottom:25px;
+    }
+    #menu li {
+        display: inline-block;
+        line-height: 30px;
+    }
+    #main {
+        float: none;
+        width: 100%;
+    }
+}
+@media (min-width: 940px) {
+    #menu {
+        margin-top: 100px;
+        float: left;
+        width: 100px;
+        text-align: right;
+    }
+    .jd-content {width: 600px;}
+}
+@media (min-width: 1000px) {
+    .jd-content {width: 660px;}
 }
