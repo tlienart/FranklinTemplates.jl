@@ -5,43 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   body {
-    background: hsl(0,0%,95%);
+    background: hsl(0,0%,98%);
     font-size: 17px;
-    width: 90%;
+    font-family: arial;
+    width: 80%;
     margin-left: auto;
     margin-right:auto;
     margin-top: 2em;
   }
   .cards {
+    margin-top: 3em;
     display: flex;
     flex-wrap: wrap;
   }
   .card {
-    background: #fff;
-    flex: 0 1 24%;
+    width: 300px;
+    height: 300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 1em;
-    padding: 1em;
+    padding: 0.3em;
     border-radius: 10px;
+    position: relative;
   }
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
-  .card .code {
-    width: 100%;
+  .card .th-name {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    color: #d85266;
   }
   .card .descr {
     margin-left: 1em;
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    height: 30%;
+    width: 80%;
+    background: #f4f5f7;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .card .descr p {
+    font-style: italic;
   }
   a {
     text-decoration: none;
     color: black;
   }
   pre {
-    background: #eee;
+    background: #f2f2f2;
     font-family: "Courier 10 Pitch", Courier, monospace;
     font-size: 14px;
     line-height: 1.6;
@@ -51,8 +68,61 @@
     padding: 1em;
     border-radius: 5px;
   }
+  .jljl {
+    color: #17aa30;
+    font-weight: bold;
+  }
+  .jlkw {
+    color: #dd9d3e;
+    font-weight: bold;
+  }
+  .jlstr {
+    color: #d85266;
+  }
+  .inline-code {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    background: #f2f2f2;
+    padding: 2px;
+    border-radius: 1px;
+  }
+  #basic {
+    background: url("thumb/basic.png");
+    background-size: contain;
+  }
+  #hyde {
+    background: url("thumb/hyde.png");
+    background-size: contain;
+  }
+  #hypertext {
+    background: url("thumb/hypertext.png");
+    background-size: contain;
+  }
+  #lanyon {
+    background: url("thumb/lanyon.png");
+    background-size: contain;
+  }
+  #pure-sm {
+    background: url("thumb/pure-sm.png");
+    background-size: contain;
+  }
+  #tufte {
+    background: url("thumb/tufte.png");
+    background-size: contain;
+  }
+  #vela {
+    background: url("thumb/vela.png");
+    background-size: contain;
+  }
   </style>
 </head>
 <body>
 <h1>JuDoc themes</h1>
+
+<p>To get started with a theme, simply do</p>
+<pre><span class=jljl>julia></span> <span class=jlkw>using</span> JuDoc
+<span class=jljl>julia></span> newsite(<span class=jlstr>"NameOfSite"</span>, template=<span class=jlstr>"basic"</span>)
+</pre>
+<p>replacing <span class="inline-code">basic</span> by the name of the template of your choice.</p>
+<p>Remember that these themes are provided as a way to get started, most likely you will need to tweak the template a little bit to suit your taste. However, if you spot a problem with a template or if you would like to suggest improvements (or even a new template), please open an issue on the <a href="https://github.com/tlienart/JuDocTemplates.jl" target="_blank" rel="noopener noreferrer">JuDocTemplates repo</a>.</p>
+
 <div class="cards">

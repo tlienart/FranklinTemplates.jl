@@ -1,5 +1,37 @@
 using JuDocTemplates, JuDoc
 
+descr = Dict{String,String}(
+    "basic"     => """
+                   <span class="th-name">basic</span>
+                   <p>Barebone theme with a top navigation bar, no extra javascript and a simple stylesheet.</p>
+                   """,
+    "hyde"      => """
+                   <span class="th-name">hyde</span>
+                   <p>A neat two-column theme with a side navigation bar, no extra javascript and a simple stylesheet. (Adapted from the Jekyll theme.)</p>
+                   """,
+    "hypertext" => """
+                   <span class="th-name">hypertext</span>
+                   <p>Barebone theme with a simple top navigation bar, no extra javascript and a simple stylesheet. (Adapted from the Grav theme.)</p>
+                   """,
+    "lanyon"    => """
+                   <span class="th-name">lanyon</span>
+                   <p>A neat single-column theme with a sliding menu-bar, no extra javascript and a simple stylesheet. (Adapted from the Jekyll theme.)</p>
+                   """,
+    "pure-sm"   => """
+                   <span class="th-name">pure-sm</span>
+                   <p>Single-column theme with a sliding menu-bar, a simple stylesheet and some javascript for the menu bar. (Adapted from the Pure CSS theme.)</p>
+                   """,
+    "tufte"     => """
+                   <span class="th-name">tufte</span>
+                   <p>A neat single-column theme adapted from tufte.css with a focus on clarity and nice typesetting, no extra javascript and a sophisticated stylesheet.</p>
+                   """,
+    "vela"      => """
+                   <span class="th-name">vela</span>
+                   <p>A single-column theme with a sliding menu-bar, a simple stylesheet and extra javascript for the menu-bar. (Adapted from the Grav theme.)</p>
+                   """,
+)
+
+
 build = joinpath(@__DIR__, "build")
 
 isdir(build) || mkdir(build)
@@ -40,6 +72,8 @@ begin
         cd("..")
         fixdir(τ)
     end
+    # copy over the thumb folder
+    cp(joinpath(dirname(build), "thumb"), joinpath(build, "thumb"), force=true)
 end
 
 # build the index page
@@ -50,13 +84,10 @@ begin
     # One card per template
     for τ ∈ JuDocTemplates.LIST_OF_TEMPLATES
         c = """
-            <a href="/templates/$τ/index.html" target="_blank" rel="noopener noreferrer">
-            <div class="card">
+            <a href="/templates/$τ/index.html" target="_blank" rel="noopener noreferrer" title="$τ">
+            <div class="card" id="$τ">
               <div class="descr">
-                <h2>$τ</h2>
-              </div>
-              <div class="code">
-                <pre><font color="green" style="font-weight:bold">julia></font> <font color="royalblue">newsite</font>(<font color="darkred">"MySite"</font>; template=<font color="darkred">"$τ"</font>)</pre>
+              $(descr[τ])
               </div>
             </div>
             </a>
