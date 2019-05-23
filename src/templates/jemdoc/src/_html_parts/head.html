@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{if hasmath}} {{insert head_katex.html }}     {{end}}
+  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+  <link rel="stylesheet" href="/css/judoc.css">
+  <link rel="stylesheet" href="/css/jemdoc.css">
+  <link rel="icon" href="/assets/infra/favicon.png">
+  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+</head>
+<body>
+  <table id="tlayout">
+    <tr valign="top">
+      <td id="layout-menu">
+        <div class="menu-category">jemdoc</div>
+        <div class="menu-item"><a href="index.html" class="current">home</a></div>
+      <div class="menu-category">topics</div>
+        <div class="menu-item"><a href="/pub/menu1.html">Menu 1</a></div>
+        <div class="menu-item"><a href="/pub/menu2.html">Menu 2</a></div>
+        <div class="menu-item"><a href="/pub/menu3.html">Menu 3</a></div>
+      </td>
+      <td id="layout-content">
+
+<!-- Content appended here -->

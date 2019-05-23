@@ -3,15 +3,19 @@ using JuDocTemplates, JuDoc
 descr = Dict{String,String}(
     "basic"     => """
                    <span class="th-name">basic</span>
-                   <p>Barebone theme with a top navigation bar, no extra javascript and a simple stylesheet.</p>
+                   <p>Barebone responsive theme with a top navigation bar, no extra javascript and a simple stylesheet.</p>
+                   """,
+    "jemdoc"    => """
+                   <span class="th-name">jemdoc</span>
+                   <p>Simple theme with a side navigation bar, no extra javascript and a simple stylesheet. (Adapted from the original Jemdoc theme.)</p>
                    """,
     "hyde"      => """
                    <span class="th-name">hyde</span>
-                   <p>A neat two-column theme with a side navigation bar, no extra javascript and a simple stylesheet. (Adapted from the Jekyll theme.)</p>
+                   <p>A neat two-column responsive theme with a side navigation bar, no extra javascript and a simple stylesheet. (Adapted from the Jekyll theme.)</p>
                    """,
     "hypertext" => """
                    <span class="th-name">hypertext</span>
-                   <p>Barebone theme with a simple top navigation bar, no extra javascript and a simple stylesheet. (Adapted from the Grav theme.)</p>
+                   <p>Barebone responsive theme with a simple top navigation bar, no extra javascript and a simple stylesheet. (Adapted from the Grav theme.)</p>
                    """,
     "lanyon"    => """
                    <span class="th-name">lanyon</span>
