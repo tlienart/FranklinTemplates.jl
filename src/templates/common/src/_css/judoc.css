@@ -79,7 +79,7 @@ html {
 .jd-content h2 { font-size: 22px; }
 .jd-content h3 { font-size: 20px; }
 
-.jd-content h1, h2, h3, h4, h5 {
+.jd-content h1, h2, h3, h4, h5, h6 {
     text-align: left; }
 
 .jd-content h1 {
@@ -93,6 +93,19 @@ html {
     border-bottom: 1px solid lightgrey;
     margin-top: 2em;
     margin-bottom: 1em; }
+
+.jd-content h1 a { color: inherit; }
+.jd-content h1 a:hover {text-decoration: none;}
+.jd-content h2 a { color: inherit; }
+.jd-content h2 a:hover {text-decoration: none;}
+.jd-content h3 a { color: inherit; }
+.jd-content h3 a:hover {text-decoration: none;}
+.jd-content h4 a { color: inherit; }
+.jd-content h4 a:hover {text-decoration: none;}
+.jd-content h5 a { color: inherit; }
+.jd-content h5 a:hover {text-decoration: none;}
+.jd-content h6 a { color: inherit; }
+.jd-content h6 a:hover {text-decoration: none;}
 
 .jd-content table {
     margin-left: auto;

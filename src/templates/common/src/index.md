@@ -93,6 +93,12 @@ In a similar vein you can cite references that would be at the bottom of the pag
 
 and use it \bolditalic{here for example}.
 
+Here's another quick one, a command to change the color:
+
+\newcommand{\col}[2]{~~~<span style="color:#1">#2</span>~~~}
+
+This is \col{blue}{in blue} or \col{#bf37bc}{in #bf37bc}.
+
 ### A quick note on whitespaces
 
 For most commands you will use `#k` to refer to the $k$-th argument as in LaTeX.
@@ -169,26 +175,3 @@ Last modified: {{ fill jd_mtime }}.
 This dictionary of variables is accessed locally by pages through `@def varname = value` and globally through the `config.md` page via the same syntax.
 
 There's a few other such functions of the form `{{fname p₁ p₂}}` as well as support for conditional blocks. If you wander through the `src/_html_parts/` folder and its content, you should be able to see those in action.
-
-## Including scripts
-
-In order to include the content of a script you can use the `\input` command specifying which language it should be tagged as:
-
-\input{code:julia}{script1.jl}
-
-these scripts can be run in such a way that their output is also saved to file, see `scripts/generate_results.jl` and you can then also input the results:
-
-\input{output}{script1.jl}
-
-which is convenient if you're presenting code.
-Using this approach with the `generate_results.jl` file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.
-
-**Note**: these scripts are not run by JuDoc (so that it doesn't slow down live preview).
-
-Finally, a similar syntax is available if you want to show plots that are produced by one of your script.
-
-\input{code:julia}{script2.jl}
-
-and then
-
-\input{plot}{script2.jl}
