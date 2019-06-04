@@ -2,7 +2,7 @@
 
 Templates for [JuDoc](https://github.com/tlienart/JuDoc.jl), the static-site generator in Julia.
 
-Most of these templates are adapted from popular existing templates with minor modifications to accommodate JuDoc's content.
+Most of these templates are adapted from existing, popular templates with minor modifications to accommodate JuDoc's content.
 
 | Name | Source | License | Nabar | JS  |
 | ---- | ------ | ------- | ----- | --- |
