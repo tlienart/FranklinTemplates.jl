@@ -1,6 +1,10 @@
 using JuDocTemplates, JuDoc
 
 descr = Dict{String,String}(
+    "sandbox"   => """
+                   <span class="th-name">sandbox</span>
+                   <p>Simplest one-page layout, meant for practicing or testing JuDoc syntax.</p>
+                   """,
     "basic"     => """
                    <span class="th-name">basic</span>
                    <p>Barebone responsive theme with a top navigation bar, no extra javascript and a simple stylesheet.</p>
@@ -71,6 +75,7 @@ begin
     templates = mkpath(joinpath(build, "templates"))
     cd(templates)
     for τ ∈ JuDocTemplates.LIST_OF_TEMPLATES
+        println("🍏  template: $τ")
         newsite(τ; template=τ, changedir=true, verbose=false)
         optimize(minify=(τ!="vela")) # see issue #7
         cd("..")
