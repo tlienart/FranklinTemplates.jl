@@ -5,7 +5,7 @@ export newsite
 const JUDOC_PATH = splitdir(pathof(JuDocTemplates))[1] # .../JuDocTemplates/src
 const TEMPL_PATH = joinpath(JUDOC_PATH, "templates")
 const LIST_OF_TEMPLATES = ("sandbox", "basic", "pure-sm", "vela", "hypertext",
-                           "tufte", "hyde", "lanyon", "jemdoc")
+                           "tufte", "hyde", "lanyon", "jemdoc", "minimal-mistakes")
 
 """
     newsite(topdir; template="basic", cd=true)
@@ -42,6 +42,12 @@ function newsite(topdir::String="TestWebsite";
         # template/foldername
         template_subdir = joinpath(TEMPL_PATH, template, foldername)
         isdir(template_subdir) && mergefolders(template_subdir, subdir)
+    end
+
+    # check if the template has a pre-specified index.html, if so make the index.md from
+    # common/ into pages/judoc.md
+    if isfile(joinpath(topdir, "src", "index.html"))
+        mv(joinpath(topdir, "src", "index.md"), joinpath(topdir, "src", "pages", "judoc.md"))
     end
 
     # move to the directory if relevant
