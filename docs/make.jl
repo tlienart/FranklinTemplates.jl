@@ -25,6 +25,10 @@ descr = Dict{String,String}(
                    <span class="th-name">lanyon</span>
                    <p>A neat single-column theme with a sliding menu-bar, no extra javascript and a simple stylesheet. (Adapted from the Jekyll theme.)</p>
                    """,
+    "minimal-mistakes" => """
+                   <span class="th-name">minimal-mistakes</span>
+                   <p>A responsive two-column theme with a nice landing page, extra javascript for the responsiveness. (Adapted from the Jekyll theme.)</p>
+                   """,
     "pure-sm"   => """
                    <span class="th-name">pure-sm</span>
                    <p>Single-column theme with a sliding menu-bar, a simple stylesheet and some javascript for the menu bar. (Adapted from the Pure CSS theme.)</p>
