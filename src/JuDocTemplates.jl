@@ -47,6 +47,9 @@ function newsite(topdir::String="TestWebsite";
     # move to the directory if relevant
     changedir && cd(topdir)
 
+    # on windows, make sure everything is read-write in the generated dir
+    Sys.iswindows() && chmod(topdir, 0o777; recursive=true)
+
     # display information as adequate
     verbose && begin
         print("✓ Website folder generated at \"$(topdir)\"")
