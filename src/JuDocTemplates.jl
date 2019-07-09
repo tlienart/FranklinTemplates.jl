@@ -43,6 +43,9 @@ function newsite(topdir::String="TestWebsite";
         template_subdir = joinpath(TEMPL_PATH, template, foldername)
         isdir(template_subdir) && mergefolders(template_subdir, subdir)
     end
+    
+    # on windows, make sure everything is read-write in the generated dir
+    Sys.iswindows() && chmod(topdir, 0o777; recursive=true)
 
     # check if the template has a pre-specified index.html, if so make the index.md from
     # common/ into pages/judoc.md

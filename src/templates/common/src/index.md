@@ -5,6 +5,8 @@
 the config file by setting hasmath = false for instance and just setting it to true
 where appropriate -->
 
+\tableofcontents <!-- you can use \toc as well -->
+
 # How to use JuDoc
 
 This section is meant as a refresher if you're new to JuDoc.
