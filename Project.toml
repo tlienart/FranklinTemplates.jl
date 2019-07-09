@@ -1,7 +1,7 @@
 name = "JuDocTemplates"
 uuid = "6793090a-55ae-11e9-0511-73b91164f4ea"
 authors = ["Thibaut Lienart <tlienart@me.com>"]
-version = "0.2.2"
+version = "0.2.3"
 
 [compat]
 julia = "^1.0.0"
