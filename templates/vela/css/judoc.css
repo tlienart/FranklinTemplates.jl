@@ -9,13 +9,6 @@ html {
 }
 
 /* ==================================================================
-    BASIC STYLING FOR TOC
-================================================================== */
-.jd-toc ol { counter-reset: item; }
-.jd-toc li { display: block; }
-.jd-toc li:before { content:counters(item, ".")" "; counter-increment: item}
-
-/* ==================================================================
     BASIC GRID FOR PROFILE PIC
 ================================================================== */
 
@@ -33,6 +26,12 @@ html {
     width: auto;
     padding-left: 0;
     border-radius: 10px; }
+
+.jd-content .footnote {
+    position: relative;
+    top: -0.5em;
+    font-size: 70%;
+}
 
 /* ==================================================================
     FOOT / COPYRIGHT
@@ -118,13 +117,10 @@ html {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    text-align: center;
-}
-
+    text-align: center;}
 .jd-content th, td{
     padding: 10px;
-    border: 1px solid black;
-}
+    border: 1px solid black;}
 
 .jd-content blockquote {
     background: #eeeeee;
@@ -152,11 +148,34 @@ html {
     text-decoration: underline; }
 
 /* ==================================================================
-    HYPERREFS
+    HYPERREFS AND FOOTNOTES
 ================================================================== */
 
 .jd-content .eqref a  { color: green; }
 .jd-content .bibref a { color: green; }
+
+.jd-content sup {
+    font-size: 70%;
+    vertical-align: super;
+    line-height: 0; }
+
+.jd-content table.fndef  {
+    margin: 0;
+    margin-bottom: 10px;}
+.jd-content .fndef tr, td {
+    padding: 0;
+    border: 0;
+    text-align: left;}
+.jd-content .fndef tr {
+    border-left: 2px solid lightgray;
+    }
+.jd-content .fndef td.fndef-backref {
+    vertical-align: top;
+    font-size: 70%;
+    padding-left: 5px;}
+.jd-content .fndef td.fndef-content {
+    font-size: 80%;
+    padding-left: 10px;}
 
 /* ==================================================================
     IMAGES in CONTENT
@@ -200,19 +219,14 @@ body { counter-reset: eqnum; }
     border-radius: 2px;
     font-size: 90%; }
 
-/*
-NOTE if update `highlight.pack.js`, look for `julia>`, replace by (so that pkg and shell are recognised)
-return{c:[{cN:"metaj",b:/^julia>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]},{cN:"metas",b:/^shell>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"bash"},aliases:["jldoctest"]},{cN:"metap",b:/^\(.*\)\spkg>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]}]}
-*/
-
 .hljs {
     font-size: 90%;
     line-height: 1.35em;
     border-radius: 10px; }
 
-.hljs-metaj, .hljs-metas, .hljs-metap { font-weight: bold; }
+.hljs-meta, .hljs-metas, .hljs-metap { font-weight: bold; }
 
-.hljs-metaj { color: rgb(25, 179, 51); }
+.hljs-meta { color: rgb(25, 179, 51); }
 
 .hljs-metas { color: red; }
 
