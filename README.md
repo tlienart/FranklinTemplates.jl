@@ -18,4 +18,18 @@ Most of these templates are adapted from existing, popular templates with minor 
 ## Misc
 
 * Current version of KaTeX: 0.11
-* Current version of highlight: v9.15.10 (with `css`, `http`, `python`, `yaml`, `bash`, `ini,TOML`, `markdown`, `r`, `julia`, `julia-repl` and the minified `github` theme).
+* Current version of highlight: v9.15.10 (with `css`, `python`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl` and the minified `github` theme).
+
+## Notes:
+
+- if update `highlight.pack.js`, look for `julia>`, replace (so that pkg and shell are recognised)
+
+```
+return{c:[{cN:"meta",b:/^julia>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]}]}
+```
+
+by
+
+```
+return{c:[{cN:"meta",b:/^julia>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"}},{cN:"metas",b:/^shell>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"bash"}},{cN:"metap",b:/^\(.*\)\spkg>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"}}]}
+```
