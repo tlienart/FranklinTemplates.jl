@@ -37,7 +37,7 @@ descr = Dict{String,String}(
                    <span class="th-name">vela</span>
                    <p>A single-column theme with a sliding menu-bar, a simple stylesheet and extra javascript for the menu-bar. (Adapted from the Grav theme.)</p>
                    """,
-)
+    )
 
 
 build = joinpath(@__DIR__, "build")
