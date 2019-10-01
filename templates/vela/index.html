@@ -53,7 +53,7 @@
 <!-- Content appended here -->
 
 <div class="jd-content">
-<div class="jd-toc"><ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#how_to_use_judoc">How to use JuDoc</a></li><ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#the_base_with_markdown">The base with Markdown</a></li><ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#symbols_and_html_entities">Symbols and html entities</a></li></ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#basic_judoc_extensions">Basic JuDoc extensions</a></li><ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#divs">Divs</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#latex_and_maths">LaTeX and Maths</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#a_quick_note_on_whitespaces">A quick note on whitespaces</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#raw_html">Raw HTML</a></li></ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#pages_and_structure">Pages and structure</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#references_not_really">References &#40;not really&#41;</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#header_and_footer">Header and Footer</a></li></ol></ol></div> </p>
+<div class="jd-toc"><ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#how_to_use_judoc">How to use JuDoc</a><ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#the_base_with_markdown">The base with Markdown</a><ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#symbols_and_html_entities">Symbols and html entities</a></li></ol></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#basic_judoc_extensions">Basic JuDoc extensions</a><ol><li><a href="/JuDocTemplates.jl/templates/vela/index.html#divs">Divs</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#latex_and_maths">LaTeX and Maths</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#a_quick_note_on_whitespaces">A quick note on whitespaces</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#raw_html">Raw HTML</a></li></ol></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#pages_and_structure">Pages and structure</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#references_not_really">References &#40;not really&#41;</a></li><li><a href="/JuDocTemplates.jl/templates/vela/index.html#header_and_footer">Header and Footer</a></li></ol></li></ol></div> </p>
 <h1 id="how_to_use_judoc"><a href="/JuDocTemplates.jl/templates/vela/index.html#how_to_use_judoc">How to use JuDoc</a></h1>
 <p>This section is meant as a refresher if you&#39;re new to JuDoc. Have a look at both how the website renders and the corresponding markdown &#40;<code>index.md</code>&#41;. Modify at will to get a feeling for how things work&#33;</p>
 <p>Ps: if you want to modify the header or footer or the general look of the website, adjust the files in</p>
@@ -94,19 +94,19 @@
 <table><tr><th>English</th><th>Mandarin</th></tr><tr><td>winnie the pooh</td><td>维尼熊</td></tr></table>
 <p>Note that you may have to do a bit of CSS-styling to get these elements to look the way you want them &#40;the same holds for the whole page in fact&#41;.</p>
 <h3 id="symbols_and_html_entities"><a href="/JuDocTemplates.jl/templates/vela/index.html#symbols_and_html_entities">Symbols and html entities</a></h3>
-<p>If you want a dollar sign you have to escape it like so: &#36;, you can also use html entities like so: &rarr; or &pi; or, if you&#39;re using Juno for instance, you can use <code>\pi&#91;TAB&#93;</code> to insert the symbol as is: π &#40;it will be converted to a html entity&#41;.<sup id="fnref:1"><a href="#fndef:1" class="fnref">[1]</a></sup>
-<p>If you want to show a backslash, just use it like so: &#92; ; if you want to force a line break, use a <code> \\ </code> like <br/> so &#40;this is on a new line&#41;.<sup id="fnref:blah"><a href="#fndef:blah" class="fnref">[2]</a></sup>
+<p>If you want a dollar sign you have to escape it like so: &#36;, you can also use html entities like so: &rarr; or &pi; or, if you&#39;re using Juno for instance, you can use <code>\pi&#91;TAB&#93;</code> to insert the symbol as is: π &#40;it will be converted to a html entity&#41;.<sup id="fnref:1"><a href="/JuDocTemplates.jl/templates/vela/index.html#fndef:1" class="fnref">[1]</a></sup>
+<p>If you want to show a backslash, just use it like so: &#92; ; if you want to force a line break, use a <code> \\ </code> like <br/> so &#40;this is on a new line&#41;.<sup id="fnref:blah"><a href="/JuDocTemplates.jl/templates/vela/index.html#fndef:blah" class="fnref">[2]</a></sup>
 <p>If you want to show a backtick, escape it like so: &#96; and if you want to show a tick in inline code use double backticks like <code>so &#96; ...</code>.</p>
 <p>Footnotes are nice too:</p>
 <table class="fndef" id="fndef:1">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:1">[1]</a></td>
+        <td class="fndef-backref"><a href="/JuDocTemplates.jl/templates/vela/index.html#fnref:1">[1]</a></td>
         <td class="fndef-content">this is the text for the first footnote, you can style all this looking at <code>.fndef</code> elements; note that the whole footnote definition is <em>expected to be on the same line</em>.</td>
     </tr>
 </table>
 <table class="fndef" id="fndef:blah">
     <tr>
-        <td class="fndef-backref"><a href="#fnref:blah">[2]</a></td>
+        <td class="fndef-backref"><a href="/JuDocTemplates.jl/templates/vela/index.html#fnref:blah">[2]</a></td>
         <td class="fndef-content">and this is a longer footnote with some blah from veggie ipsum: turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</td>
     </tr>
 </table>
@@ -186,13 +186,13 @@
 </ul>
 <h2 id="header_and_footer"><a href="/JuDocTemplates.jl/templates/vela/index.html#header_and_footer">Header and Footer</a></h2>
 <p>As you can see here at the bottom of the page, there is a footer which you may want on all pages but for instance you may want the date of last modification to be displayed. In a fashion heavily inspired by <a href="https://gohugo.io">Hugo</a>, you can write things like</p>
-<pre><code class="html hljs">Last modified: September 23, 2019.
+<pre><code class="html hljs">Last modified: October 01, 2019.
 </code></pre>
 <p>&#40;cf. <code>src/_html_parts/page_foot.html</code>&#41; which will then replace these braces with the content of a dictionary of variables at the key <code>jd_mtime</code>. This dictionary of variables is accessed locally by pages through <code>@def varname &#61; value</code> and globally through the <code>config.md</code> page via the same syntax.</p>
 <p>There&#39;s a few other such functions of the form <code>&#123;&#123;fname p₁ p₂&#125;&#125;</code> as well as support for conditional blocks. If you wander through the <code>src/_html_parts/</code> folder and its content, you should be able to see those in action.
 <div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: September 23, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
+    &copy; Septimia Zenobia. Last modified: October 01, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
   </div>
 </div>
 
