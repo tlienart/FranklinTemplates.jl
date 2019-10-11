@@ -44,7 +44,8 @@ function newsite(topdir::String="TestWebsite";
         isdir(template_subdir) && mergefolders(template_subdir, subdir)
     end
 
-    # Pkg.jl does something odd with file permissions, restoring everything to 644
+    # Pkg.jl does something odd with file permissions, restoring to 644
+    # otherwise there may be files that are read-only which is annoying
     for (root, _, files) ∈ walkdir(topdir)
         for file in files
             run(`chmod 644 $(joinpath(root, file))`)
