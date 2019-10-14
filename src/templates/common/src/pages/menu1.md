@@ -78,8 +78,8 @@ Finally, a similar syntax is available if you want to show plots that are produc
 
 \input{code:julia}{/assets/scripts/script2.jl}
 
-and then
+and then:
 
-\input{plot}{/assets/scripts/script2.jl}
+\style{margin-top:-2em;width:65%}{\input{plot}{/assets/scripts/script2.jl}}
 
 (Note that you could, just as well, use the usual markdown syntax for inserting images).
