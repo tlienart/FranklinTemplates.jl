@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{if hasmath}} {{insert head_katex.html }}     {{end}}
+  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+  <link rel="stylesheet" href="/css/jtd.css">
+  <link rel="icon" href="/assets/infra/favicon.ico">
+  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+</head>
+<body>                      <!-- closed in foot.html -->
+  <div class="page-wrap">   <!-- closed in foot.html -->
+    <!-- SIDE BAR -->
+    <div class="side-bar">
+      <div class="header">
+        <a href="/" class="title">
+          JuDoc
+        </a>
+      </div>
+      <label for="show-menu" class="show-menu">MENU</label>
+      <input type="checkbox" id="show-menu" role="button">
+      <div class="menu" id="side-menu">
+        <ul class="menu-list">
+          <li class="menu-list-item {{ispage index}}active{{end}}"><a href="/" class="menu-list-link {{ispage index}}active{{end}}">Home</a>
+          <li class="menu-list-item {{ispage pub/menu1}}active{{end}}"><a href="/pub/menu1.html" class="menu-list-link {{ispage pub/menu1}}active{{end}}">Menu 1</a>
+          <li class="menu-list-item {{ispage pub/menu2}}active{{end}}"><a href="/pub/menu2.html" class="menu-list-link {{ispage pub/menu2}}active{{end}}">Menu 2</a>
+          <li class="menu-list-item {{ispage pub/menu3}}active{{end}}"><a href="/pub/menu3.html" class="menu-list-link {{ispage pub/menu3}}active{{end}}">Menu 3</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item "><a href="#" class="menu-list-link">Submenu</a>
+            </ul>
+        </ul>
+      </div>
+      <div class="footer">
+        This is <em>Just the docs</em>, adapted from the <a href="https://github.com/pmarsceill/just-the-docs" target="_blank">Jekyll theme</a>.
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="main-content-wrap"> <!-- closed in foot.html -->
+      <div class="main-content">    <!-- closed in foot.html -->
+        <div class="main-header">
+          <a id="github" href="//github.com/tlienart/JuDoc.jl">JuDoc on GitHub</a>
+        </div>
+
+
+<!-- Content appended here (in class jd-content) -->
