@@ -113,15 +113,13 @@ hr{
   }
 }
 
-/* SIDE
+/************************************************************
+=============================================================
 
-===========================================================
+SIDE BAR
 
-- side-bar
--- site-header
--- navigation main-nav > navigation > ul
--- footer
- */
+============================================================
+************************************************************/
 
 .side-bar{
   z-index: 100;
@@ -148,6 +146,7 @@ hr{
   line-height: 1.15em;
 }
 .show-menu {
+  cursor: pointer;
   appearance:none;
   display:flex;
   height:100%;
@@ -157,9 +156,11 @@ hr{
   color:#0E39B0;
   text-transform:uppercase;
   background:transparent;
-  text-align:center;
+  text-align:right;
+  padding-right: 2rem;
   border:0;
-  width: 100px;
+  width: calc(100% - 220px);
+  background-color: white;
 }
 .side-bar .menu {
   width: 100%;
@@ -237,9 +238,12 @@ input[type=checkbox]:checked ~ #side-menu{display: block;}
     display: none;
     padding-left:35px;
     padding-bottom:15px;}
+  .side-bar {
+    border-bottom: 1px solid #eeebee;
+  }
   .side-bar .header {
     padding-left: 15px;
-    width: calc(100% - 150px);} /* middle space */
+    width: 150px;} /* middle space */
   .show-menu {display: block;}
 }
 /* side bar adjustments for narrow mode (bar on top) */
@@ -259,7 +263,6 @@ input[type=checkbox]:checked ~ #side-menu{display: block;}
     width: 248px;
     height: 100%;
     flex-direction: column;
-    border-right: 1px solid #eeebee;
     align-items: flex-end;
   }
   .side-bar .header{
@@ -301,20 +304,13 @@ input[type=checkbox]:checked ~ #side-menu{display: block;}
 }
 
 
-/*
+/************************************************************
+=============================================================
 
-====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+MAIN CONTENT
 
-*/
-
-
-/* CONTENT
-- main-content-wrap
--- main-content
--- -- main-header
--- -- page
--- -- -- <footer>
- */
+============================================================
+************************************************************/
 
 @media (min-width: 50rem){
   .main-content-wrap{
@@ -327,8 +323,6 @@ input[type=checkbox]:checked ~ #side-menu{display: block;}
     overflow-x: hidden;
     overflow-y: scroll
   }
-}
-@media (min-width: 50rem){
   .main-content{
     position:relative;
     max-width: 800px;
@@ -366,7 +360,6 @@ input[type=checkbox]:checked ~ #side-menu{display: block;}
     border-bottom:1px solid #eeebee;
   }
 }
-
 .main-footer{
   font-size: 14px;
   color: darkgray;
@@ -390,6 +383,14 @@ input[type=checkbox]:checked ~ #side-menu{display: block;}
     padding-bottom:2rem;
   }
 }
+
+/************************************************************
+=============================================================
+
+JUDOC SPECIFICS
+
+============================================================
+************************************************************/
 
 .jd-content a{
   overflow:hidden;
