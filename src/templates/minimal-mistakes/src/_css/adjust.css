@@ -1,0 +1,33 @@
+/* on narrow device, reduce margins */
+@media (min-width: 940px) {
+    .jd-content {
+        width: 100%;}
+    }
+
+@media (min-width: 1024px) {
+    .jd-content {
+        width: 80%;
+        padding-left: 12.5%;
+        padding-right: 7%;
+    }
+}
+
+pre {
+    font-size: 17px;
+}
+
+.jd-content code {
+    font-size: 70%;
+}
+
+.jd-content .hljs {
+    font-size: 90%;
+}
+
+blockquote {
+    font-size: 90%;
+}
+
+.fndef-content {
+    line-height: 1.5em;
+}

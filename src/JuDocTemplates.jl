@@ -5,7 +5,8 @@ export newsite
 const JUDOC_PATH = splitdir(pathof(JuDocTemplates))[1] # .../JuDocTemplates/src
 const TEMPL_PATH = joinpath(JUDOC_PATH, "templates")
 const LIST_OF_TEMPLATES = ("sandbox", "basic", "jemdoc", "just-the-docs", "hyde",
-                           "hypertext", "lanyon", "pure-sm", "tufte", "vela")
+                           "hypertext", "lanyon", "minimal-mistakes", "pure-sm",
+                           "tufte", "vela")
 
 """
     newsite(topdir; template="basic", cd=true)
@@ -50,6 +51,12 @@ function newsite(topdir::String="TestWebsite";
         for file in files
             run(`chmod 644 $(joinpath(root, file))`)
         end
+    end
+
+    # check if the template has a pre-specified index.html, if so make the index.md from
+    # common/ into pages/judoc.md
+    if isfile(joinpath(topdir, "src", "index.html"))
+        mv(joinpath(topdir, "src", "index.md"), joinpath(topdir, "src", "pages", "judoc.md"))
     end
 
     # move to the directory if relevant
