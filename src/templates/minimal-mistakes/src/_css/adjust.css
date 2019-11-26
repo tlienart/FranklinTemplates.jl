@@ -17,5 +17,17 @@ pre {
 }
 
 .jd-content code {
-    line-height: 1.7em;
+    font-size: 70%;
+}
+
+.jd-content .hljs {
+    font-size: 90%;
+}
+
+blockquote {
+    font-size: 90%;
+}
+
+.fndef-content {
+    line-height: 1.5em;
 }
