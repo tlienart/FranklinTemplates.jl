@@ -5,9 +5,9 @@
 the config file by setting hasmath = false for instance and just setting it to true
 where appropriate -->
 
-\tableofcontents <!-- you can use \toc as well -->
-
 # How to use JuDoc
+
+\tableofcontents <!-- you can use \toc as well -->
 
 This section is meant as a refresher if you're new to JuDoc.
 Have a look at both how the website renders and the corresponding markdown (`index.md`).
@@ -53,6 +53,19 @@ or have tables:
 | winnie the pooh | 维尼熊      |
 
 Note that you may have to do a bit of CSS-styling to get these elements to look the way you want them (the same holds for the whole page in fact).
+
+### Symbols and html entities
+
+If you want a dollar sign you have to escape it like so: \$, you can also use html entities like so: &rarr; or &pi; or, if you're using Juno for instance, you can use `\pi[TAB]` to insert the symbol as is: π (it will be converted to a html entity).[^1]
+
+If you want to show a backslash, just use it like so: \ ; if you want to force a line break, use a ` \\ ` like \\ so (this is on a new line).[^blah]
+
+If you want to show a backtick, escape it like so: \` and if you want to show a tick in inline code use double backticks like ``so ` ...``.
+
+Footnotes are nice too:
+
+[^1]: this is the text for the first footnote, you can style all this looking at `.fndef` elements; note that the whole footnote definition is _expected to be on the same line_.
+[^blah]: and this is a longer footnote with some blah from veggie ipsum: turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.
 
 ## Basic JuDoc extensions
 
@@ -155,14 +168,13 @@ Marine iguanas are **truly splendid** creatures. They're not found in equations 
 Here are a few empty pages connecting to the menu links to show where files can go and the resulting paths. (It's probably best if you look at the source folder for this).
 
 * [menu 1](/pub/menu1.html)
-  * [example page](/pub/menu1/example.html)
 * [menu 2](/pub/menu2.html)
 * [menu 3](/pub/menu3.html)
 
 ## References (not really)
 
 * \biblabel{noether15}{Noether (1915)} **Noether**,  Körper und Systeme rationaler Funktionen, 1915.
-* \biblabel{bezanson17}{Bezanson et al. (2017)} **Bezanson**, **Edelman**, **Karpinski** and **Shah**, [Julia: a fresh approach to numerical computing](https://julialang.org/publications/julia-fresh-approach-BEKS.pdf), SIAM review 2017.
+* \biblabel{bezanson17}{Bezanson et al. (2017)} **Bezanson**, **Edelman**, **Karpinski** and **Shah**, [Julia: a fresh approach to numerical computing](https://julialang.org/research/julia-fresh-approach-BEKS.pdf), SIAM review 2017.
 
 ## Header and Footer
 

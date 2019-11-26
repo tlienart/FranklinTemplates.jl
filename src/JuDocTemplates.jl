@@ -4,8 +4,9 @@ export newsite
 
 const JUDOC_PATH = splitdir(pathof(JuDocTemplates))[1] # .../JuDocTemplates/src
 const TEMPL_PATH = joinpath(JUDOC_PATH, "templates")
-const LIST_OF_TEMPLATES = ("sandbox", "basic", "pure-sm", "vela", "hypertext",
-                           "tufte", "hyde", "lanyon", "jemdoc", "minimal-mistakes")
+const LIST_OF_TEMPLATES = ("sandbox", "basic", "jemdoc", "just-the-docs", "hyde",
+                           "hypertext", "lanyon", "minimal-mistakes", "pure-sm",
+                           "tufte", "vela")
 
 """
     newsite(topdir; template="basic", cd=true)
@@ -43,9 +44,14 @@ function newsite(topdir::String="TestWebsite";
         template_subdir = joinpath(TEMPL_PATH, template, foldername)
         isdir(template_subdir) && mergefolders(template_subdir, subdir)
     end
-    
-    # on windows, make sure everything is read-write in the generated dir
-    Sys.iswindows() && chmod(topdir, 0o777; recursive=true)
+
+    # Pkg.jl does something odd with file permissions, restoring to 644
+    # otherwise there may be files that are read-only which is annoying
+    for (root, _, files) ∈ walkdir(topdir)
+        for file in files
+            run(`chmod 644 $(joinpath(root, file))`)
+        end
+    end
 
     # check if the template has a pre-specified index.html, if so make the index.md from
     # common/ into pages/judoc.md

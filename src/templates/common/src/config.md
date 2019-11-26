@@ -1,7 +1,12 @@
 <!-----------------------------------------------------
 Add here global page variables to use throughout your
 website.
+The website_* must be defined for the RSS to work
 ------------------------------------------------------->
+@def website_title = "JuDoc Template"
+@def website_descr = "Example website using JuDoc"
+@def website_url   = "https://tlienart.github.io/JuDocTemplates.jl/"
+
 @def author = "Septimia Zenobia"
 
 <!-----------------------------------------------------
@@ -12,3 +17,9 @@ For instance:
 ------------------------------------------------------->
 \newcommand{\R}{\mathbb R}
 \newcommand{\scal}[1]{\langle #1 \rangle}
+
+
+<!-- Put a box around something and pass some css styling to the box
+(useful for images for instance) e.g.:
+\style{width:80%;}{![](path/to/img.png)} -->
+\newcommand{\style}[2]{~~~<div style="!#1;margin-left:auto;margin-right:auto;">~~~!#2~~~</div>~~~}

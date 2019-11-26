@@ -13,6 +13,10 @@ descr = Dict{String,String}(
                    <span class="th-name">jemdoc</span>
                    <p>Simple theme with a side navigation bar, no extra javascript and a simple stylesheet. (Adapted from the original Jemdoc theme.)</p>
                    """,
+    "just-the-docs" => """
+                   <span class="th-name">just-the-docs</span>
+                   <p>Simple documentation theme with a side navigation bar, and no extra javascript (Adapted from the Jekyll theme.)</p>
+                   """,
     "hyde"      => """
                    <span class="th-name">hyde</span>
                    <p>A neat two-column responsive theme with a side navigation bar, no extra javascript and a simple stylesheet. (Adapted from the Jekyll theme.)</p>
@@ -41,7 +45,7 @@ descr = Dict{String,String}(
                    <span class="th-name">vela</span>
                    <p>A single-column theme with a sliding menu-bar, a simple stylesheet and extra javascript for the menu-bar. (Adapted from the Grav theme.)</p>
                    """,
-)
+    )
 
 
 build = joinpath(@__DIR__, "build")

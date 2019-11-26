@@ -1,5 +1,7 @@
 @def title = "Code blocks"
 @def hascode = true
+@def date = Date(2019, 3, 22)
+@def rss = "A short description of the page which would serve as **blurb** in a `RSS` feed; you can use basic markdown here but the whole description string must be a single line (not a multiline string). Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don't expect maths or fancy styling to work; images should be ok though: ![](https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg)"
 
 # Working with code blocks
 
@@ -61,11 +63,11 @@ Another approach is to include the content of a script that has already been exe
 This can be an alternative to the description above if you'd like to only run the code once because it's particularly slow or because it's not Julia code.
 For this you can use the `\input` command specifying which language it should be tagged as:
 
-\input{code:julia}{scripts/script1.jl}
+\input{code:julia}{/assets/scripts/script1.jl}
 
 these scripts can be run in such a way that their output is also saved to file, see `scripts/generate_results.jl` for instance, and you can then also input the results:
 
-\input{output}{scripts/script1.jl}
+\input{output}{/assets/scripts/script1.jl}
 
 which is convenient if you're presenting code.
 
@@ -74,10 +76,10 @@ which is convenient if you're presenting code.
 Using this approach with the `generate_results.jl` file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.
 Finally, a similar syntax is available if you want to show plots that are produced by one of your script.
 
-\input{code:julia}{scripts/script2.jl}
+\input{code:julia}{/assets/scripts/script2.jl}
 
-and then
+and then:
 
-\input{plot}{scripts/script2.jl}
+\style{margin-top:-2em;width:65%}{\input{plot}{/assets/scripts/script2.jl}}
 
 (Note that you could, just as well, use the usual markdown syntax for inserting images).
