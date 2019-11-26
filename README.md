@@ -15,8 +15,8 @@ Most of these templates are adapted from existing, popular templates with minor 
 | `"tufte"` | [Tufte CSS](https://github.com/edwardtufte/tufte-css), and a bit of [Lawler.io](https://github.com/Eiriksmal/lawler-dot-io) for the menu | [both](https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE)  [MIT](https://github.com/Eiriksmal/lawler-dot-io/blob/main/license.md) | Side | No |
 | `"hyde"` | [Hyde](https://github.com/poole/hyde) | [MIT](https://github.com/poole/hyde/blob/master/LICENSE.md) | Side | No |
 | `"lanyon"` | [Lanyon](https://github.com/poole/lanyon) | [MIT](https://github.com/poole/lanyon/blob/master/LICENSE.md) | Side (collapsable) | No |
-| `"just-the-docs"` | [Just the docs](https://github.com/pmarsceill/just-the-docs) | MIT | Side/Top | No |
-| `"minimal-mistakes"` | [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes) | MIT | Side/Top | No |
+| `"just-the-docs"` | [Just the docs](https://github.com/pmarsceill/just-the-docs) | [MIT](https://github.com/pmarsceill/just-the-docs/blob/master/LICENSE.txt) | Side/Top | No |
+| `"minimal-mistakes"` | [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes) | [MIT](https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE) | Side/Top | No |
 
 ## Misc
 
