@@ -73,15 +73,14 @@ b = a+<span class="hljs-number">1</span></code></pre> or</p>
 <pre><code class="julia hljs">a = <span class="hljs-number">1</span>
 b = a+<span class="hljs-number">1</span></code></pre>
 <p>you can specify the default language with <code>@def lang &#61; &quot;julia&quot;</code>. If you actually want a &quot;plain&quot; code block, qualify it as <code>plaintext</code> like</p>
-<pre><code class="plaintext hljs">so this is plain-text stuff.
-</code></pre>
+<pre><code class="plaintext hljs">so this is plain-text stuff.</code></pre>
 <h2 id="a_bit_more_highlighting"><a href="/JuDocTemplates.jl/templates/vela/pub/menu2.html#a_bit_more_highlighting">A bit more highlighting</a></h2>
 <p>Extension of highlighting for <code>pkg</code> an <code>shell</code> mode in Julia:</p>
-<pre><code class="julia-repl hljs"><span class=hljs-metap>(v1.4) pkg&gt;</span> add JuDoc
-<span class=hljs-metas>shell&gt;</span> blah
-<span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-number">1</span>+<span class="hljs-number">1</span>
-</span><span class=hljs-metap>(Sandbox) pkg&gt;</span> resolve
-</code></pre>
+<pre><code class="julia hljs">-repl
+(v1<span class="hljs-number">.4</span>) pkg&gt; add JuDoc
+shell&gt; blah
+julia&gt; <span class="hljs-number">1</span>+<span class="hljs-number">1</span>
+(Sandbox) pkg&gt; resolve</code></pre>
 <p>you can tune the colouring etc via the</p>
 <ul>
 <li><p><code>hljs-meta</code> &#40;for <code>julia&gt;</code>&#41;</p>
@@ -94,7 +93,7 @@ b = a+<span class="hljs-number">1</span></code></pre>
 
 <div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: October 15, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
+    &copy; Septimia Zenobia. Last modified: November 26, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
   </div>
 </div>
 
