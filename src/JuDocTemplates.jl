@@ -49,7 +49,8 @@ function newsite(topdir::String="TestWebsite";
     # otherwise there may be files that are read-only which is annoying
     for (root, _, files) ∈ walkdir(topdir)
         for file in files
-            run(`chmod 644 $(joinpath(root, file))`)
+            chmod(joinpath(root, file), 0o644)
+            #run(`chmod 644 $(joinpath(root, file))`)
         end
     end
 
