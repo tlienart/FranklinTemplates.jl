@@ -50,7 +50,6 @@ function newsite(topdir::String="TestWebsite";
     for (root, _, files) ∈ walkdir(topdir)
         for file in files
             chmod(joinpath(root, file), 0o644)
-            #run(`chmod 644 $(joinpath(root, file))`)
         end
     end
 
