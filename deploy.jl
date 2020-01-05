@@ -14,8 +14,10 @@ for (root, _, files) ∈ walkdir(joinpath(@__DIR__, "docs", "build"))
     end
 end
 
+using NodeJS
+
 const JS_GHP = """
     var ghpages = require('gh-pages');
     ghpages.publish('docs/build', function(err) {});
     """
-run(`node -e $JS_GHP`)
+run(`$(NodeJS.nodejs_cmd()) -e $JS_GHP`)

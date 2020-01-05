@@ -131,3 +131,27 @@ instead, display a burger menu.
         margin-right: 10px;
         margin-top: 5px; }
     }
+
+table {
+ line-height:1em;
+ margin-left:auto;
+ margin-right:auto;
+ border-collapse:collapse;
+ text-align:center;
+ margin-bottom:1.5em
+}
+tr:first-of-type {
+ background:#eae9f4
+}
+tr:first-of-type>th {
+ text-align:center
+}
+tr,
+th,
+td {
+ padding:10px;
+ border:1px solid lightgray
+}
+table tbody tr td {
+ border:1px solid lightgray
+}

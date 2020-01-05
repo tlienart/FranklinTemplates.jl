@@ -76,6 +76,10 @@ a:hover {
   text-decoration: none;
 }
 
+#layout-menu .current > a {
+  border-bottom: 1px gray solid;
+}
+
 div.menu-category {
   border-bottom: 1px solid gray;
   margin-top: 0.8em;
