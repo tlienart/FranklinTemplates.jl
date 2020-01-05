@@ -4,6 +4,8 @@ Templates for [JuDoc](https://github.com/tlienart/JuDoc.jl), the static-site gen
 
 Most of these templates are adapted from existing, popular templates with minor modifications to accommodate JuDoc's content.
 
+**NOTE**: these templates should be seen as starting points, they are far from perfect. PRs to help improve them will be very welcome.
+
 | Name | Source | License | Navbar | JS  |
 | ---- | ------ | ------- | ----- | --- |
 | `"sandbox"`  | N/A    | MIT     | N/A | No |
