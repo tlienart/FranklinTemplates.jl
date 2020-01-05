@@ -18,7 +18,7 @@ or also for images
 
 ![][some image]
 
-some people find that useful as it allows referring multiply to the same link for instance.
+some people find that useful as it allows referring multiple times to the same link for instance.
 
 [some image]: https://upload.wikimedia.org/wikipedia/commons/9/90/Krul.svg
 
@@ -52,8 +52,8 @@ julia> 1+1
 (Sandbox) pkg> resolve
 ```
 
-you can tune the colouring etc via the
+you can tune the colouring in the CSS etc via the following classes:
 
-* `hljs-meta` (for `julia>`)
-* `hljs-metas` (for `shell>`)
-* `hljs-metap` (for `...pkg>`)
+* `.hljs-meta` (for `julia>`)
+* `.hljs-metas` (for `shell>`)
+* `.hljs-metap` (for `...pkg>`)
