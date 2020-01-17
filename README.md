@@ -1,8 +1,8 @@
-# JuDoc Templates
+# Franklin Templates
 
-Templates for [JuDoc](https://github.com/tlienart/JuDoc.jl), the static-site generator in Julia.
+Templates for [Franklin](https://github.com/tlienart/Franklin.jl), the static-site generator in Julia.
 
-Most of these templates are adapted from existing, popular templates with minor modifications to accommodate JuDoc's content.
+Most of these templates are adapted from existing, popular templates with minor modifications to accommodate Franklin's content.
 
 **NOTE**: these templates should be seen as starting points, they are far from perfect. PRs to help improve them will be very welcome.
 

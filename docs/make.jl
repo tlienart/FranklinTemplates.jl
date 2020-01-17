@@ -1,9 +1,9 @@
-using JuDocTemplates, JuDoc
+using FranklinTemplates, Franklin
 
 descr = Dict{String,String}(
     "sandbox"   => """
                    <span class="th-name">sandbox</span>
-                   <p>Simplest one-page layout, meant for practicing or testing JuDoc syntax.</p>
+                   <p>Simplest one-page layout, meant for practicing or testing Franklin syntax.</p>
                    """,
     "basic"     => """
                    <span class="th-name">basic</span>
@@ -71,7 +71,7 @@ function fixdir(τ::String)
 end
 
 # make a template folder with a subfolder for each template
-# compile each template with a fullpass of judoc
+# compile each template with a fullpass of Franklin
 begin
     # first clean up the directory to avoid clashes etc
     begin
@@ -82,9 +82,9 @@ begin
     # make the template folder
     templates = mkpath(joinpath(build, "templates"))
     cd(templates)
-    for τ ∈ JuDocTemplates.LIST_OF_TEMPLATES
+    for τ ∈ FranklinTemplates.LIST_OF_TEMPLATES
         println("🍏  template: $τ")
-        newsite(τ; template=τ, changedir=true, verbose=false)
+        FranklinTemplates.newsite(τ; template=τ, changedir=true, verbose=false)
         optimize(minify=(τ!="vela")) # see issue #7
         cd("..")
         fixdir(τ)
@@ -99,7 +99,7 @@ begin
     write(html, read(joinpath(@__DIR__, "index_head.html"), String))
 
     # One card per template
-    for τ ∈ JuDocTemplates.LIST_OF_TEMPLATES
+    for τ ∈ FranklinTemplates.LIST_OF_TEMPLATES
         c = """
             <a href="/templates/$τ/index.html" target="_blank" rel="noopener noreferrer" title="$τ">
             <div class="card" id="$τ">

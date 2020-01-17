@@ -1,15 +1,15 @@
-@def title = "JuDoc Example"
+@def title = "Franklin Example"
 @def hasmath = true
 @def hascode = true
 <!-- Note: by default hasmath == true and hascode == false. You can change this in
 the config file by setting hasmath = false for instance and just setting it to true
 where appropriate -->
 
-# How to use JuDoc
+# How to use Franklin
 
 \tableofcontents <!-- you can use \toc as well -->
 
-This section is meant as a refresher if you're new to JuDoc.
+This section is meant as a refresher if you're new to Franklin.
 Have a look at both how the website renders and the corresponding markdown (`index.md`).
 Modify at will to get a feeling for how things work!
 
@@ -67,12 +67,12 @@ Footnotes are nice too:
 [^1]: this is the text for the first footnote, you can style all this looking at `.fndef` elements; note that the whole footnote definition is _expected to be on the same line_.
 [^blah]: and this is a longer footnote with some blah from veggie ipsum: turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.
 
-## Basic JuDoc extensions
+## Basic Franklin extensions
 
 ### Divs
 
 It is sometimes useful to have a short way to make a part of the page belong to a div so that it can be styled separately.
-You can do this easily with JuDoc by using `@@divname ... @@`.
+You can do this easily with Franklin by using `@@divname ... @@`.
 For instance, you could want a blue background behind some text.
 
 @@colbox-blue

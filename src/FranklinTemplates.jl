@@ -1,25 +1,27 @@
-module JuDocTemplates
+module FranklinTemplates
 
 export newsite
 
-const JUDOC_PATH = splitdir(pathof(JuDocTemplates))[1] # .../JuDocTemplates/src
-const TEMPL_PATH = joinpath(JUDOC_PATH, "templates")
-const LIST_OF_TEMPLATES = ("sandbox", "basic", "jemdoc", "just-the-docs", "hyde",
-                           "hypertext", "lanyon", "minimal-mistakes", "pure-sm",
-                           "tufte", "vela")
+const FRANKLIN_PATH     = splitdir(pathof(FranklinTemplates))[1]
+const TEMPL_PATH        = joinpath(FRANKLIN_PATH, "templates")
+const LIST_OF_TEMPLATES = ("sandbox", "basic", "jemdoc", "just-the-docs",
+                           "hyde", "hypertext", "lanyon", "minimal-mistakes",
+                           "pure-sm", "tufte", "vela")
 
 """
     newsite(topdir; template="basic", cd=true)
 
 Generate a new folder (an error is thrown if it already exists) that contains the skeleton of a
-website that can be processed by JuDoc. The user can specify a `template` out of the list of
-available templates.
+website that can be processed by Franklin. The user can specify a `template`
+out of the list of available templates.
 
-* `template="basic"` specify the name of the desired template,
-* `cd=true` specify whether to change the current directory to the newly created folder or not.
-* `verbose=true` specify whether to display information or not.
+* `template="basic"`: name of the template to use,
+* `cd=true`:          whether to change the current directory to the newly
+                      created folder or not.
+* `verbose=true`:     whether to display information or not.
 
 ### Example
+
 ```julia
 newsite("MyNewWebsite", template="pure-sm")
 ```
@@ -54,9 +56,9 @@ function newsite(topdir::String="TestWebsite";
     end
 
     # check if the template has a pre-specified index.html, if so make the index.md from
-    # common/ into pages/judoc.md
+    # common/ into pages/franklin.md
     if isfile(joinpath(topdir, "src", "index.html"))
-        mv(joinpath(topdir, "src", "index.md"), joinpath(topdir, "src", "pages", "judoc.md"))
+        mv(joinpath(topdir, "src", "index.md"), joinpath(topdir, "src", "pages", "franklin.md"))
     end
 
     # move to the directory if relevant
@@ -66,7 +68,7 @@ function newsite(topdir::String="TestWebsite";
     verbose && begin
         print("✓ Website folder generated at \"$(topdir)\"")
         println(ifelse(changedir, " (now the current directory)." , "."))
-        println("→ Use serve() from JuDoc to see the website in your browser.")
+        println("→ Use serve() from Franklin to see the website in your browser.")
     end
 
     return nothing
@@ -79,9 +81,10 @@ end
 """
     mergefolders(src, dst)
 
-Internal function to looks at what's inside `src/` and put it in `dst/`. If there are paths that
-match, the files are merged. It is assumed that files will not clash, if they clash files in `dst`
-are replaced. See also [`newsite`](@ref).
+Internal function to looks at what's inside `src/` and put it in `dst/`. If
+there are paths that match, the files are merged. It is assumed that files will
+not clash, if they clash files in `dst` are replaced.
+See also [`newsite`](@ref).
 """
 function mergefolders(src, dst)
     for (root, _, files) ∈ walkdir(src)

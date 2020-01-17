@@ -1,15 +1,15 @@
-@def title = "JuDoc Sandbox"
+@def title = "Franklin Sandbox"
 @def hasmath = true
 @def hascode = true
 
 
-# JuDoc syntax sandbox
+# Franklin syntax sandbox
 
-This page is meant as a sandbox for JuDoc Syntax so that you can quickly practice or experience things.
+This page is meant as a sandbox for Franklin Syntax so that you can quickly practice or experience things.
 
 ## Sandbox
 
-Write whatever you want here to practice JuDoc Syntax:
+Write whatever you want here to practice Franklin Syntax:
 
 ```julia:./ex1
 using LinearAlgebra, Random

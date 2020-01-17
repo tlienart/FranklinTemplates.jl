@@ -8,7 +8,7 @@
 
 ## More markdown support
 
-The Julia Markdown parser in Julia's stdlib is not exactly complete and JuDoc strives to bring useful extensions that are either defined in standard specs such as Common Mark or that just seem like useful extensions.
+The Julia Markdown parser in Julia's stdlib is not exactly complete and Franklin strives to bring useful extensions that are either defined in standard specs such as Common Mark or that just seem like useful extensions.
 
 * indirect references for instance [like so]
 
@@ -46,7 +46,7 @@ so this is plain-text stuff.
 Extension of highlighting for `pkg` an `shell` mode in Julia:
 
 ```julia-repl
-(v1.4) pkg> add JuDoc
+(v1.4) pkg> add Franklin
 shell> blah
 julia> 1+1
 (Sandbox) pkg> resolve
