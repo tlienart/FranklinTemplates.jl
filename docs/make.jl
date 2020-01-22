@@ -114,3 +114,5 @@ begin
     write(html, read(joinpath(@__DIR__, "index_foot.html"), String))
     write(joinpath(build, "index.html"), take!(html))
 end
+
+cd(dirname(dirname(pathof(FranklinTemplates))))

@@ -1,7 +1,7 @@
 name = "FranklinTemplates"
 uuid = "3a985190-f512-4703-8d38-2a7944ed5916"
 authors = ["Thibaut Lienart <tlienart@me.com>"]
-version = "0.4.0"
+version = "0.4.1"
 
 [compat]
 julia = "^1.0"

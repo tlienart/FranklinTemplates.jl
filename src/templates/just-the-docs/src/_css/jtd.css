@@ -367,7 +367,7 @@ MAIN CONTENT
   padding-top: 15px;
 }
 
-.jd-content {
+.franklin-content {
   padding-right:1rem;
   padding-left:1rem;
   padding-top:1rem;
@@ -376,7 +376,7 @@ MAIN CONTENT
   line-height:1.5
 }
 @media (min-width: 50rem){
-  .jd-content {
+  .franklin-content {
     padding-right:2rem;
     padding-left:2rem;
     padding-top:2rem;
@@ -392,29 +392,29 @@ Franklin SPECIFICS
 ============================================================
 ************************************************************/
 
-.jd-content a{
+.franklin-content a{
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap
 }
 
-.jd-content ul,ol{
+.franklin-content ul,ol{
   line-height: 1em;
 }
-.jd-content li{
+.franklin-content li{
   margin-top: 0.3em;
   line-height: 1.3em;
 }
 
-.jd-content ul,.jd-content ol{
+.franklin-content ul,.franklin-content ol{
   padding-left:1.5em
 }
 
-.jd-content h1:first-of-type{
+.franklin-content h1:first-of-type{
   margin-top:0.5em
 }
 
-.jd-content h1,h2,h3,h4,h5,h6{
+.franklin-content h1,h2,h3,h4,h5,h6{
   position:relative
 }
 
@@ -423,80 +423,80 @@ td.fndef-backref {
 }
 
 
-.jd-content table {
+.franklin-content table {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
     text-align: center;
     margin-bottom: 1em;}
-.jd-content tr,th,td{
+.franklin-content tr,th,td{
     padding: 10px;
     border: 1px solid black;}
 
-.jd-content table tbody tr td {
+.franklin-content table tbody tr td {
   border: 1px solid black;
 }
 
-.jd-content blockquote {
+.franklin-content blockquote {
     background: lemonchiffon;
     border-left: 7px solid #a8a8a8;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
     font-style: italic;}
 
-.jd-content blockquote p {
+.franklin-content blockquote p {
     display: inline; }
 
-.jd-content .row {
+.franklin-content .row {
   display: block; }
 
-.jd-content .left {
+.franklin-content .left {
   float: left;
   margin-right: 15px; }
 
-.jd-content .right {
+.franklin-content .right {
     float: right; }
 
-.jd-content .container img {
+.franklin-content .container img {
     width: auto;
     padding-left: 0;
     border-radius: 10px;
     margin-bottom: 1em;}
 
 
-.jd-content .fndef table {
+.franklin-content .fndef table {
   margin; 0;
   margin-bottom: 1em;
   border: 0;
 }
-.jd-content .fndef tr {
+.franklin-content .fndef tr {
   padding: 0;
   border: 0;
   text-align: left;
 }
-.jd-content .fndef td {
+.franklin-content .fndef td {
   padding: 0;
   border: 0;
 }
-.jd-content .fndef td.fndef-backref {
+.franklin-content .fndef td.fndef-backref {
   vertical-align: top;
   font-size: 80%;
   padding-left: 5px;
 }
-.jd-content .fndef td.fndef-content {
+.franklin-content .fndef td.fndef-content {
   font-size: 90%;
   padding-left: 10px;
 }
-.jd-content .fndef tr {
+.franklin-content .fndef tr {
   border-left: 2px solid lightgray;
 }
 
-.jd-content img {
+.franklin-content img {
     width: 70%;
     text-align: center;
     padding-left: 10%; }
 
-.jd-content .img-small img {
+.franklin-content .img-small img {
     width: 50%;
     text-align: center;
     padding-left: 20%; }

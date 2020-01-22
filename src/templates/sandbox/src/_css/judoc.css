@@ -12,17 +12,17 @@ html {
     BASIC GRID FOR PROFILE PIC
 ================================================================== */
 
-.jd-content .row {
+.franklin-content .row {
   display: block; }
 
-.jd-content .left {
+.franklin-content .left {
   float: left;
   margin-right: 15px; }
 
-.jd-content .right {
+.franklin-content .right {
     float: right; }
 
-.jd-content .container img {
+.franklin-content .container img {
     width: auto;
     padding-left: 0;
     border-radius: 10px; }
@@ -31,7 +31,7 @@ html {
     FOOT / COPYRIGHT
 ================================================================== */
 
-.jd-content .page-foot a {
+.franklin-content .page-foot a {
     text-decoration: none;
     color: #a6a2a0;
     text-decoration: underline; }
@@ -50,7 +50,7 @@ html {
     TEXT GEOMETRY
 ================================================================== */
 
-.jd-content {
+.franklin-content {
     position: relative;
     padding-left: 12.5%;
     padding-right: 12.5%;
@@ -58,7 +58,7 @@ html {
 
 /* on wide screens, fix content width to a max value */
 @media (min-width: 940px) {
-    .jd-content {
+    .franklin-content {
         width: 705px;
         margin-left: auto;
         margin-right: auto; }
@@ -66,7 +66,7 @@ html {
 
 /* on narrow device, reduce margins */
 @media (max-width: 480px) {
-    .jd-content {
+    .franklin-content {
         padding-left: 6%;
         padding-right: 6%; }
     }
@@ -75,58 +75,58 @@ html {
     TITLES
 ================================================================== */
 
-.jd-content h1 { font-size: 24px; }
-.jd-content h2 { font-size: 22px; }
-.jd-content h3 { font-size: 20px; }
+.franklin-content h1 { font-size: 24px; }
+.franklin-content h2 { font-size: 22px; }
+.franklin-content h3 { font-size: 20px; }
 
-.jd-content h1, h2, h3, h4, h5, h6 {
+.franklin-content h1, h2, h3, h4, h5, h6 {
     text-align: left; }
 
-.jd-content h1 {
+.franklin-content h1 {
     padding-bottom: 0.5em;
     border-bottom: 3px double lightgrey;
     margin-top: 1.5em;
     margin-bottom: 1em; }
 
-.jd-content h2 {
+.franklin-content h2 {
     padding-bottom: 0.3em;
     border-bottom: 1px solid lightgrey;
     margin-top: 2em;
     margin-bottom: 1em; }
 
-.jd-content h1 a { color: inherit; }
-.jd-content h1 a:hover {text-decoration: none;}
-.jd-content h2 a { color: inherit; }
-.jd-content h2 a:hover {text-decoration: none;}
-.jd-content h3 a { color: inherit; }
-.jd-content h3 a:hover {text-decoration: none;}
-.jd-content h4 a { color: inherit; }
-.jd-content h4 a:hover {text-decoration: none;}
-.jd-content h5 a { color: inherit; }
-.jd-content h5 a:hover {text-decoration: none;}
-.jd-content h6 a { color: inherit; }
-.jd-content h6 a:hover {text-decoration: none;}
+.franklin-content h1 a { color: inherit; }
+.franklin-content h1 a:hover {text-decoration: none;}
+.franklin-content h2 a { color: inherit; }
+.franklin-content h2 a:hover {text-decoration: none;}
+.franklin-content h3 a { color: inherit; }
+.franklin-content h3 a:hover {text-decoration: none;}
+.franklin-content h4 a { color: inherit; }
+.franklin-content h4 a:hover {text-decoration: none;}
+.franklin-content h5 a { color: inherit; }
+.franklin-content h5 a:hover {text-decoration: none;}
+.franklin-content h6 a { color: inherit; }
+.franklin-content h6 a:hover {text-decoration: none;}
 
-.jd-content table {
+.franklin-content table {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
     text-align: center;
 }
 
-.jd-content th, td{
+.franklin-content th, td{
     padding: 10px;
     border: 1px solid black;
 }
 
-.jd-content blockquote {
+.franklin-content blockquote {
     background: #eeeeee;
     border-left: 7px solid #a8a8a8;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
     font-style: italic;}
 
-.jd-content blockquote p {
+.franklin-content blockquote p {
     display: inline; }
 
 /* ==================================================================
@@ -134,33 +134,33 @@ html {
 ================================================================== */
 
 /* spacing between bullet points */
-.jd-content li p {
+.franklin-content li p {
         margin: 10px 0; }
 
-.jd-content a {
+.franklin-content a {
     color: #004de6;
     text-decoration: none; }
 
-.jd-content a:hover {
+.franklin-content a:hover {
     text-decoration: underline; }
 
 /* ==================================================================
     HYPERREFS
 ================================================================== */
 
-.jd-content .eqref a  { color: green; }
-.jd-content .bibref a { color: green; }
+.franklin-content .eqref a  { color: green; }
+.franklin-content .bibref a { color: green; }
 
 /* ==================================================================
     IMAGES in CONTENT
 ================================================================== */
 
-.jd-content img {
+.franklin-content img {
     width: 70%;
     text-align: center;
     padding-left: 10%; }
 
-.jd-content .img-small img {
+.franklin-content .img-small img {
     width: 50%;
     text-align: center;
     padding-left: 20%; }
@@ -187,7 +187,7 @@ body { counter-reset: eqnum; }
     CODE & HIGHLIGHT.JS
 ================================================================== */
 
-.jd-content code {
+.franklin-content code {
     background-color: rgba(27,31,35,0.05); /*#f6f8fa;*/
     padding: 0.1em 0.2em;
     border-radius: 2px;
@@ -215,7 +215,7 @@ return{c:[{cN:"metaj",b:/^julia>/,r:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},alias
     BOXES
 ================================================================== */
 
-.jd-content .colbox-blue {
+.franklin-content .colbox-blue {
     background-color: #EEF3F5;
     padding-top: 5px;
     padding-right: 10px;
