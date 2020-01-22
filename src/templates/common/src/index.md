@@ -182,10 +182,10 @@ As you can see here at the bottom of the page, there is a footer which you may w
 In a fashion heavily inspired by [Hugo](https://gohugo.io), you can write things like
 
 ```html
-Last modified: {{ fill jd_mtime }}.
+Last modified: {{ fill fd_mtime }}.
 ```
 
-(cf. `src/_html_parts/page_foot.html`) which will then replace these braces with the content of a dictionary of variables at the key `jd_mtime`.
+(cf. `src/_html_parts/page_foot.html`) which will then replace these braces with the content of a dictionary of variables at the key `fd_mtime`.
 This dictionary of variables is accessed locally by pages through `@def varname = value` and globally through the `config.md` page via the same syntax.
 
 There's a few other such functions of the form `{{fname p₁ p₂}}` as well as support for conditional blocks. If you wander through the `src/_html_parts/` folder and its content, you should be able to see those in action.

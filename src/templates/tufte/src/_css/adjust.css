@@ -1,7 +1,7 @@
 /* adjustments for Franklin */
 
-.jd-content code { font-size: 75% !important; }
-.jd-content { font-size: 1.4rem; }
+.franklin-content code { font-size: 75% !important; }
+.franklin-content { font-size: 1.4rem; }
 
 #main {
     float:left;
@@ -42,8 +42,8 @@
     transform: scaleX(1)
 }
 
-.jd-content { padding-left: 10%;}
-.jd-content { padding-right: 5%;}
+.franklin-content { padding-left: 10%;}
+.franklin-content { padding-right: 5%;}
 
 @media (max-width: 940px){
     /* narrow display: menu is at the top */
@@ -68,8 +68,8 @@
         width: 100px;
         text-align: right;
     }
-    .jd-content {width: 600px;}
+    .franklin-content {width: 600px;}
 }
 @media (min-width: 1000px) {
-    .jd-content {width: 660px;}
+    .franklin-content {width: 660px;}
 }

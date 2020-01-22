@@ -1,11 +1,11 @@
 /* on narrow device, reduce margins */
 @media (min-width: 940px) {
-    .jd-content {
+    .franklin-content {
         width: 100%;}
     }
 
 @media (min-width: 1024px) {
-    .jd-content {
+    .franklin-content {
         width: 80%;
         padding-left: 12.5%;
         padding-right: 7%;
@@ -16,11 +16,11 @@ pre {
     font-size: 17px;
 }
 
-.jd-content code {
+.franklin-content code {
     font-size: 70%;
 }
 
-.jd-content .hljs {
+.franklin-content .hljs {
     font-size: 90%;
 }
 

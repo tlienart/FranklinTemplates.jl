@@ -2,7 +2,7 @@ html {
     font-size: 17px;
 }
 
-.jd-content {
+.franklin-content {
     position: relative;
     padding-left: 0;
     padding-right: 0;
@@ -10,7 +10,7 @@ html {
 
 /* on wide screens, fix content width to a max value */
 @media (min-width: 940px) {
-    .jd-content {
+    .franklin-content {
         width: 100%;
         margin-left: auto;
         margin-right: auto; }
@@ -18,7 +18,7 @@ html {
 
 /* on narrow device, reduce margins */
 @media (max-width: 768px) {
-    .jd-content {
+    .franklin-content {
         padding-left: 6%;
         padding-right: 6%; }
     }
