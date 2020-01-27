@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Un-minified script so that can play a bit -->
-<link rel="stylesheet" href="/FranklinTemplates.jl/templates/vela/libs/katex/katex.min.css">
+   <link rel="stylesheet" href="/FranklinTemplates.jl/templates/vela/libs/katex/katex.min.css">
    
-   <!-- Syntax highlighting via Prism, note: restricted langs -->
-<link rel="stylesheet" href="/FranklinTemplates.jl/templates/vela/libs/highlight/github.min.css">
+   <link rel="stylesheet" href="/FranklinTemplates.jl/templates/vela/libs/highlight/github.min.css">
    
 
   <link href="/FranklinTemplates.jl/templates/vela/css/franklin.css" rel="stylesheet">
@@ -74,7 +72,7 @@ println(dot(a, a))</code></pre>
 </li>
 <li><p>only Julia code blocks are supported at the moment, there may be a support for scripting languages like <code>R</code> or <code>python</code> in the future,</p>
 </li>
-<li><p>the way you specify the path is important; see <a href="https://tlienart.github.io/Franklin.jl/dev/man/syntax/#More-on-paths-1">the docs</a> for more info. If you don&#39;t care about how things are structured in your <code>/assets/</code> folder, just use <code>./scriptname.jl</code>. If you want things to be grouped, use <code>./group/scriptname.jl</code>. For more involved uses, see the docs.</p>
+<li><p>the way you specify the path is important; see <a href="https://tlienart.github.io/franklindocs/pub/code/inserting-code.html#more_on_paths">the docs</a> for more info. If you don&#39;t care about how things are structured in your <code>/assets/</code> folder, just use <code>./scriptname.jl</code>. If you want things to be grouped, use <code>./group/scriptname.jl</code>. For more involved uses, see the docs.</p>
 </li>
 </ul>
 <p>Lastly, it&#39;s important to realise that if you don&#39;t change the content of the code, then that code will only be executed <em>once</em> even if you make multiple changes to the text around it.</p>
@@ -122,7 +120,7 @@ savefig(joinpath(<span class="hljs-meta">@__DIR__</span>, <span class="hljs-stri
 <p>&#40;Note that you could, just as well, use the usual markdown syntax for inserting images&#41;.
 <div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: January 22, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+    &copy; Septimia Zenobia. Last modified: January 27, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
   </div>
 </div>
 
