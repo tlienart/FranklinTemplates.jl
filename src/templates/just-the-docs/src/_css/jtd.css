@@ -232,7 +232,7 @@ input[type=checkbox]{display: none;}
 input[type=checkbox]:checked ~ #side-menu{display: block;}
 
 /* side bar adjustments for narrow mode (bar on top) */
-@media (max-width : 50rem){
+@media (max-width : 49.99rem){
   /* Toggle menu off */
   .side-bar .menu {
     display: none;

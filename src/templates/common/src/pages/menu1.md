@@ -29,7 +29,7 @@ You can now show what this would look like:
 * you don't have to specify the `.jl` (see below),
 * you do need to explicitly use print statements or `@show` for things to show, so just leaving a variable at the end like you would in the REPL will show nothing,
 * only Julia code blocks are supported at the moment, there may be a support for scripting languages like `R` or `python` in the future,
-* the way you specify the path is important; see [the docs](https://tlienart.github.io/Franklin.jl/dev/man/syntax/#More-on-paths-1) for more info. If you don't care about how things are structured in your `/assets/` folder, just use `./scriptname.jl`. If you want things to be grouped, use `./group/scriptname.jl`. For more involved uses, see the docs.
+* the way you specify the path is important; see [the docs](https://tlienart.github.io/franklindocs/pub/code/inserting-code.html#more_on_paths) for more info. If you don't care about how things are structured in your `/assets/` folder, just use `./scriptname.jl`. If you want things to be grouped, use `./group/scriptname.jl`. For more involved uses, see the docs.
 
 Lastly, it's important to realise that if you don't change the content of the code, then that code will only be executed _once_ even if you make multiple changes to the text around it.
 
@@ -63,11 +63,11 @@ Another approach is to include the content of a script that has already been exe
 This can be an alternative to the description above if you'd like to only run the code once because it's particularly slow or because it's not Julia code.
 For this you can use the `\input` command specifying which language it should be tagged as:
 
-\input{code:julia}{/assets/scripts/script1.jl}
+\input{julia}{/assets/scripts/script1.jl}
 
 these scripts can be run in such a way that their output is also saved to file, see `scripts/generate_results.jl` for instance, and you can then also input the results:
 
-\input{output}{/assets/scripts/script1.jl}
+\output{/assets/scripts/script1.jl}
 
 which is convenient if you're presenting code.
 
@@ -76,7 +76,7 @@ which is convenient if you're presenting code.
 Using this approach with the `generate_results.jl` file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.
 Finally, a similar syntax is available if you want to show plots that are produced by one of your script.
 
-\input{code:julia}{/assets/scripts/script2.jl}
+\input{julia}{/assets/scripts/script2.jl}
 
 and then:
 
