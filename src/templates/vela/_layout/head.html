@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{if hasmath}} {{insert head_katex.html }}   {{end}}
+  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+
+  <link href="/css/franklin.css" rel="stylesheet">
+  <link href="/css/vela.css" rel="stylesheet">
+  <script src="/libs/vela/jquery.min.js"></script>
+
+  <link rel="icon" href="/assets/favicon.png">
+
+  <title>Franklin Example | Vela</title>
+</head>
+<body>
+  <div class="main-nav" id="menu">
+    <div class="flex-container">
+      <span class="sidebar-brand">
+        <h3 style='font-size: 25px'>Vela Template</h3>
+      </span>
+    </div> <!-- class="flex-container" -->
+
+    <nav class="sidebar-nav">
+      <ul class="metismenu"  id="metismenu" >
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/menu1/">Code blocks</a></li>
+        <li><a href="" class="has-arrow">Topic</a>
+          <ul>
+            <li><a href="/menu2/">More goodies</a></li>
+          </ul>
+        </li>
+        <li><a href="/menu3/">Menu 3</a></li>
+      </ul>
+    </nav>
+  </div> <!-- main nav menu -->
+
+  <main id="panel">
+    <div class="toggle-button hamburger hamburger--spin">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+    <h1 class="page title">{{isdef title}}{{fill title}}{{end}}</h1>
+    <hr>
+
+
+<!-- Content appended here -->

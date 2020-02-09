@@ -53,8 +53,14 @@ build = joinpath(@__DIR__, "build")
 isdir(build) || mkdir(build)
 
 function fixdir(τ::String)
-    # 1. remove src folder (not needed anymore)
-    rm(joinpath(τ, "src"), recursive=true)
+    for name in readdir(τ; join=true)
+        occursin("__site", name) && continue
+        rm(name, recursive=true)
+    end
+    for name in readdir(joinpath(τ, "__site"); join=true)
+        cp(name, replace(name, "__site" => ""))
+    end
+    rm(joinpath(τ, "__site"), recursive=true)
     # 2. fix links in index.html etc
     html_files = String[]
     for (root, _, files) ∈ walkdir(τ)

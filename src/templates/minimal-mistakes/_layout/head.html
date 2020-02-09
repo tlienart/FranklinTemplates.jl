@@ -1,0 +1,62 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{if hasmath}} {{insert head_katex.html }}     {{end}}
+  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/minimal-mistakes.css">
+  <link rel="stylesheet" href="/css/adjust.css">
+  <!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+  <![endif]-->
+  <!-- start custom head snippets -->
+  <link rel="icon" href="/assets/favicon.png">
+  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+  <!-- insert favicons. use https://realfavicongenerator.net/ -->
+  <!-- end custom head snippets -->
+</head>
+<body class="layout--single">
+  {{ insert masthead.html }}
+  <div class="initial-content">
+    <div id="main" role="main">
+      <div class="sidebar sticky">
+        <div itemscope itemtype="https://schema.org/Person">
+          <div class="author__avatar">
+            <img src="/assets/minimal-mistakes/zenobia.png" alt="Septimia Zenobia" itemprop="image">
+          </div>
+          <div class="author__content">
+            <h3 class="author__name" itemprop="name">Septimia Zenobia</h3>
+            <p class="author__bio" itemprop="description">Probably not a commoner.</p>
+          </div>
+          <div class="author__urls-wrapper">
+            <button class="btn btn--inverse">Follow</button>
+            <ul class="author__urls social-icons">
+              <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+                <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Palmyra</span></li>
+              <li><a href="https://twitter.com/mmistakes" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+              <li><a href="https://github.com/mmistakes" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+<!-- Content appended here -->
