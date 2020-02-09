@@ -1,3 +1,5 @@
+@def folder_structure = v"0.1"
+
 <!-----------------------------------------------------
 Add here global page variables to use throughout your
 website.
