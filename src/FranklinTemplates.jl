@@ -11,9 +11,10 @@ const LIST_OF_TEMPLATES = ("sandbox", "basic", "jemdoc", "just-the-docs",
 """
     newsite(topdir; template="basic", cd=true)
 
-Generate a new folder (an error is thrown if it already exists) that contains the skeleton of a
-website that can be processed by Franklin. The user can specify a `template`
-out of the list of available templates.
+Generate a new folder (an error is thrown if it already exists) that contains
+the skeleton of a website that can be processed by Franklin. The user can
+specify a `template` out of the list of available templates.
+If `topdir` is specified as `"."` then the current directory is used.
 
 * `template="basic"`: name of the template to use,
 * `cd=true`:          whether to change the current directory to the newly
@@ -27,25 +28,26 @@ newsite("MyNewWebsite", template="pure-sm")
 ```
 """
 function newsite(topdir::String="TestWebsite";
-                 template::String="basic",
-                 changedir::Bool=true,
+                 template::String="basic", changedir::Bool=true,
                  verbose::Bool=true)
 
     template = lowercase(template)
-    template ∈ LIST_OF_TEMPLATES || throw(ArgumentError("Template $template doesn't exist."))
+    template ∈ LIST_OF_TEMPLATES ||
+        throw(ArgumentError("Template $template doesn't exist."))
 
     # create the top-directory
-    topdir = mkdir(topdir)
-
-    # create the sub-directories
-    for foldername ∈ ("libs", "assets", "src")
-        subdir = joinpath(topdir, foldername)
-        # common/foldername
-        cp(joinpath(TEMPL_PATH, "common", foldername), subdir)
-        # template/foldername
-        template_subdir = joinpath(TEMPL_PATH, template, foldername)
-        isdir(template_subdir) && mergefolders(template_subdir, subdir)
+    if topdir == "."
+        topdir    = pwd()
+        changedir = true
+    else
+        topdir = mkdir(topdir)
     end
+
+    common_dir   = joinpath(TEMPL_PATH, "common")
+    template_dir = joinpath(TEMPL_PATH, template)
+
+    mergefolders(common_dir,   topdir)
+    mergefolders(template_dir, topdir)
 
     # Pkg.jl does something odd with file permissions, restoring to 644
     # otherwise there may be files that are read-only which is annoying
@@ -55,10 +57,10 @@ function newsite(topdir::String="TestWebsite";
         end
     end
 
-    # check if the template has a pre-specified index.html, if so make the index.md from
-    # common/ into pages/franklin.md
-    if isfile(joinpath(topdir, "src", "index.html"))
-        mv(joinpath(topdir, "src", "index.md"), joinpath(topdir, "src", "pages", "franklin.md"))
+    # check if the template has a pre-specified index.html, if so rename
+    # index.md to avoid confusion
+    if isfile(joinpath(topdir, "index.html"))
+        mv(joinpath(topdir, "index.md"), joinpath(topdir, "franklin.md"))
     end
 
     # move to the directory if relevant
