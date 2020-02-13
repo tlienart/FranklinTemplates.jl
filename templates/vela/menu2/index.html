@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/FranklinTemplates.jl/templates/vela/libs/katex/katex.min.css">
+   
+   <link rel="stylesheet" href="/FranklinTemplates.jl/templates/vela/libs/highlight/github.min.css">
+   
+
+  <link href="/FranklinTemplates.jl/templates/vela/css/franklin.css" rel="stylesheet">
+  <link href="/FranklinTemplates.jl/templates/vela/css/vela.css" rel="stylesheet">
+  <script src="/FranklinTemplates.jl/templates/vela/libs/vela/jquery.min.js"></script>
+
+  <link rel="icon" href="/FranklinTemplates.jl/templates/vela/assets/favicon.png">
+
+  <title>Franklin Example | Vela</title>
+</head>
+<body>
+  <div class="main-nav" id="menu">
+    <div class="flex-container">
+      <span class="sidebar-brand">
+        <h3 style='font-size: 25px'>Vela Template</h3>
+      </span>
+    </div> <!-- class="flex-container" -->
+
+    <nav class="sidebar-nav">
+      <ul class="metismenu"  id="metismenu" >
+        <li><a href="/FranklinTemplates.jl/templates/vela/index.html">Home</a></li>
+        <li><a href="/FranklinTemplates.jl/templates/vela/menu1/">Code blocks</a></li>
+        <li><a href="" class="has-arrow">Topic</a>
+          <ul>
+            <li><a href="/FranklinTemplates.jl/templates/vela/menu2/">More goodies</a></li>
+          </ul>
+        </li>
+        <li><a href="/FranklinTemplates.jl/templates/vela/menu3/">Menu 3</a></li>
+      </ul>
+    </nav>
+  </div> <!-- main nav menu -->
+
+  <main id="panel">
+    <div class="toggle-button hamburger hamburger--spin">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+    <h1 class="page title">More goodies</h1>
+    <hr>
+
+
+<!-- Content appended here -->
+
+<div class="franklin-content">
+<h1 id="more_goodies"><a href="/FranklinTemplates.jl/templates/vela/menu2/index.html#more_goodies">More goodies</a></h1>
+<h2 id="more_markdown_support"><a href="/FranklinTemplates.jl/templates/vela/menu2/index.html#more_markdown_support">More markdown support</a></h2>
+<p>The Julia Markdown parser in Julia&#39;s stdlib is not exactly complete and Franklin strives to bring useful extensions that are either defined in standard specs such as Common Mark or that just seem like useful extensions.</p>
+<ul>
+<li><p>indirect references for instance <a href="http://existentialcomics.com/">like so</a></p>
+</li>
+</ul>
+ or also for images</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Krul.svg" alt="some image"></p>
+<p>some people find that useful as it allows referring multiple times to the same link for instance.</p>
+
+<ul>
+<li><p>un-qualified code blocks and indented code blocks are allowed and are julia by default</p>
+</li>
+</ul>
+<pre><code class="julia hljs">a = <span class="hljs-number">1</span>
+b = a+<span class="hljs-number">1</span></code></pre> or</p>
+<pre><code class="julia hljs">a = <span class="hljs-number">1</span>
+b = a+<span class="hljs-number">1</span></code></pre>
+<p>you can specify the default language with <code>@def lang &#61; &quot;julia&quot;</code>. If you actually want a &quot;plain&quot; code block, qualify it as <code>plaintext</code> like</p>
+<pre><code class="plaintext hljs">so this is plain-text stuff.</code></pre>
+<h2 id="a_bit_more_highlighting"><a href="/FranklinTemplates.jl/templates/vela/menu2/index.html#a_bit_more_highlighting">A bit more highlighting</a></h2>
+<p>Extension of highlighting for <code>pkg</code> an <code>shell</code> mode in Julia:</p>
+<pre><code class="julia-repl hljs"><span class=hljs-metap>(v1.4) pkg&gt;</span> add Franklin
+<span class=hljs-metas>shell&gt;</span> blah
+<span class="hljs-meta">julia&gt;</span><span class="julia"> <span class="hljs-number">1</span>+<span class="hljs-number">1</span>
+</span><span class=hljs-metap>(Sandbox) pkg&gt;</span> resolve</code></pre>
+<p>you can tune the colouring in the CSS etc via the following classes:</p>
+<ul>
+<li><p><code>.hljs-meta</code> &#40;for <code>julia&gt;</code>&#41;</p>
+</li>
+<li><p><code>.hljs-metas</code> &#40;for <code>shell&gt;</code>&#41;</p>
+</li>
+<li><p><code>.hljs-metap</code> &#40;for <code>...pkg&gt;</code>&#41;</p>
+</li>
+</ul>
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Septimia Zenobia. Last modified: February 13, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+  </div>
+</div>
+
+</div>
+<!-- CONTENT ENDS HERE -->
+  </main> <!-- end of id=main -->
+  <script src="/FranklinTemplates.jl/templates/vela/libs/vela/metisMenu.min.js"></script>
+  <script src="/FranklinTemplates.jl/templates/vela/libs/vela/slideout.min.js"></script>
+  
+    
+
+
+
+  
+  
+    
+
+
+  
+</body>
+</html>
