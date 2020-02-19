@@ -20,6 +20,6 @@ For instance:
 
 
 <!-- Put a box around something and pass some css styling to the box
-(useful for images for instance) e.g.:
+(useful for images for instance) e.g. :
 \style{width:80%;}{![](path/to/img.png)} -->
 \newcommand{\style}[2]{~~~<div style="!#1;margin-left:auto;margin-right:auto;">~~~!#2~~~</div>~~~}
