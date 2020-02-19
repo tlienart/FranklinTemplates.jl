@@ -1,0 +1,5 @@
+[deps]
+Hyperscript = "47d2ed2b-36de-50cf-bf87-49c2cf4b8b91"
+Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
+Plotly = "58dd65bb-95f3-509e-9936-c39a10fdeae7"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"

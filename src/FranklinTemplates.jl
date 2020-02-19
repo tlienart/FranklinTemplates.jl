@@ -4,9 +4,9 @@ export newsite
 
 const FRANKLIN_PATH     = splitdir(pathof(FranklinTemplates))[1]
 const TEMPL_PATH        = joinpath(FRANKLIN_PATH, "templates")
-const LIST_OF_TEMPLATES = ("sandbox", "basic", "jemdoc", "just-the-docs",
-                           "hyde", "hypertext", "lanyon", "minimal-mistakes",
-                           "pure-sm", "tufte", "vela")
+const LIST_OF_TEMPLATES = ("sandbox", "sandbox-extended", "basic", "jemdoc",
+                           "just-the-docs", "hyde", "hypertext", "lanyon",
+                           "minimal-mistakes", "pure-sm", "tufte", "vela")
 
 """
     newsite(topdir; template="basic", cd=true)

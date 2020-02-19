@@ -5,6 +5,10 @@ descr = Dict{String,String}(
                    <span class="th-name">sandbox</span>
                    <p>Simplest one-page layout, meant for practicing or testing Franklin syntax.</p>
                    """,
+    "sandbox-extended"   => """
+                   <span class="th-name">sandbox-extended</span>
+                   <p>Simplest one-page layout, meant for practising interaction between Franklin and other packages.</p>
+                   """,
     "basic"     => """
                    <span class="th-name">basic</span>
                    <p>Barebone responsive theme with a top navigation bar, no extra javascript and a simple stylesheet.</p>
@@ -91,7 +95,7 @@ begin
     for τ ∈ FranklinTemplates.LIST_OF_TEMPLATES
         println("🍏  template: $τ")
         FranklinTemplates.newsite(τ; template=τ, changedir=true, verbose=false)
-        optimize(minify=(τ!="vela")) # see issue #7
+        optimize(minify=(τ ∉ ("vela", "sandbox-extended"))) # see issue #7
         cd("..")
         fixdir(τ)
     end

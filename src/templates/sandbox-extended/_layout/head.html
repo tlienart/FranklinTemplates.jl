@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{if hasmath}} {{insert head_katex.html }}     {{end}}
+  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+  {{if hasplotly}} <script src="/libs/plotly/plotly.min.js"></script> {{end}}
+  {{if hasmdpad}}
+    <script src="/libs/mdpad/mdpad.min.js"></script>
+    <script src="/libs/mdpad/mdpad-mithril.js"></script>
+    <script src="/libs/mdpad/mithril.min.js"></script>
+  {{end}}
+  <link rel="stylesheet" href="/css/franklin.css">
+  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+</head>
+<body>
+
+<!-- Content appended here -->
