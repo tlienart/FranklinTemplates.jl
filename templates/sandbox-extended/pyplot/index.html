@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Un-minified script so that can play a bit -->
+<link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/libs/katex/katex.min.css">
+     
+   <!-- Syntax highlighting via Prism, note: restricted langs -->
+<link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/libs/highlight/github.min.css">
+   
+  
+  
+  <link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/css/franklin.css">
+   <title>Franklin &#43; PyPlot</title>  
+</head>
+<body>
+
+<!-- Content appended here -->
+
+<div class="franklin-content">
+<h1 id="franklin_pyplot"><a href="/FranklinTemplates.jl/templates/sandbox-extended/pyplot/index.html#franklin_pyplot">Franklin &#43; PyPlot</a></h1>
+<p>Using Franklin with PyPlot is pretty straightforward but it&#39;s always nice to have a few examples especially for the paths.</p>
+<p><strong>NOTE</strong>: if you have lots of plots on a  page, it may happen that you see a warning like:</p>
+<pre><code class="julia hljs">RuntimeWarning: More than <span class="hljs-number">20</span> figures have been opened. Figures created through
+the pyplot interface (<span class="hljs-string">`matplotlib.pyplot.figure`</span>) are retained until explicitly
+closed and may consume too much memory. (To control this warning, see the
+rcParam <span class="hljs-string">`figure.max_open_warning`</span>).</code></pre>
+<p>In such a case, consider killing the server, calling <code>using PyPlot; PyPlot.close_figs&#40;&#41;</code> and restarting the server &#40;you don&#39;t need to do this, but it will make the error go away and possibly avoid slowdown.&#41;.</p>
+
+<h2 id="examples"><a href="/FranklinTemplates.jl/templates/sandbox-extended/pyplot/index.html#examples">Examples</a></h2>
+<h3 id="sincs"><a href="/FranklinTemplates.jl/templates/sandbox-extended/pyplot/index.html#sincs">Sincs</a></h3>
+
+<img src="/FranklinTemplates.jl/templates/sandbox-extended/assets/pyplot/code/output/sinc.svg" alt="">
+<h3 id="koch"><a href="/FranklinTemplates.jl/templates/sandbox-extended/pyplot/index.html#koch">Koch</a></h3>
+<p><a href="https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/fill.html#sphx-glr-gallery-lines-bars-and-markers-fill-py">Original script</a></p>
+
+<img src="/FranklinTemplates.jl/templates/sandbox-extended/assets/pyplot/code/output/koch.svg" alt="">
+<h3 id="scatterplot_histogram"><a href="/FranklinTemplates.jl/templates/sandbox-extended/pyplot/index.html#scatterplot_histogram">Scatterplot &#43; histogram</a></h3>
+<p><a href="https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/scatter_hist.html#sphx-glr-gallery-lines-bars-and-markers-scatter-hist-py">Original file</a></p>
+
+<img src="/FranklinTemplates.jl/templates/sandbox-extended/assets/pyplot/code/output/schist.svg" alt="">
+<div class="page-foot">
+  <div class="copyright">
+    &copy; The Oracle. Last modified: February 19, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+  </div>
+</div>
+
+</div>
+<!-- CONTENT ENDS HERE -->
+    
+        
+
+
+
+    
+    
+        
+
+
+    
+  </body>
+</html>

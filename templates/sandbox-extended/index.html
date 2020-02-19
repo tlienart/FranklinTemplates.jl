@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Un-minified script so that can play a bit -->
+<link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/libs/katex/katex.min.css">
+     
+   <!-- Syntax highlighting via Prism, note: restricted langs -->
+<link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/libs/highlight/github.min.css">
+   
+  
+  
+  <link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/css/franklin.css">
+   <title>Franklin Sandbox</title>  
+</head>
+<body>
+
+<!-- Content appended here -->
+
+<div class="franklin-content">
+<h1 id="franklin_extended_sandbox"><a href="/FranklinTemplates.jl/templates/sandbox-extended/index.html#franklin_extended_sandbox">Franklin extended sandbox</a></h1>
+<p>This is meant as a collection of simple examples of how you can use Franklin with other Julia libraries. It&#39;s assumed you&#39;re already familiar with the syntax &#40;otherwise, please try the <code>sandbox</code> template&#41;.</p>
+<ul>
+<li><p><a href="/FranklinTemplates.jl/templates/sandbox-extended/literate/">literate</a></p>
+</li>
+<li><p><a href="/FranklinTemplates.jl/templates/sandbox-extended/plotly/">plotly</a></p>
+</li>
+<li><p><a href="/FranklinTemplates.jl/templates/sandbox-extended/hyperscript/">hyperscript</a></p>
+</li>
+<li><p><a href="/FranklinTemplates.jl/templates/sandbox-extended/pyplot/">pyplot</a></p>
+</li>
+<li><p><a href="/FranklinTemplates.jl/templates/sandbox-extended/mdpad/">mdpad</a></p>
+</li>
+</ul>
+<h2 id="katex_numbering_onoff"><a href="/FranklinTemplates.jl/templates/sandbox-extended/index.html#katex_numbering_onoff">KaTeX numbering on/off</a></h2>
+<p>Have a look at <code>.no-number</code> in the CSS.</p>
+<p>This is numbered <span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex"> 1+1 = 2 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></span>
+<p>This isn&#39;t</p>
+<div class="no-number"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex"> 2+2 = 4 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span></span> and <span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>7</mn><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex"> 3+3 = 7-1 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span></div>
+<p>Numbered again <span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>7</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex"> 7 + 1 = 8 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span></span>
+<div class="page-foot">
+  <div class="copyright">
+    &copy; The Oracle. Last modified: February 19, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+  </div>
+</div>
+
+</div>
+<!-- CONTENT ENDS HERE -->
+    
+        
+
+
+
+    
+    
+        
+
+
+    
+  </body>
+</html>

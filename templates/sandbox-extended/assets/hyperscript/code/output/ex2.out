@@ -1,0 +1,2 @@
+~~~<style>p[v-style5] {font-weight: bold;color: red;}</style>~~~
+~~~<p v-style5>hello</p>~~~
