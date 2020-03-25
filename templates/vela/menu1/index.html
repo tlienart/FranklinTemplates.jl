@@ -51,8 +51,8 @@
 <!-- Content appended here -->
 
 <div class="franklin-content">
-<h1 id="working_with_code_blocks"><a href="/FranklinTemplates.jl/templates/vela/menu1/index.html#working_with_code_blocks">Working with code blocks</a></h1>
-<h2 id="live_evaluation_of_code_blocks"><a href="/FranklinTemplates.jl/templates/vela/menu1/index.html#live_evaluation_of_code_blocks">Live evaluation of code blocks</a></h2>
+<h1 id="working_with_code_blocks"><a href="#working_with_code_blocks">Working with code blocks</a></h1>
+<h2 id="live_evaluation_of_code_blocks"><a href="#live_evaluation_of_code_blocks">Live evaluation of code blocks</a></h2>
 <p>If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.</p>
 <p>Indeed, what happens is that the code block gets saved as a script which then gets executed. This also allows for that block to not be re-executed every time you change something <em>else</em> on the page.</p>
 <p>Here&#39;s a simple example &#40;change values in <code>a</code> to see the results being live updated&#41;:</p>
@@ -93,7 +93,7 @@ println(dot(a, a))</code></pre>
 <span class="hljs-meta">@show</span> randn(<span class="hljs-number">2</span>)</code></pre>
 <pre><code class="plaintext hljs">randn(2) = [0.2972879845354616, 0.3823959677906078]
 </code></pre>
-<h2 id="including_scripts"><a href="/FranklinTemplates.jl/templates/vela/menu1/index.html#including_scripts">Including scripts</a></h2>
+<h2 id="including_scripts"><a href="#including_scripts">Including scripts</a></h2>
 <p>Another approach is to include the content of a script that has already been executed. This can be an alternative to the description above if you&#39;d like to only run the code once because it&#39;s particularly slow or because it&#39;s not Julia code. For this you can use the <code>\input</code> command specifying which language it should be tagged as:</p>
 <pre><code class="julia hljs">x = randn(<span class="hljs-number">5</span>)
 y = randn(<span class="hljs-number">5</span>)
@@ -113,7 +113,7 @@ y = randn(<span class="hljs-number">5</span>)
 <p>Using this approach with the <code>generate_results.jl</code> file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.
 <div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: February 19, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+    &copy; Septimia Zenobia. Last modified: March 25, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
   </div>
 </div>
 
