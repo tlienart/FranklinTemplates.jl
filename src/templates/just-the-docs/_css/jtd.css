@@ -464,8 +464,8 @@ td.fndef-backref {
     margin-bottom: 1em;}
 
 
-.franklin-content .fndef table {
-  margin; 0;
+.franklin-content table.fndef {
+  margin: 0;
   margin-bottom: 1em;
   border: 0;
 }

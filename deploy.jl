@@ -6,11 +6,11 @@ cd(@__DIR__)
 for (root, _, files) ∈ walkdir(joinpath(@__DIR__, "docs", "build"))
     for file ∈ files
         endswith(file, ".html") || continue
-        path = joinpath(root, file)
-        html = read(path, String)
-        html = replace(html, "href=\"/" => "href=\"/FranklinTemplates.jl/")
-        html = replace(html, "src=\"/" => "src=\"/FranklinTemplates.jl/")
-        write(path, html)
+        path  = joinpath(root, file)
+        htmls = read(path, String)
+        htmls = replace(htmls, "href=\"/" => "href=\"/FranklinTemplates.jl/")
+        htmls = replace(htmls, "src=\"/" => "src=\"/FranklinTemplates.jl/")
+        write(path, htmls)
     end
 end
 
