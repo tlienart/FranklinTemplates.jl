@@ -1,2 +1,2 @@
-~~~<style>p[v-style1] {font-weight: bold;color: red;}</style>~~~
-~~~<p v-style1>hello</p>~~~
+~~~<style>p[v-style2] {font-weight: bold;color: red;}</style>~~~
+~~~<p v-style2>hello</p>~~~

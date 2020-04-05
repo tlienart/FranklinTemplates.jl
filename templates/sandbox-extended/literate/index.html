@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Un-minified script so that can play a bit -->
-<link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/libs/katex/katex.min.css">
+   <link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/libs/katex/katex.min.css">
      
-   <!-- Syntax highlighting via Prism, note: restricted langs -->
-<link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/libs/highlight/github.min.css">
+   <link rel="stylesheet" href="/FranklinTemplates.jl/templates/sandbox-extended/libs/highlight/github.min.css">
    
   
   
@@ -27,8 +25,8 @@
 <p>You can write tutorials using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a> and simply plug them in Franklin where they will be &#40;re&#41;evaluated and the output of code blocks shown assuming you&#39;ve written <code>@def showall &#61; true</code> on the page. Here&#39;s an example:</p>
 <h2 id="literate_example"><a href="#literate_example">Literate example</a></h2>
 <p>Whatever is in comment can be Franklin-markdown, so for instance you can write maths in much the same way:</p>
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>i</mi><mi>τ</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex"> \exp(i\tau) = 1 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span>
-<p>This is Euler&#39;s identity following the <a href="https://tauday.com/tau-manifesto"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span></span></span></span> day manifesto</a>.</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>i</mi><mi>τ</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex"> \exp(i\tau) = 1 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span>
+<p>This is Euler&#39;s identity following the <a href="https://tauday.com/tau-manifesto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span></span></span></span> day manifesto</a>.</p>
 <p>Code:</p>
 <pre><code class="julia hljs">a = <span class="hljs-number">5</span>
 a^<span class="hljs-number">2</span></code></pre><pre><code class="plaintext hljs">25</code></pre>
@@ -50,7 +48,7 @@ f = first.(v)</code></pre><pre><code class="plaintext hljs">4-element Array{Char
 </code></pre> 
 <div class="page-foot">
   <div class="copyright">
-    &copy; The Oracle. Last modified: March 25, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+    &copy; The Oracle. Last modified: April 05, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
   </div>
 </div>
 
