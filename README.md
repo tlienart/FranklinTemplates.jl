@@ -4,7 +4,6 @@ Templates for [Franklin](https://github.com/tlienart/Franklin.jl), the static-si
 
 Most of these templates are adapted from existing, popular templates with minor modifications to accommodate Franklin's content.
 
-
 **NOTE**: these templates should be seen as _starting points_, they are far from perfect. PRs to help improve them will be very welcome, thanks! Most importantly they are designed to be simple to adjust to your needs.
 
 ## List of templates
@@ -26,6 +25,32 @@ The grid below keeps track of their name, license, the kind of navbar they have 
 | `"lanyon"` | [Lanyon](https://github.com/poole/lanyon) | [MIT](https://github.com/poole/lanyon/blob/master/LICENSE.md) | Side (collapsable) | No |
 | `"just-the-docs"` | [Just the docs](https://github.com/pmarsceill/just-the-docs) | [MIT](https://github.com/pmarsceill/just-the-docs/blob/master/LICENSE.txt) | Side/Top | No |
 | `"minimal-mistakes"` | [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes) | [MIT](https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE) | Side/Top | No |
+
+## Fixing/Adding a template
+
+The package now contains a few utils to make it easier to add / fix templates.
+
+1. clone a fork of this package wherever you usually do things, typically `~/.julia/dev/`
+1. checkout the package in development mode with `] dev FranklinTemplates`
+1. `cd` to a sensible workspace and do one of
+    1. `using FranklinTemplates; newsite("newTemplate")` to start working on `newTemplate` more or less from scratch,
+    1. `using FranklinTemplates; newsite("newTemplate", template="jemdoc")` to start working on `newTemplate` using some other template as starting point,
+    1. `using FranklinTemplates; modify("jemdoc")` to quickly start working on an existing template in order to fix it.
+1. change things, fix things, etc.
+1. bring your changes into your fork with `addtemplate("path/to/your/work")`
+    1. if the template doesn't exist, it will just add the folder removing things that are duplicate from `templates/common/`.
+    1. if the template exists, it will just adjust what needs to be adjusted.
+
+Now if it was just a bunch of fixes to an existing template, you can just push those changes to your fork and open a PR.
+
+If it's a new template that you're working on, you can also do that but there's a few extra things you need to do:
+
+1. in `FranklinTemplates/src/FranklinTemplates.jl` add the name of your template in the list
+1. in `FranklinTemplates/docs/make.jl` add the name of your template with a description in the list
+1. in `FranklinTemplates/docs/thumb` add a screenshot of your template in `png` format with **exactly** an 850x850 dimension
+1. in `FranklinTemplates/docs/index_head.html` add a CSS block following the other examples
+
+Thanks!!
 
 ## Misc
 
