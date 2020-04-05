@@ -4,11 +4,18 @@ Templates for [Franklin](https://github.com/tlienart/Franklin.jl), the static-si
 
 Most of these templates are adapted from existing, popular templates with minor modifications to accommodate Franklin's content.
 
-**NOTE**: these templates should be seen as starting points, they are far from perfect. PRs to help improve them will be very welcome, thanks!
+
+**NOTE**: these templates should be seen as _starting points_, they are far from perfect. PRs to help improve them will be very welcome, thanks! Most importantly they are designed to be simple to adjust to your needs.
+
+## List of templates
+
+Get an idea for which template you like using [this preview](https://tlienart.github.io/FranklinTemplates.jl/).
+The grid below keeps track of their name, license, the kind of navbar they have and whether they require Javascript.
 
 | Name | Source | License | Navbar | JS  |
 | ---- | ------ | ------- | ----- | --- |
 | `"sandbox"`  | N/A    | MIT     | N/A | No |
+| `"sandbox-extended"`  | N/A    | MIT     | N/A | No |
 | `"basic"`  | N/A    | MIT     | Top | No |
 | `"jemdoc"` | [jemdoc](https://github.com/jem/jemdoc) | N/A | Side | No |
 | `"hypertext"` | [grav theme hypertext](https://github.com/artofthesmart/hypertext) | [MIT](https://github.com/artofthesmart/hypertext/blob/master/LICENSE) | Top | No |
@@ -23,7 +30,7 @@ Most of these templates are adapted from existing, popular templates with minor 
 ## Misc
 
 * Current version of KaTeX: 0.11.1
-* Current version of highlight: v9.17.1 (with `css`, `python`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext` and the minified `github` theme).
+* Current version of highlight: v9.17.1 (with `css`, `C/AL`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
 
 ## Notes:
 
