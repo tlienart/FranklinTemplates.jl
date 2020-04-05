@@ -15,7 +15,14 @@ This is meant as a collection of simple examples of how you can use Franklin wit
 
 ## KaTeX numbering on/off
 
-Have a look at `.no-number` in the CSS.
+~~~
+<style>
+.no-number .katex-display::after {
+  counter-increment: nothing;
+  content: "";
+}
+</style>
+~~~
 
 This is numbered
 $$ 1+1 = 2 $$
