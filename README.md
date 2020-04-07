@@ -55,7 +55,7 @@ Thanks!!
 ## Misc
 
 * Current version of KaTeX: 0.11.1
-* Current version of highlight: v9.17.1 (with `css`, `C/AL`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
+* Current version of highlight: v9.18.1 (with `css`, `C/AL`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
 
 ## Notes:
 
