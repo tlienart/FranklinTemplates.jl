@@ -49,9 +49,7 @@
 
 
 <!-- Content appended here -->
-
-<div class="franklin-content">
-<h1 id="how_to_use_franklin"><a href="#how_to_use_franklin">How to use Franklin</a></h1>
+<div class="franklin-content"><h1 id="how_to_use_franklin"><a href="#how_to_use_franklin">How to use Franklin</a></h1>
 <div class="franklin-toc"><ol><li><a href="#how_to_use_franklin">How to use Franklin</a><ol><li><a href="#the_base_with_markdown">The base with Markdown</a><ol><li><a href="#symbols_and_html_entities">Symbols and html entities</a></li></ol></li><li><a href="#basic_franklin_extensions">Basic Franklin extensions</a><ol><li><a href="#divs">Divs</a></li><li><a href="#latex_and_maths">LaTeX and Maths</a></li><li><a href="#a_quick_note_on_whitespaces">A quick note on whitespaces</a></li><li><a href="#raw_html">Raw HTML</a></li></ol></li><li><a href="#pages_and_structure">Pages and structure</a></li><li><a href="#references_not_really">References &#40;not really&#41;</a></li><li><a href="#header_and_footer">Header and Footer</a></li></ol></li></ol></div> </p>
 <p>This section is meant as a refresher if you&#39;re new to Franklin. Have a look at both how the website renders and the corresponding markdown &#40;<code>index.md</code>&#41;. Modify at will to get a feeling for how things work&#33;</p>
 <p>Ps: if you want to modify the header or footer or the general look of the website, adjust the files in</p>
@@ -181,15 +179,12 @@
 <p>As you can see here at the bottom of the page, there is a footer which you may want on all pages but for instance you may want the date of last modification to be displayed. In a fashion heavily inspired by <a href="https://gohugo.io">Hugo</a>, you can write things like</p>
 <pre><code class="html hljs">Last modified: {{ fill fd_mtime }}.</code></pre>
 <p>&#40;cf. <code>src/_html_parts/page_foot.html</code>&#41; which will then replace these braces with the content of a dictionary of variables at the key <code>fd_mtime</code>. This dictionary of variables is accessed locally by pages through <code>@def varname &#61; value</code> and globally through the <code>config.md</code> page via the same syntax.</p>
-<p>There&#39;s a few other such functions of the form <code>&#123;&#123;fname p₁ p₂&#125;&#125;</code> as well as support for conditional blocks. If you wander through the <code>src/_html_parts/</code> folder and its content, you should be able to see those in action.
-<div class="page-foot">
+<p>There&#39;s a few other such functions of the form <code>&#123;&#123;fname p₁ p₂&#125;&#125;</code> as well as support for conditional blocks. If you wander through the <code>src/_html_parts/</code> folder and its content, you should be able to see those in action.<div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: April 05, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+    &copy; Septimia Zenobia. Last modified: April 28, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
   </div>
 </div>
-
-</div>
-<!-- CONTENT ENDS HERE -->
+</div><!-- CONTENT ENDS HERE -->
   </main> <!-- end of id=main -->
   <script src="/FranklinTemplates.jl/templates/vela/libs/vela/metisMenu.min.js"></script>
   <script src="/FranklinTemplates.jl/templates/vela/libs/vela/slideout.min.js"></script>
