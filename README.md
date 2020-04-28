@@ -55,9 +55,19 @@ Thanks!!
 ## Misc
 
 * Current version of KaTeX: 0.11.1
-* Current version of highlight: v9.17.1 (with `css`, `C/AL`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
+* Current version of highlight: v9.18.1 (with `css`, `C/AL`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
 
 ## Notes:
+
+This package contains a copy of the relevant KaTeX files and highlight.js files;
+- the KaTeX files are basically provided "as is", completely unmodified; you could download your own version of the files from the [original repo](https://github.com/KaTeX/KaTeX) and replace the files in `_libs/katex`,
+- the Highlight.js files are _essentially_ provided "as is" for a set of languages, there is a small modification in the `highlight.pack.js` file to highlight julia shell and pkg prompt (see next section). You can also download your own version of files from the [original source](https://highlightjs.org) where you might want to
+    - specify languages you want to highlight if other than the default list above
+    - specify the "style" (we use github but you could use another sheet)
+
+**Note**: in Franklin's `optimize` pass, by default the **full library** `highlight.js` is called to pre-render highlighting; this bypasses the `highlight.pack.js` file and, in particular, supports highlighting for **all** languages. In other words, the `highlight.pack.js` file is relevant only when you preview your site locally with `serve()` or if you don't intend to apply the prerendering step.
+
+### Maintenance
 
 - if update `highlight.pack.js`, look for `julia>`, replace (so that pkg and shell are recognised)
 
