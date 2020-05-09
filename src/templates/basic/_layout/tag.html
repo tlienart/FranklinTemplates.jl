@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{if hasmath}} {{insert head_katex.html }}     {{end}}
-  {{if hascode}} {{insert head_highlight.html }}   {{end}}
   <link rel="stylesheet" href="/css/franklin.css">
   <link rel="stylesheet" href="/css/basic.css">
-  <link rel="icon" href="/assets/favicon.png">
-  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+  <title>Tag: {{fill fd_tag}}</title>
 </head>
 <body>
   {{insert header.html}}
-
-<!-- Content appended here -->
+  <div class="{{div_content}}">
+    <h1>Tag: {{fill fd_tag}}</h1>
+    {{taglist}}
+    {{insert page_foot.html}}
+  </div>
+</body>
+</html>
