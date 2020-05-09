@@ -9,48 +9,50 @@
    
 
   <link href="/FranklinTemplates.jl/templates/vela/css/franklin.css" rel="stylesheet">
-  <link href="/FranklinTemplates.jl/templates/vela/css/vela.css" rel="stylesheet">
-  <script src="/FranklinTemplates.jl/templates/vela/libs/vela/jquery.min.js"></script>
+<link href="/FranklinTemplates.jl/templates/vela/css/vela.css" rel="stylesheet">
+<script src="/FranklinTemplates.jl/templates/vela/libs/vela/jquery.min.js"></script>
 
-  <link rel="icon" href="/FranklinTemplates.jl/templates/vela/assets/favicon.png">
+<link rel="icon" href="/FranklinTemplates.jl/templates/vela/assets/favicon.png">
+
 
   <title>Franklin Example | Vela</title>
 </head>
 <body>
-  <div class="main-nav" id="menu">
-    <div class="flex-container">
-      <span class="sidebar-brand">
-        <h3 style='font-size: 25px'>Vela Template</h3>
-      </span>
-    </div> <!-- class="flex-container" -->
+<div class="main-nav" id="menu">
+  <div class="flex-container">
+    <span class="sidebar-brand">
+      <h3 style='font-size: 25px'>Vela Template</h3>
+    </span>
+  </div> <!-- class="flex-container" -->
 
-    <nav class="sidebar-nav">
-      <ul class="metismenu"  id="metismenu" >
-        <li><a href="/FranklinTemplates.jl/templates/vela/index.html">Home</a></li>
-        <li><a href="/FranklinTemplates.jl/templates/vela/menu1/">Code blocks</a></li>
-        <li><a href="" class="has-arrow">Topic</a>
-          <ul>
-            <li><a href="/FranklinTemplates.jl/templates/vela/menu2/">More goodies</a></li>
-          </ul>
-        </li>
-        <li><a href="/FranklinTemplates.jl/templates/vela/menu3/">Menu 3</a></li>
-      </ul>
-    </nav>
-  </div> <!-- main nav menu -->
+  <nav class="sidebar-nav">
+    <ul class="metismenu"  id="metismenu" >
+      <li><a href="/FranklinTemplates.jl/templates/vela/index.html">Home</a></li>
+      <li><a href="/FranklinTemplates.jl/templates/vela/menu1/">Code blocks</a></li>
+      <li><a href="" class="has-arrow">Topic</a>
+        <ul>
+          <li><a href="/FranklinTemplates.jl/templates/vela/menu2/">More goodies</a></li>
+        </ul>
+      </li>
+      <li><a href="/FranklinTemplates.jl/templates/vela/menu3/">Tags</a></li>
+    </ul>
+  </nav>
+</div> <!-- main nav menu -->
 
-  <main id="panel">
-    <div class="toggle-button hamburger hamburger--spin">
-      <div class="hamburger-box">
-        <div class="hamburger-inner"></div>
-      </div>
+<main id="panel">
+  <div class="toggle-button hamburger hamburger--spin">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
     </div>
-    <h1 class="page title">Franklin Example</h1>
-    <hr>
+  </div>
+  <h1 class="page title">Franklin Example</h1>
+  <hr>
+
 
 
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="how_to_use_franklin"><a href="#how_to_use_franklin">How to use Franklin</a></h1>
-<div class="franklin-toc"><ol><li><a href="#how_to_use_franklin">How to use Franklin</a><ol><li><a href="#the_base_with_markdown">The base with Markdown</a><ol><li><a href="#symbols_and_html_entities">Symbols and html entities</a></li></ol></li><li><a href="#basic_franklin_extensions">Basic Franklin extensions</a><ol><li><a href="#divs">Divs</a></li><li><a href="#latex_and_maths">LaTeX and Maths</a></li><li><a href="#a_quick_note_on_whitespaces">A quick note on whitespaces</a></li><li><a href="#raw_html">Raw HTML</a></li></ol></li><li><a href="#pages_and_structure">Pages and structure</a></li><li><a href="#references_not_really">References &#40;not really&#41;</a></li><li><a href="#header_and_footer">Header and Footer</a></li></ol></li></ol></div> </p>
+<div class="franklin-toc"><ol><li><a href="#the_base_with_markdown">The base with Markdown</a><ol><li><a href="#symbols_and_html_entities">Symbols and html entities</a></li></ol></li><li><a href="#basic_franklin_extensions">Basic Franklin extensions</a><ol><li><a href="#divs">Divs</a></li><li><a href="#latex_and_maths">LaTeX and Maths</a></li><li><a href="#a_quick_note_on_whitespaces">A quick note on whitespaces</a></li><li><a href="#raw_html">Raw HTML</a></li></ol></li><li><a href="#pages_and_structure">Pages and structure</a></li><li><a href="#references_not_really">References &#40;not really&#41;</a></li><li><a href="#header_and_footer">Header and Footer</a></li></ol></div> </p>
 <p>This section is meant as a refresher if you&#39;re new to Franklin. Have a look at both how the website renders and the corresponding markdown &#40;<code>index.md</code>&#41;. Modify at will to get a feeling for how things work&#33;</p>
 <p>Ps: if you want to modify the header or footer or the general look of the website, adjust the files in</p>
 <ul>
@@ -181,7 +183,7 @@
 <p>&#40;cf. <code>src/_html_parts/page_foot.html</code>&#41; which will then replace these braces with the content of a dictionary of variables at the key <code>fd_mtime</code>. This dictionary of variables is accessed locally by pages through <code>@def varname &#61; value</code> and globally through the <code>config.md</code> page via the same syntax.</p>
 <p>There&#39;s a few other such functions of the form <code>&#123;&#123;fname p₁ p₂&#125;&#125;</code> as well as support for conditional blocks. If you wander through the <code>src/_html_parts/</code> folder and its content, you should be able to see those in action.<div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: April 28, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+    &copy; Septimia Zenobia. Last modified: May 09, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
