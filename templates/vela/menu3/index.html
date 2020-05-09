@@ -112,6 +112,8 @@
     write(c, <span class="hljs-string">"...1..."</span>)
     <span class="hljs-comment"># go over all paths</span>
     <span class="hljs-keyword">for</span> rpath <span class="hljs-keyword">in</span> rpaths
+        <span class="hljs-comment"># recover the url corresponding to the rpath</span>
+        url = get_url(rpath)
         <span class="hljs-comment"># recover the title of the page if there is one defined,</span>
         <span class="hljs-comment"># if there isn't, fallback on the path to the page</span>
         title = pagevar(rpath, <span class="hljs-string">"title"</span>)
