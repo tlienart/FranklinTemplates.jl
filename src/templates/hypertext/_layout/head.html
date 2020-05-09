@@ -5,21 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{if hasmath}} {{insert head_katex.html }}     {{end}}
   {{if hascode}} {{insert head_highlight.html }}   {{end}}
-  <link rel="stylesheet" href="/css/franklin.css">
-  <link rel="stylesheet" href="/css/hypertext.css">
-  <link rel="icon" href="/assets/favicon.png">
+  {{insert style.html}}
   {{isdef title}} <title>{{fill title}}</title>  {{end}}
 </head>
 <body>
-  <header>
-    <h1><a href="/">Hypertext Theme</a></h1>
-    <nav>
-      <a href="/" class="current">Home</a>
-    | <a href="/menu1/">Code blocks</a>
-    | <a href="/menu2/">More goodies</a>
-    | <a href="/menu3/">Menu 3</a>
-      <hr/>
-    </nav>
-  </header>
+{{insert header.html}}
 
 <!-- Content appended here -->
