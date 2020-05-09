@@ -71,6 +71,8 @@ function hfun_custom_taglist()::String
     write(c, "...1...")
     # go over all paths
     for rpath in rpaths
+        # recover the url corresponding to the rpath
+        url = get_url(rpath)
         # recover the title of the page if there is one defined,
         # if there isn't, fallback on the path to the page
         title = pagevar(rpath, "title")
