@@ -105,7 +105,7 @@ end
 Which you can use like this `{{m1fill title}}`: **{{m1fill title}}**. Of course  in this specific case you could also have used `{{fill title menu1}}`: **{{fill title menu1}}**.
 
 Of course these examples are not very useful, in practice you might want to use it to generate actual HTML in a specific way using Julia code.
-For instance you can use it to customise how [tag pages look like](http://localhost:8000/menu3/#customising_tag_pages).
+For instance you can use it to customise how [tag pages look like](/tags/#customising_tag_pages).
 
 A nice example of what you can do is in the [SymbolicUtils.jl manual](https://juliasymbolics.github.io/SymbolicUtils.jl/api/) where they use a `hfun_` to generate HTML encapsulating the content of code docstrings, in a way doing something similar to what Documenter does. See [how they defined it](https://github.com/JuliaSymbolics/SymbolicUtils.jl/blob/website/utils.jl).
 
