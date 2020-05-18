@@ -1,5 +1,3 @@
-@def hascode = true
-
 # Franklin + GR
 
 ## Examples
@@ -22,4 +20,3 @@ println("~~~$(s.s)~~~") # hide
 ```
 
 \textoutput{gr}
-
