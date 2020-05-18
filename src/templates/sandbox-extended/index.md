@@ -12,6 +12,7 @@ This is meant as a collection of simple examples of how you can use Franklin wit
 * [hyperscript](/hyperscript/)
 * [pyplot](/pyplot/)
 * [mdpad](/mdpad/)
+* [gr](/gr/)
 
 ## KaTeX numbering on/off
 
