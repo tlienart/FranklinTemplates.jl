@@ -69,14 +69,14 @@ This package contains a copy of the relevant KaTeX files and highlight.js files;
 
 ### Maintenance
 
-- if update `highlight.pack.js`, look for `julia>`, replace (so that pkg and shell are recognised)
+- if update `highlight.pack.js`, look for `julia>`, replace (so that ‚`pkg>` and `shell>` are recognised)
 
-```
+```js
 hljs.registerLanguage("julia-repl",function(e){return{c:[{cN:"meta",b:/^julia>/,relevance:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]}]}});
 ```
 
-by
+with
 
-```
+```js
 hljs.registerLanguage("julia-repl",function(e){return{c:[{cN:"meta",b:/^julia>/,relevance:10,starts:{e:/^(?![ ]{6})/,sL:"julia"}},{cN:"metas",b:/^shell>/,relevance:10,starts:{e:/^(?![ ]{6})/,sL:"bash"}},{cN:"metap",b:/^\(.*\)\spkg>/,relevance:10,starts:{e:/^(?![ ]{6})/,sL:"julia"}}]}});
 ```
