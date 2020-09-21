@@ -21,7 +21,7 @@
 </li>
 </ul>
 <p>You can write tutorials using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a> and simply plug them in Franklin where they will be &#40;re&#41;evaluated and the output of code blocks shown assuming you&#39;ve written <code>@def showall &#61; true</code> on the page. Here&#39;s an example:</p>
-<h2 id="literate_example"><a href="#literate_example">Literate example</a></h2>
+<p><h2 id="literate_example"><a href="#literate_example">Literate example</a></h2>
 <p>Whatever is in comment can be Franklin-markdown, so for instance you can write maths in much the same way:</p>
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>i</mi><mi>τ</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex"> \exp(i\tau) = 1 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></span>
 <p>This is Euler&#39;s identity following the <a href="https://tauday.com/tau-manifesto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.1132em;">τ</span></span></span></span> day manifesto</a>.</p>
@@ -29,12 +29,12 @@
 <pre><code class="julia hljs">a = <span class="hljs-number">5</span>
 a^<span class="hljs-number">2</span></code></pre><pre><code class="plaintext hljs">25</code></pre>
 <p>Any valid code basically:</p>
-<pre><code class="julia hljs">v = [<span class="hljs-string">"Thom"</span>, <span class="hljs-string">"Martha"</span>, <span class="hljs-string">"Smith"</span>, <span class="hljs-string">"John"</span>]
+<pre><code class="julia hljs">v = [<span class="hljs-string">&quot;Thom&quot;</span>, <span class="hljs-string">&quot;Martha&quot;</span>, <span class="hljs-string">&quot;Smith&quot;</span>, <span class="hljs-string">&quot;John&quot;</span>]
 f = first.(v)</code></pre><pre><code class="plaintext hljs">4-element Array{Char,1}:
- 'T': ASCII/Unicode U+0054 (category Lu: Letter, uppercase)
- 'M': ASCII/Unicode U+004D (category Lu: Letter, uppercase)
- 'S': ASCII/Unicode U+0053 (category Lu: Letter, uppercase)
- 'J': ASCII/Unicode U+004A (category Lu: Letter, uppercase)</code></pre>
+ &#x27;T&#x27;: ASCII/Unicode U+0054 (category Lu: Letter, uppercase)
+ &#x27;M&#x27;: ASCII/Unicode U+004D (category Lu: Letter, uppercase)
+ &#x27;S&#x27;: ASCII/Unicode U+0053 (category Lu: Letter, uppercase)
+ &#x27;J&#x27;: ASCII/Unicode U+004A (category Lu: Letter, uppercase)</code></pre>
 <p>So the workflow is to just write a standard Literate document using Franklin markdown in the comments and normal code. You can also hide lines:</p>
 <pre><code class="julia hljs">randn()</code></pre><pre><code class="plaintext hljs">0.2972879845354616</code></pre>
 <p>Or hide everything &#40;note that for the line to be taken as comment for the code block there should be no whitespace between the <code>#</code> and the <code>h</code>&#41;.</p>
@@ -42,10 +42,12 @@ f = first.(v)</code></pre><pre><code class="plaintext hljs">4-element Array{Char
 <p>It still shows the result though since <code>showall &#61; true</code>&#33; If you want to suppress it, just use a <code>;</code> on the last line:</p>
 
 <p>That&#39;s basically it.</p>
-<pre><code class="julia hljs">println(<span class="hljs-string">"done!"</span>)</code></pre><pre><code class="plaintext hljs">done!
-</code></pre> <div class="page-foot">
+<pre><code class="julia hljs">println(<span class="hljs-string">&quot;done!&quot;</span>)</code></pre><pre><code class="plaintext hljs">done!
+</code></pre>
+ </p>
+<div class="page-foot">
   <div class="copyright">
-    &copy; The Oracle. Last modified: May 18, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+    &copy; The Oracle. Last modified: September 21, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

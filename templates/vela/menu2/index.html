@@ -58,7 +58,7 @@
 <li><p>indirect references for instance &#91;like so&#93;</p>
 </li>
 </ul>
- or also for images</p>
+<p> or also for images</p>
 <p>&#33;&#91;&#93;&#91;some image&#93;</p>
 <p>some people find that useful as it allows referring multiple times to the same link for instance.</p>
 
@@ -111,7 +111,7 @@ b = a+<span class="hljs-number">1</span></code></pre>
 <p>Usually you will want to pass variable name &#40;either local or global&#41; and collect their value via one of <code>locvar</code>, <code>globvar</code> or <code>pagevar</code> depending on your use case. Let&#39;s have another toy example:</p>
 <pre><code class="julia hljs"><span class="hljs-keyword">function</span> hfun_m1fill(vname)
   var = vname[<span class="hljs-number">1</span>]
-  <span class="hljs-keyword">return</span> pagevar(<span class="hljs-string">"menu1"</span>, var)
+  <span class="hljs-keyword">return</span> pagevar(<span class="hljs-string">&quot;menu1&quot;</span>, var)
 <span class="hljs-keyword">end</span></code></pre>
 <p>Which you can use like this <code>&#123;&#123;m1fill title&#125;&#125;</code>: <strong>Franklin Example</strong>. Of course  in this specific case you could also have used <code>&#123;&#123;fill title menu1&#125;&#125;</code>: <strong>Code blocks</strong>.</p>
 <p>Of course these examples are not very useful, in practice you might want to use it to generate actual HTML in a specific way using Julia code. For instance you can use it to customise how <a href="/FranklinTemplates.jl/templates/vela/menu3/#customising_tag_pages">tag pages look like</a>.</p>
@@ -127,9 +127,10 @@ b = a+<span class="hljs-number">1</span></code></pre>
   <span class="hljs-keyword">return</span> uppercase(brace_content)
 <span class="hljs-keyword">end</span></code></pre>
 <p>You can call the above with <code>\baz&#123;some string&#125;</code>: SOME STRING.</p>
-<p><strong>Note</strong>: the output <strong>will be</strong> reprocessed by Franklin, if you want to avoid this, then escape the output by using <code>return &quot;~~~&quot; * s * &quot;~~~&quot;</code> and it will be plugged  in as is in the HTML.<div class="page-foot">
+<p><strong>Note</strong>: the output <strong>will be</strong> reprocessed by Franklin, if you want to avoid this, then escape the output by using <code>return &quot;~~~&quot; * s * &quot;~~~&quot;</code> and it will be plugged  in as is in the HTML.</p>
+<div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: 0001-01-01. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a>.
+    &copy; Septimia Zenobia. Last modified: 0001-01-01. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
