@@ -56,12 +56,12 @@ jobs:
             include("docs/make.jl");
             for (root, _, files) ∈ walkdir(joinpath("docs", "build"))
                 for file ∈ files
-                    endswith(file, ".html") || continue
-                    path  = joinpath(root, file)
-                    htmls = read(path, String)
-                    htmls = replace(htmls, "href=\"/" => "href=\"/FranklinTemplates.jl/")
-                    htmls = replace(htmls, "src=\"/" => "src=\"/FranklinTemplates.jl/")
-                    write(path, htmls)
+                    endswith(file, ".html") || continue;
+                    path  = joinpath(root, file);
+                    htmls = read(path, String);
+                    htmls = replace(htmls, "href=\"/" => "href=\"/FranklinTemplates.jl/");
+                    htmls = replace(htmls, "src=\"/" => "src=\"/FranklinTemplates.jl/");
+                    write(path, htmls);
                 end
             end'
     - name: Build and Deploy
