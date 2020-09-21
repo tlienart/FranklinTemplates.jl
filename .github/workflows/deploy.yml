@@ -48,13 +48,14 @@ jobs:
     #   The last line should be `optimize()` though you may want to give it
     #   specific arguments, see the documentation or ?optimize in the REPL.
     - run: julia -e '
-            using Pkg; Pkg.add(["NodeJS", "Franklin"]);
+            using Pkg; Pkg.add(["NodeJS", "Franklin", "PyPlot", "GR", "Literate", "PlotlyJS", "Hyperscript"]);
             Pkg.add(Pkg.PackageSpec(name="FranklinTemplates", rev="master"));
             using NodeJS; run(`$(npm_cmd()) install highlight.js`);
             using Franklin;
             Pkg.activate("."); Pkg.instantiate();
-            include("docs/make.jl");
-            for (root, _, files) ∈ walkdir(joinpath("docs", "build"))
+            cd("docs")
+            include("make.jl");
+            for (root, _, files) ∈ walkdir("build")
                 for file ∈ files
                     endswith(file, ".html") || continue;
                     path  = joinpath(root, file);
