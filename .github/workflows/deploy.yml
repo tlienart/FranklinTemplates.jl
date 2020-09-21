@@ -53,7 +53,7 @@ jobs:
             using NodeJS; run(`$(npm_cmd()) install highlight.js`);
             using Franklin;
             Pkg.activate("."); Pkg.instantiate();
-            cd("docs")
+            cd("docs");
             include("make.jl");
             for (root, _, files) ∈ walkdir("build")
                 for file ∈ files
