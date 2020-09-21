@@ -55,7 +55,7 @@ jobs:
             Pkg.activate("."); Pkg.instantiate();
             cd("docs");
             include("make.jl");
-            for (root, _, files) ∈ walkdir("build")
+            for (root, _, files) ∈ walkdir(build)
                 for file ∈ files
                     endswith(file, ".html") || continue;
                     path  = joinpath(root, file);
