@@ -175,7 +175,8 @@ html {
     padding-left: 5px;}
 .franklin-content .fndef td.fndef-content {
     font-size: 80%;
-    padding-left: 10px;}
+    padding-left: 10px;
+    width: 100%;}
 
 /* ==================================================================
     IMAGES in CONTENT
