@@ -26,9 +26,9 @@ jobs:
     #   matplotlib which is necessary if you intend to use PyPlot. If you do
     #   not, then you can remove the `run: pip install matplotlib` line.
     - name: Install python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.8'
     - run: pip install matplotlib # if you use PyPlot this is needed
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
