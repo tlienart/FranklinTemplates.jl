@@ -4,7 +4,9 @@ Templates for [Franklin](https://github.com/tlienart/Franklin.jl), the static-si
 
 Most of these templates are adapted from existing, popular templates with minor modifications to accommodate Franklin's content.
 
-**NOTE**: these templates should be seen as _starting points_, they are far from perfect. PRs to help improve them will be very welcome, thanks! Most importantly they are designed to be simple to adjust to your needs.
+**NOTE**: these templates should be seen as _starting points_, they are far from perfect.
+PRs to help improve them will be very welcome, thanks!
+Most importantly they are designed to be simple to adjust to your needs.
 
 ## List of templates
 
@@ -54,8 +56,9 @@ Thanks!!
 
 ## Misc
 
-* Current version of KaTeX: 0.11.1
-* Current version of highlight: v9.18.1 (with `css`, `C/AL`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
+* Current version of KaTeX: 0.12.0
+* Current version of highlight: v10.3.1 (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
+* Current version of Plotly (used in `sandbox-extended`): 1.57
 
 ## Notes:
 
