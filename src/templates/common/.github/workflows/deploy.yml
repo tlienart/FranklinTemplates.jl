@@ -1,16 +1,6 @@
 name: Build and Deploy
 on:
   push:
-    # NOTE:
-    #   For a **project** site (username.github.io/project/), push things
-    #     to the **master** branch and make sure to set the line below to
-    # `   - master`; also, at the end of the file, change to `BRANCH: gh-pages`
-    #
-    #   For a **personal** site (username.github.io/), push things to a **dev**
-    #     branch  and make sure to set the line  below to `- dev` this is
-    #     because for user pages GitHub pages **requires** the deployment to be
-    #     on the master branch; also, at the end of the file, change to
-    #    `BRANCH: master`
     branches:
       - master
 jobs:
@@ -21,25 +11,24 @@ jobs:
       uses: actions/checkout@v2
       with:
         persist-credentials: false
-    # NOTE
-    #   Python is necessary for pre-rendering steps as well as to install
-    #   matplotlib which is necessary if you intend to use PyPlot. If you do
-    #   not, then you can remove the `run: pip install matplotlib` line.
+    # NOTE: Python is necessary for the pre-rendering (minification) step
     - name: Install python
       uses: actions/setup-python@v2
       with:
         python-version: '3.8'
-    - run: pip install matplotlib # if you use PyPlot this is needed
+    # NOTE: Here you can install dependencies such as matplotlib if you use
+    # packages such as PyPlot.
+    # - run: pip install matplotlib
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
       with:
         version: 1.5
     # NOTE
     #   The steps below ensure that NodeJS and Franklin are loaded then it
-    #   installs highlight.js which is needed for the prerendering step.
+    #   installs highlight.js which is needed for the prerendering step
+    #   (code highlighting + katex prerendering).
     #   Then the environment is activated and instantiated to install all
     #   Julia packages which may be required to successfully build your site.
-    #
     #   The last line should be `optimize()` though you may want to give it
     #   specific arguments, see the documentation or ?optimize in the REPL.
     - run: julia -e '
@@ -52,8 +41,5 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # NOTE
-        #   Set this to `BRANCH: gh-pages` for a **project** page and  to
-        #   `BRANCH: master` for a **personal** page
         BRANCH: gh-pages
         FOLDER: __site
