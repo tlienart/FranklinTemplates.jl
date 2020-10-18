@@ -4,7 +4,9 @@ Templates for [Franklin](https://github.com/tlienart/Franklin.jl), the static-si
 
 Most of these templates are adapted from existing, popular templates with minor modifications to accommodate Franklin's content.
 
-**NOTE**: these templates should be seen as _starting points_, they are far from perfect. PRs to help improve them will be very welcome, thanks! Most importantly they are designed to be simple to adjust to your needs.
+**NOTE**: these templates should be seen as _starting points_, they are far from perfect.
+PRs to help improve them will be very welcome, thanks!
+Most importantly they are designed to be simple to adjust to your needs.
 
 ## List of templates
 
