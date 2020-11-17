@@ -1,9 +1,15 @@
 /* Default css file for jemdoc. */
 
-table#tlayout {
-  border: none;
-  border-collapse: separate;
-  background: white;
+.outside {
+  /* We need a flex here, to allow the lower element to use flex. */
+  display: flex;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  max-width: 10rem;
+  margin: auto;
 }
 
 body {
@@ -11,6 +17,10 @@ body {
   font-family: Georgia, serif;
   padding-bottom: 8px;
   margin: 0;
+}
+
+.layout-menu {
+  flex: 0 0 14rem;
 }
 
 #layout-menu {
