@@ -1,15 +1,24 @@
 /* Default css file for jemdoc. */
 
-.outside {
-  /* We need a flex here, to allow the lower element to use flex. */
-  display: flex;
-}
+@media (max-width: 640px) {
+    .box {
+      /* Disable flex, which results in menu above content. */
+      display: block;
+    }
 
-.box {
-  display: flex;
-  justify-content: center;
-  max-width: 10rem;
-  margin: auto;
+    .layout-menu {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+
+@media (min-width: 640px) {
+  .box {
+    /* Note that width is handled by franklin-content in a media query. */
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
 
 body {
