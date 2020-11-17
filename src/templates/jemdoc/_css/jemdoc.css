@@ -1,6 +1,6 @@
 /* Default css file for jemdoc. */
 
-@media (max-width: 640px) {
+@media (max-width: 750px) {
     .box {
       /* Disable flex, which results in menu above content. */
       display: block;
@@ -12,7 +12,7 @@
     }
   }
 
-@media (min-width: 640px) {
+@media (min-width: 750px) {
   .box {
     /* Note that width is handled by franklin-content in a media query. */
     display: flex;
