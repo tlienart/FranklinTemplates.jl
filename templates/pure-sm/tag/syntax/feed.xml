@@ -1,0 +1,25 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Franklin Template</title>
+  <description><![CDATA[Example website using Franklin
+]]></description>
+  <link>https://tlienart.github.io/FranklinTemplates.jl/</link>
+  <atom:link href="https://tlienart.github.io/FranklinTemplates.jl/tag/syntax/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>More goodies</title>
+    <link>https://tlienart.github.io/FranklinTemplates.jl/menu2/</link>
+    <description><![CDATA[A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg" alt="" />
+<br><a href="https://tlienart.github.io/FranklinTemplates.jl/menu2/">Read more</a>]]></description>
+    <guid>https://tlienart.github.io/FranklinTemplates.jl/menu2/</guid>
+    <pubDate>Wed, 1 May 2019 00:00:00 UT</pubDate>
+  </item>
+  <item>
+    <title>Code blocks</title>
+    <link>https://tlienart.github.io/FranklinTemplates.jl/menu1/</link>
+    <description><![CDATA[A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg" alt="" />
+<br><a href="https://tlienart.github.io/FranklinTemplates.jl/menu1/">Read more</a>]]></description>
+    <guid>https://tlienart.github.io/FranklinTemplates.jl/menu1/</guid>
+    <pubDate>Fri, 22 Mar 2019 00:00:00 UT</pubDate>
+  </item>
+</channel>
+</rss>
