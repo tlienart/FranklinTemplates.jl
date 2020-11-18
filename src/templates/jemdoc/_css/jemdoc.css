@@ -1,9 +1,33 @@
 /* Default css file for jemdoc. */
 
-table#tlayout {
-  border: none;
-  border-collapse: separate;
-  background: white;
+@media (max-width: 750px) {
+  .box {
+    display: block;
+  }
+
+  .layout-menu {
+    margin: 0;
+    margin-top: 2rem;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .franklin-content h1 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 750px) {
+  .box {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .layout-menu {
+    margin-top: 5rem;
+    margin-left: 1rem;
+  }
 }
 
 body {
@@ -11,6 +35,10 @@ body {
   font-family: Georgia, serif;
   padding-bottom: 8px;
   margin: 0;
+}
+
+.layout-menu {
+  flex: 0 0 14rem;
 }
 
 #layout-menu {
