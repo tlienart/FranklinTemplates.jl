@@ -201,7 +201,10 @@ body { counter-reset: eqnum; }
 .katex { font-size: 1em !important; }
 
 .katex-display .katex {
-    display: inline-block; } /* overwrite katex settings */
+    /* Overwrite KaTeX settings. */
+    display: inline-block; 
+    /* Allow display equations to wrap on small screens. */
+    white-space: normal; }
 
 .katex-display::after {
     counter-increment: eqnum;
