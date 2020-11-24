@@ -97,7 +97,7 @@
         <span class="hljs-comment"># use the date of creation of the file</span>
         pvd = pagevar(p, :date)
         <span class="hljs-keyword">if</span> isnothing(pvd)
-            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Date</span>(Dates.unix2datetime(stat(p * <span class="hljs-string">&quot;.md&quot;</span>).ctime))
+            <span class="hljs-keyword">return</span> Date(Dates.unix2datetime(stat(p * <span class="hljs-string">&quot;.md&quot;</span>).ctime))
         <span class="hljs-keyword">end</span>
         <span class="hljs-keyword">return</span> pvd
     <span class="hljs-keyword">end</span>
@@ -135,7 +135,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/$rpath/&quot;</span>&gt;</span>$title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></code></pre>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: November 18, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Septimia Zenobia. Last modified: November 24, 2020. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
