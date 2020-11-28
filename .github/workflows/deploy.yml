@@ -36,7 +36,7 @@ jobs:
             Pkg.add(Pkg.PackageSpec(name="FranklinTemplates", rev="master"));
             using NodeJS; run(`$(npm_cmd()) install highlight.js`);
             using Franklin;
-            Pkg.dev("."); using FranklinTemplates;
+            Pkg.develop(path="."); using FranklinTemplates;
             FranklinTemplates.build_templates()'
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
