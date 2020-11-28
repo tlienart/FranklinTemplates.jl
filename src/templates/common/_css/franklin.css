@@ -4,7 +4,7 @@
 
 html {
     font-family: Helvetica, Arial, sans-serif;
-    font-size  : 17px;
+    font-size  : 18px;
     color: #1c1c1c;
 }
 
@@ -55,6 +55,11 @@ html {
 /* ==================================================================
     TEXT GEOMETRY
 ================================================================== */
+
+.franklin-toc li {
+  /* Avoid clickable elements being too close together.
+  margin: 0.6rem 0; 
+}
 
 .franklin-content {
     position: relative;
@@ -119,6 +124,7 @@ html {
     border-collapse: collapse;
     text-align: center;}
 .franklin-content th, td{
+    font-size: 14px;
     padding: 10px;
     border: 1px solid black;}
 
@@ -221,7 +227,7 @@ code {
     background-color: rgba(27,31,35,0.05);
     padding: 0.1em 0.2em;
     border-radius: 2px;
-    font-size: 90%;
+    font-size: 14px;
 }
 
 /* .franklin-content code { */
