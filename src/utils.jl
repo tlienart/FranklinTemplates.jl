@@ -1,3 +1,9 @@
+using LiveServer
+
+export 
+    build_templates,
+    serve_templates
+
 """
     newsite(topdir; template="basic", cd=true)
 
@@ -215,4 +221,58 @@ function filecmp(path1::AbstractString, path2::AbstractString)
             return eof(file1) == eof(file2)
         end
     end
+end
+
+"""
+    build_templates()
+
+Build all the templates.
+"""
+function build_templates()
+    docs_dir = dirname(dirname(@__FILE__))
+    cd(docs_dir)
+    make_path = joinpath("docs", "make.jl")
+    include(make_path)
+    cd(docs_dir)
+    for (root, _, files) ∈ walkdir(build)
+        for file ∈ files
+            endswith(file, ".html") || continue;
+            path  = joinpath(root, file);
+            htmls = read(path, String);
+            if get(ENV, "CI", nothing) == "true"
+                htmls = replace(htmls, "href=\"/" => "href=\"/FranklinTemplates.jl/");
+                htmls = replace(htmls, "src=\"/" => "src=\"/FranklinTemplates.jl/");
+            end
+            write(path, htmls);
+        end
+    end 
+end
+
+"""
+    serve_templates()
+
+Rebuild all templates upon detecting changes.
+"""
+function serve_templates()
+    build_templates()
+
+    root = dirname(dirname(@__FILE__))
+    function custom_callback(fp::AbstractString)
+        build_templates()
+        cd(joinpath(root, "docs", "build"))
+        LiveServer.file_changed_callback(fp)
+    end
+
+    sw = LiveServer.SimpleWatcher(custom_callback)
+
+    # Source files to watch for changes.
+    for (root, dirs, files) in walkdir(joinpath(root, "src"))
+        for file in files
+            path = joinpath(root, file)
+            LiveServer.watch_file!(sw, path)
+        end
+    end
+
+    cd(joinpath(root, "docs", "build"))
+    LiveServer.serve(sw; verbose=true)
 end
