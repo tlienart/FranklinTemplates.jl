@@ -83,13 +83,11 @@ end
 # make a template folder with a subfolder for each template
 # compile each template with a fullpass of Franklin
 begin
-    # first clean up the directory to avoid clashes etc
-    begin
-        cd(build)
-        isdir("templates") && rm("templates", recursive=true)
-        cd("..")
+    # Clean up the directory to avoid clashes etc.
+    if isdir(joinpath(build, "templates")) 
+        rm(joinpath(build, "templates"), recursive=true)
     end
-    # make the template folder
+    # Make the template folder.
     templates = mkpath(joinpath(build, "templates"))
     cd(templates)
     for τ ∈ FranklinTemplates.LIST_OF_TEMPLATES
@@ -125,4 +123,5 @@ begin
     write(joinpath(build, "index.html"), take!(html))
 end
 
-cd(dirname(dirname(pathof(FranklinTemplates))))
+# Causes infinite loop with `serve_templates`?
+# cd(dirname(dirname(pathof(FranklinTemplates))))

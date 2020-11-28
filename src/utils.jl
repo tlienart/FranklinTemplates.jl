@@ -229,12 +229,10 @@ end
 Build all the templates.
 """
 function build_templates()
-    docs_dir = dirname(dirname(@__FILE__))
-    cd(docs_dir)
-    make_path = joinpath("docs", "make.jl")
+    root = dirname(dirname(@__FILE__))
+    make_path = joinpath(root, "docs", "make.jl")
     include(make_path)
-    cd(docs_dir)
-    for (root, _, files) ∈ walkdir(build)
+    for (root, _, files) ∈ walkdir(joinpath(root, "docs", "build"))
         for file ∈ files
             endswith(file, ".html") || continue;
             path  = joinpath(root, file);
@@ -258,9 +256,11 @@ function serve_templates()
 
     root = dirname(dirname(@__FILE__))
     function custom_callback(fp::AbstractString)
-        build_templates()
-        cd(joinpath(root, "docs", "build"))
-        LiveServer.file_changed_callback(fp)
+        if contains(fp, "src/")
+            build_templates()
+            cd(joinpath(root, "docs", "build"))
+            LiveServer.file_changed_callback(fp)
+        end
     end
 
     sw = LiveServer.SimpleWatcher(custom_callback)

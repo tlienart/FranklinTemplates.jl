@@ -53,30 +53,36 @@ img{
   border:0
 }
 p,h1,h2,h3,h4,h5,h6,ol,ul,pre,address,blockquote,dl,div,fieldset,form,hr,noscript,table{
+  font-size: 14px;
   margin-top:0
 }
-h1,h2,h3,h4,h5,h6{
+
+h1,h2,h3,h4,h5,h6 {
   margin-top:1.2em;
   margin-bottom:0.8em;
   font-weight:500;
   line-height:1.15;
   color:#27262b;
 }
-p{
+
+p {
   margin-bottom:1em
 }
-a{
+
+a {
   color:#0E39B0;
   text-decoration:none;
 }
-pre{
+
+pre {
   overflow:auto;
   margin:0;
   margin-bottom: 0.8em;
 }
-code{
+
+code {
   font-family:"SFMono-Regular",Menlo,Consolas,Monospace;
-  font-size:12px;
+  font-size:14px;
   line-height:1.4;
     padding:0.2em 0.15em;
     font-weight:400;
