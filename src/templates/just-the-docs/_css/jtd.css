@@ -9,11 +9,11 @@ html{
   font-family:sans-serif;
   -ms-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
-  font-size:15px !important;
+  font-size: 15px !important;
 }
 @media (min-width: 31.25rem){
   html{
-    font-size:17px !important;
+    font-size:19px !important;
   }
 }
 

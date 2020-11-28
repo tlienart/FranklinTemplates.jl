@@ -33,10 +33,10 @@ jobs:
     #   specific arguments, see the documentation or ?optimize in the REPL.
     - run: julia -e '
             using Pkg; Pkg.add(["NodeJS", "Franklin", "PyPlot", "GR", "Literate", "PlotlyJS", "Hyperscript"]);
-            Pkg.add(Pkg.PackageSpec(name="FranklinTemplates", rev="master"));
+            Pkg.develop(path=".");
             using NodeJS; run(`$(npm_cmd()) install highlight.js`);
             using Franklin;
-            Pkg.develop(path="."); using FranklinTemplates;
+            using FranklinTemplates;
             FranklinTemplates.build_templates()'
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
