@@ -79,7 +79,7 @@ tt {
 }
 
 pre, tt {
-  font-size: 90%;
+  font-size: 14px;
   font-family: monaco, monospace;
 }
 
@@ -369,12 +369,15 @@ img.eqwl {
 }
 
 table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
   border: 2px solid black;
   border-collapse: collapse;
 }
 
-td {
-  padding: 2px;
+th, td, tr {
+  padding: 10px;
   padding-left: 0.5em;
   padding-right: 0.5em;
   text-align: center;

@@ -123,5 +123,4 @@ begin
     write(joinpath(build, "index.html"), take!(html))
 end
 
-# Causes infinite loop with `serve_templates`?
-# cd(dirname(dirname(pathof(FranklinTemplates))))
+cd(dirname(dirname(pathof(FranklinTemplates))))

@@ -17,11 +17,11 @@ pre {
 }
 
 .franklin-content code {
-    font-size: 70%;
+    font-size: 14px;
 }
 
 .franklin-content .hljs {
-    font-size: 90%;
+    font-size: 14px;
 }
 
 blockquote {

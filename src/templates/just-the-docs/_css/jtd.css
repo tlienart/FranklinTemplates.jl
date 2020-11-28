@@ -9,11 +9,11 @@ html{
   font-family:sans-serif;
   -ms-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
-  font-size: 15px !important;
+  font-size: 15px;
 }
 @media (min-width: 31.25rem){
   html{
-    font-size:19px !important;
+    font-size:19px;
   }
 }
 
@@ -53,7 +53,7 @@ img{
   border:0
 }
 p,h1,h2,h3,h4,h5,h6,ol,ul,pre,address,blockquote,dl,div,fieldset,form,hr,noscript,table{
-  font-size: 14px;
+  font-size: 19px;
   margin-top:0
 }
 
@@ -74,6 +74,7 @@ a {
   text-decoration:none;
 }
 
+
 pre{
   overflow:auto;
   margin:0;
@@ -81,30 +82,32 @@ pre{
 }
 
 code{
-  font-family:"SFMono-Regular",Menlo,Consolas,Monospace;
-  font-size:14px;
-  line-height:1.4;
-    padding:0.2em 0.15em;
-    font-weight:400;
-    background-color:#f5f6fa;
-    border:1px solid #eeebee;
-    border-radius:4px;
+  font-family: "SFMono-Regular",Menlo,Consolas,Monospace;
+  font-size: 14px;
+  line-height: 1.4;
+    padding: 0.2em 0.15em;
+    font-weight: 400;
+    background-color: #f5f6fa;
+    border: 1px solid #eeebee;
+    border-radius: 4px;
 }
+
 li:not(:last-child) {
     margin-bottom: 5px;
 }
-img{
+
+img {
   max-width:100%;
   height:auto
 }
-hr{
+
+hr {
   height:1px;
   padding:0;
   margin:2rem 0;
   background-color:#eeebee;
   border:0;
 }
-
 
 @media (min-width: 50rem){
   .page-wrap{
@@ -436,6 +439,7 @@ td.fndef-backref {
     text-align: center;
     margin-bottom: 1em;}
 .franklin-content tr,th,td{
+    font-size: 14px;
     padding: 10px;
     border: 1px solid black;}
 
@@ -531,7 +535,7 @@ body { counter-reset: eqnum; }
 ================================================================== */
 
 .hljs {
-    font-size: 90%;
+    font-size: 14px;
     line-height: 1.35em;
     border-radius: 10px;
     padding: 1em;}
@@ -543,3 +547,8 @@ body { counter-reset: eqnum; }
 .hljs-metas { color: red; }
 
 .hljs-metap { color: rgb(51, 131, 231); }
+
+franklin-toc {
+  /* Avoid clickable elements being too close together.
+  margin: 0.6rem 0; 
+}

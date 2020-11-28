@@ -4287,7 +4287,7 @@ a.reversefootnote:hover {
 @media (min-width: 64em) {
   .sidebar {
     float: left;
-    width: calc(200px - 1em);
+    width: calc(200px + 2em);
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out
