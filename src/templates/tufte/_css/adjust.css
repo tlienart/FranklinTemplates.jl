@@ -1,6 +1,9 @@
 /* adjustments for Franklin */
 
-.franklin-content code { font-size: 75% !important; }
+.franklin-content code { 
+  font-size: var(--small);
+}
+
 .franklin-content { font-size: 1.4rem; }
 
 #main {
