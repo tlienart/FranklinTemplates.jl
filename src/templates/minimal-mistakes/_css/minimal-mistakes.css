@@ -3,6 +3,7 @@
  * Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
+
 .mfp-counter {
   font-family: Georgia,Times,serif
 }
@@ -4287,7 +4288,7 @@ a.reversefootnote:hover {
 @media (min-width: 64em) {
   .sidebar {
     float: left;
-    width: calc(200px + 2em);
+    width: calc(200px - 1em);
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out
@@ -4305,7 +4306,7 @@ a.reversefootnote:hover {
 
 @media (min-width: 80em) {
   .sidebar {
-    width: calc(300px - 1em)
+    width: calc(300px + 1em)
   }
 }
 

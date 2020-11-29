@@ -6,9 +6,9 @@
 
 @media (min-width: 1024px) {
     .franklin-content {
-        width: 80%;
-        padding-left: 12.5%;
-        padding-right: 7%;
+        width: 75%;
+        padding-left: 20%;
+        padding-right: 5%;
     }
 }
 
@@ -31,3 +31,28 @@ blockquote {
 .fndef-content {
     line-height: 1.5em;
 }
+
+.franklin-content h1 {
+  padding-bottom: 0.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.franklin-content a {
+  text-decoration: none;
+}
+
+/* For some reason, 
+ * `h1, h2, h3 { a { color: ... } a:visited { color: ... } }` didn't work.
+ */
+h1 a { color: #1c1c1c !important; }
+h2 a { color: #1c1c1c !important; }
+h3 a { color: #1c1c1c !important; }
+h4 a { color: #1c1c1c !important; }
+h5 a { color: #1c1c1c !important; }
+
+h1 a:visited { color: #1c1c1c !important; }
+h2 a:visited { color: #1c1c1c !important; }
+h3 a:visited { color: #1c1c1c !important; }
+h4 a:visited { color: #1c1c1c !important; }
+h5 a:visited { color: #1c1c1c !important; }
