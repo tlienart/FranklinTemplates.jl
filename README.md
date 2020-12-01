@@ -28,9 +28,21 @@ The grid below keeps track of their name, license, the kind of navbar they have 
 | `"just-the-docs"` | [Just the docs](https://github.com/pmarsceill/just-the-docs) | [MIT](https://github.com/pmarsceill/just-the-docs/blob/master/LICENSE.txt) | Side/Top | No |
 | `"minimal-mistakes"` | [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes) | [MIT](https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE) | Side/Top | No |
 
-## Fixing/Adding a template
+## Modifying or adding a template
 
-The package now contains a few utils to make it easier to add / fix templates.
+The package contains a few utils to make it easier to modify or add templates. 
+Now if it was just a bunch of fixes to an existing template, you can just push those changes to your fork and open a PR.
+If it's a new template that you're working on, you can also do that but there's a few extra things you need to do:
+
+1. in `FranklinTemplates/src/FranklinTemplates.jl` add the name of your template in the list
+1. in `FranklinTemplates/docs/make.jl` add the name of your template with a description in the list
+1. in `FranklinTemplates/docs/thumb` add a screenshot of your template in `png` format with **exactly** an 850x850 dimension
+1. in `FranklinTemplates/docs/index_head.html` add a CSS block following the other examples
+
+To locally see changes quickly, use [Changing a single template](#user-content-changing-a-single-template].
+To change all templates at the same time, use [Changing multiple templates](#user-content-changing-multiple-templates).
+
+### Changing a single template
 
 1. clone a fork of this package wherever you usually do things, typically `~/.julia/dev/`
 1. checkout the package in development mode with `] dev FranklinTemplates`
@@ -43,14 +55,11 @@ The package now contains a few utils to make it easier to add / fix templates.
     1. if the template doesn't exist, it will just add the folder removing things that are duplicate from `templates/common/`.
     1. if the template exists, it will just adjust what needs to be adjusted.
 
-Now if it was just a bunch of fixes to an existing template, you can just push those changes to your fork and open a PR.
+### Changing multiple templates
 
-If it's a new template that you're working on, you can also do that but there's a few extra things you need to do:
-
-1. in `FranklinTemplates/src/FranklinTemplates.jl` add the name of your template in the list
-1. in `FranklinTemplates/docs/make.jl` add the name of your template with a description in the list
-1. in `FranklinTemplates/docs/thumb` add a screenshot of your template in `png` format with **exactly** an 850x850 dimension
-1. in `FranklinTemplates/docs/index_head.html` add a CSS block following the other examples
+1. clone a fork of this package wherever you usually do things, typically `~/.julia/dev/`
+1. checkout the package in development mode with `] dev FranklinTemplates`
+1. start serving the preview website with `using FranklinTemplates; FranklinTemplates.serve_templates()`
 
 Thanks!!
 
@@ -60,7 +69,7 @@ Thanks!!
 * Current version of highlight: v10.3.1 (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
 * Current version of Plotly (used in `sandbox-extended`): 1.57
 
-## Notes:
+## Notes
 
 This package contains a copy of the relevant KaTeX files and highlight.js files;
 - the KaTeX files are basically provided "as is", completely unmodified; you could download your own version of the files from the [original repo](https://github.com/KaTeX/KaTeX) and replace the files in `_libs/katex`,
