@@ -7,4 +7,5 @@ version = "0.8.3"
 LiveServer = "16fef848-5104-11e9-1b77-fb7a48bbb589"
 
 [compat]
+LiveServer = "0.6"
 julia = "^1.1"
