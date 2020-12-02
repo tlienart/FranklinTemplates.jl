@@ -1,20 +1,23 @@
 .franklin-content {
-    position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    line-height: 1.35em; }
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1.35em;
+}
 
 /* on wide screens, fix content width to a max value */
 @media (min-width: 940px) {
-    .franklin-content {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto; }
-    }
+  .franklin-content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 /* on narrow device, reduce margins */
 @media (max-width: 768px) {
-    .franklin-content {
-        padding-left: 6%;
-        padding-right: 6%; }
-    }
+  .franklin-content {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
