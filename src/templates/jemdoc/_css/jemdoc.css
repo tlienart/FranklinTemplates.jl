@@ -43,11 +43,11 @@ body {
 
 #layout-menu {
   background: #f6f6f6;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   padding-top: 0.5em;
   padding-left: 15px;
   padding-right: 25px;
-  font-size: 1.0em;
+  font-size: 1em;
   width: auto;
   white-space: nowrap;
   text-align: left;
@@ -60,9 +60,9 @@ body {
 }
 
 #layout-content {
-  padding-top: 0.0em;
-  padding-left: 1.0em;
-  padding-right: 1.0em;
+  padding-top: 0;
+  padding-left: 1em;
+  padding-right: 1em;
   border: none;
   background: white;
   text-align: left;
@@ -75,15 +75,17 @@ body {
 }
 
 tt {
-  background: #ffffdd;
+  background: #ffd;
 }
 
-pre, tt {
+pre,
+tt {
   font-size: 14px;
   font-family: monaco, monospace;
 }
 
-a, a > tt {
+a,
+a > tt {
   color: #224b8d;
   text-decoration: none;
 }
@@ -92,14 +94,19 @@ a:hover {
   border-bottom: 1px gray dotted;
 }
 
-#layout-menu a.current:link, #layout-menu a.current:visited {
+#layout-menu a.current:link,
+#layout-menu a.current:visited {
   color: #022b6d;
   border-bottom: 1px gray solid;
 }
-#layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
+
+#layout-menu a:link,
+#layout-menu a:visited,
+#layout-menu a:hover {
   color: #527bbd;
   text-decoration: none;
 }
+
 #layout-menu a:hover {
   text-decoration: none;
 }
@@ -128,14 +135,15 @@ div#toptitle {
 }
 
 /* Reduce space if we begin the page with a title. */
-div#toptitle + h2, div#toptitle + h3 {
+div#toptitle + h2,
+div#toptitle + h3 {
   margin-top: -0.7em;
 }
 
 div#subtitle {
-  margin-top: 0.0em;
-  margin-bottom: 0.0em;
-  padding-top: 0em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
   padding-bottom: 0.1em;
 }
 
@@ -147,15 +155,16 @@ strong {
   font-weight: bold;
 }
 
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #527bbd;
   margin-top: 0.7em;
   margin-bottom: 0.3em;
   padding-bottom: 0.2em;
-  line-height: 1.0;
+  line-height: 1;
   padding-top: 0.5em;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaa;
 }
 
 h1 {
@@ -178,7 +187,7 @@ h3 {
 }
 
 p {
-  margin-top: 0.0em;
+  margin-top: 0;
   margin-bottom: 0.8em;
   padding: 0;
   line-height: 1.3;
@@ -193,7 +202,7 @@ div#footer {
   font-size: small;
   border-top: 1px solid #c0c0c0;
   padding-top: 0.1em;
-  margin-top: 4.0em;
+  margin-top: 4em;
   color: #c0c0c0;
 }
 
@@ -206,7 +215,9 @@ div#footer-text {
   padding-bottom: 8px;
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin-top: 0.2em;
   padding-top: 0;
   margin-bottom: 0.8em;
@@ -222,7 +233,7 @@ dl {
 }
 
 dd {
-  color: #222222;
+  color: #222;
 }
 
 dd > *:first-child {
@@ -234,11 +245,13 @@ ul {
   list-style-type: square;
 }
 
-p + ul, p + ol {
+p + ul,
+p + ol {
   margin-top: -0.5em;
 }
 
-li ul, li ol {
+li ul,
+li ol {
   margin-top: -0.3em;
 }
 
@@ -247,10 +260,10 @@ ol {
   list-style-type: decimal;
 }
 
-li p, dd p {
+li p,
+dd p {
   margin-bottom: 0.3em;
 }
-
 
 ol ol {
   list-style-type: lower-alpha;
@@ -264,7 +277,8 @@ p + div.codeblock {
   margin-top: -0.6em;
 }
 
-div.codeblock, div.infoblock {
+div.codeblock,
+div.infoblock {
   margin-right: 0%;
   margin-top: 1.2em;
   margin-bottom: 1.3em;
@@ -283,18 +297,20 @@ div.blockcontent {
 }
 
 div.infoblock > div.blockcontent {
-  background: #ffffee;
+  background: #ffe;
 }
 
-div.blockcontent p + ul, div.blockcontent p + ol {
+div.blockcontent p + ul,
+div.blockcontent p + ol {
   margin-top: 0.4em;
 }
 
 div.infoblock p {
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 
-div.infoblock li p, div.infoblock dd p {
+div.infoblock li p,
+div.infoblock dd p {
   margin-bottom: 0.5em;
 }
 
@@ -311,21 +327,29 @@ span.pycommand {
 }
 
 span.statement {
-  color: #008800;
+  color: #080;
 }
+
 span.builtin {
-  color: #000088;
+  color: #008;
 }
+
 span.special {
-  color: #990000;
+  color: #900;
 }
+
 span.operator {
-  color: #880000;
+  color: #800;
 }
+
 span.error {
-  color: #aa0000;
+  color: #a00;
 }
-span.comment, span.comment > *, span.string, span.string > * {
+
+span.comment,
+span.comment > *,
+span.string,
+span.string > * {
   color: #606060;
 }
 
@@ -342,12 +366,15 @@ span.comment, span.comment > *, span.string, span.string > * {
   margin-bottom: 0.5em;
 }
 
-#layout-content h1:first-child, #layout-content h2:first-child, #layout-content h3:first-child {
+#layout-content h1:first-child,
+#layout-content h2:first-child,
+#layout-content h3:first-child {
   margin-top: -0.7em;
 }
 
-div#toptitle h1, #layout-content div#toptitle h1 {
-  margin-bottom: 0.0em;
+div#toptitle h1,
+#layout-content div#toptitle h1 {
+  margin-bottom: 0;
   padding-bottom: 0.1em;
   padding-top: 0;
   margin-top: 0.5em;
@@ -376,7 +403,9 @@ table {
   border-collapse: collapse;
 }
 
-th, td, tr {
+th,
+td,
+tr {
   padding: 10px;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -397,18 +426,22 @@ img {
   border: none;
 }
 
-table.imgtable, table.imgtable td {
+table.imgtable,
+table.imgtable td {
   border: none;
   text-align: left;
 }
 
 
 /* Extra css file for personal jemdoc customizations. */
+
 /* Copyright (C) Jacob Mattingley 2007. */
 
-a, a > tt {
+a,
+a > tt {
   color: #305080;
 }
+
 a:hover {
   border-bottom: 1px #305080 dotted;
 }
@@ -418,11 +451,17 @@ div#toptitle {
   border-bottom: 1px solid #c0c0c0;
 }
 
-h1, h2, h3, #layout-menu a.current:link, #layout-menu a.current:visited {
+h1,
+h2,
+h3,
+#layout-menu a.current:link,
+#layout-menu a.current:visited {
   color: #203060;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   border-bottom: 1px solid #c0c0c0;
 }
 
