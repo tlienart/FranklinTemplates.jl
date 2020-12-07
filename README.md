@@ -30,7 +30,7 @@ The grid below keeps track of their name, license, the kind of navbar they have 
 
 ## Modifying or adding a template
 
-The package contains a few utils to make it easier to modify or add templates. 
+The package contains a few utils to make it easier to modify or add templates.
 Now if it was just a bunch of fixes to an existing template, you can just push those changes to your fork and open a PR.
 If it's a new template that you're working on, you can also do that but there's a few extra things you need to do:
 
@@ -66,7 +66,7 @@ Thanks!!
 ## Misc
 
 * Current version of KaTeX: 0.12.0
-* Current version of highlight: v10.3.1 (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
+* Current version of highlight: v10.4.1 (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
 * Current version of Plotly (used in `sandbox-extended`): 1.57
 
 ## Notes
