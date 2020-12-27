@@ -67,7 +67,7 @@ Thanks!!
 
 * Current version of KaTeX: 0.12.0
 * Current version of highlight: v10.5.0 (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
-* Current version of Plotly (used in `sandbox-extended`): 1.57
+* Current version of Plotly (used in `sandbox-extended`): 1.58.4
 
 ## Notes
 
