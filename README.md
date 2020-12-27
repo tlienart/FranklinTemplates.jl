@@ -66,7 +66,7 @@ Thanks!!
 ## Misc
 
 * Current version of KaTeX: 0.12.0
-* Current version of highlight: v10.4.1 (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
+* Current version of highlight: v10.5.0 (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
 * Current version of Plotly (used in `sandbox-extended`): 1.57
 
 ## Notes
@@ -82,13 +82,4 @@ This package contains a copy of the relevant KaTeX files and highlight.js files;
 ### Maintenance
 
 - if update `highlight.pack.js`, look for `julia>`, replace (so that ‚`pkg>` and `shell>` are recognised)
-
-```js
-hljs.registerLanguage("julia-repl",function(e){return{c:[{cN:"meta",b:/^julia>/,relevance:10,starts:{e:/^(?![ ]{6})/,sL:"julia"},aliases:["jldoctest"]}]}});
-```
-
-with
-
-```js
-hljs.registerLanguage("julia-repl",function(e){return{c:[{cN:"meta",b:/^julia>/,relevance:10,starts:{e:/^(?![ ]{6})/,sL:"julia"}},{cN:"metas",b:/^shell>/,relevance:10,starts:{e:/^(?![ ]{6})/,sL:"bash"}},{cN:"metap",b:/^\(.*\)\spkg>/,relevance:10,starts:{e:/^(?![ ]{6})/,sL:"julia"}}]}});
-```
+- look for `hljs.registerLanguage("julia-repl")` and adjust
