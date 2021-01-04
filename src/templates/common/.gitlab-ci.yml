@@ -1,9 +1,19 @@
+image: julia:1.5
+
+before_script:
+  - apt-get -qq update; apt-get -y install git
+
 pages:
-    stage: deploy
-    script:
-        - mv __site public
-    artifacts:
-        paths:
-            - public
-    only:
-        - master
+  stage: deploy
+  script:
+    - julia --project=@. -e 'import Pkg; Pkg.instantiate();
+      using NodeJS; run(`$(npm_cmd()) install highlight.js`);
+      using Franklin;
+      serve(single = true, is_final_pass = true);
+      optimize()'
+    - mv __site public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
