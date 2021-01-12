@@ -153,6 +153,10 @@ h6 {
   text-align: center;
 }
 
+ol ol {
+  list-style-type: lower-alpha;
+}
+
 .franklin-content th,
 td {
   font-size: var(--small);
