@@ -12,12 +12,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         persist-credentials: false
-    # NOTE: Python is necessary for the pre-rendering (minification) step
+    # NOTE: Python is necessary if you set minify=true in optimize below
     - name: Install python
       uses: actions/setup-python@v2
       with:
         python-version: '3.8'
-    # NOTE: Here you can install dependencies such as matplotlib if you use
+    # NOTE: Here you can then install Python dependencies such as matplotlib if you use
     # packages such as PyPlot.
     # - run: pip install matplotlib
     - name: Install Julia
@@ -28,15 +28,15 @@ jobs:
       uses: julia-actions/julia-buildpkg@master
     # NOTE
     #   Using --project below ensures that the environment defined by
-    #   Project.toml and build by `julia-buildpkg` is loaded. Then, it 
-    #   installs highlight.js which is needed for the prerendering step 
-    #   (code highlighting + katex prerendering).
-    #   The last line should be `optimize()` though you may want to give it
-    #   specific arguments, see the documentation or ?optimize in the REPL.
+    #   Project.toml and built by `julia-buildpkg` is loaded.
+    #   NodeJS helps install the highlight.js node package which is used
+    #   to prer-ender code blocks when 'prerender=false'.
+    #   The last line should be the 'optimize(...)' call (see ?optimize).
     - run: julia --project -e '
-            using NodeJS; run(`$(npm_cmd()) install highlight.js`);
-            using Franklin;
-            optimize()'
+            using NodeJS, Franklin
+            run(`$(npm_cmd()) install highlight.js`); # for pre-rendering code blocks
+            optimize(minify=true, prerender=true);
+            '
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
