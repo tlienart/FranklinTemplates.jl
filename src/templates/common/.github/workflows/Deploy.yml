@@ -27,11 +27,10 @@ jobs:
     - name: Install dependencies listed in Project.toml and build package
       uses: julia-actions/julia-buildpkg@master
     # NOTE
-    #   Using --project below ensures that NodeJS and Franklin are loaded then 
-    #   it installs highlight.js which is needed for the prerendering step
+    #   Using --project below ensures that the environment defined by
+    #   Project.toml and build by `julia-buildpkg` is loaded. Then, it 
+    #   installs highlight.js which is needed for the prerendering step 
     #   (code highlighting + katex prerendering).
-    #   Then, the environment is activated and instantiated to install all
-    #   Julia packages which may be required to successfully build your site.
     #   The last line should be `optimize()` though you may want to give it
     #   specific arguments, see the documentation or ?optimize in the REPL.
     - run: julia --project -e '
