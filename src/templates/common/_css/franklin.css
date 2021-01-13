@@ -153,7 +153,7 @@ h6 {
   text-align: center;
 }
 
-ol ol {
+.franklin-toc ol ol {
   list-style-type: lower-alpha;
 }
 
