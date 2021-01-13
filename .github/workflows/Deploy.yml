@@ -16,18 +16,21 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.8'
+    # NOTE: Here you can install dependencies such as matplotlib if you use
+    # packages such as PyPlot.
     - run: pip install matplotlib
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
       with:
         version: 1.5
-    - name: Install dependencies listed in Project.toml
-      uses: julia-actions/julia-buildpkg@master
-    - run: julia --project -e '
-            using NodeJS, FranklinTemplates;
-            run(`$(npm_cmd()) install highlight.js`);
-            FranklinTemplates.build_templates();
-            '
+    - name: Build
+      run: julia -e '
+            using Pkg; Pkg.add(["NodeJS", "Franklin", "PyPlot", "GR", "Literate", "PlotlyJS", "Hyperscript"]);
+            Pkg.develop(path=".");
+            using NodeJS; run(`$(npm_cmd()) install highlight.js`);
+            using Franklin;
+            using FranklinTemplates;
+            FranklinTemplates.build_templates()'
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
