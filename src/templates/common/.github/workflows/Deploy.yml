@@ -34,7 +34,7 @@ jobs:
     #   The last line should be the 'optimize(...)' call (see ?optimize).
     - run: julia --project -e '
             using NodeJS, Franklin;
-            run(`$(npm_cmd()) install highlight.js`); # for pre-rendering code blocks
+            run(`$(npm_cmd()) install highlight.js`);
             optimize(minify=true, prerender=true);
             '
     - name: Build and Deploy
