@@ -12,31 +12,31 @@ jobs:
       uses: actions/checkout@v2
       with:
         persist-credentials: false
-    # NOTE: Python is necessary if you set minify=true in optimize below
+    # NOTE: Python is necessary for the pre-rendering (minification) step
     - name: Install python
       uses: actions/setup-python@v2
       with:
         python-version: '3.8'
-    # NOTE: Here you can then install Python dependencies such as matplotlib if you use
+    # NOTE: Here you can install dependencies such as matplotlib if you use
     # packages such as PyPlot.
     # - run: pip install matplotlib
     - name: Install Julia
       uses: julia-actions/setup-julia@v1
       with:
         version: 1.5
-    - name: Install dependencies listed in Project.toml and build package
-      uses: julia-actions/julia-buildpkg@master
     # NOTE
-    #   Using --project below ensures that the environment defined by
-    #   Project.toml and built by `julia-buildpkg` is loaded.
-    #   NodeJS helps install the highlight.js node package which is used
-    #   to prer-ender code blocks when 'prerender=false'.
-    #   The last line should be the 'optimize(...)' call (see ?optimize).
-    - run: julia --project -e '
-            using NodeJS, Franklin;
-            run(`$(npm_cmd()) install highlight.js`);
-            optimize(minify=true, prerender=true);
-            '
+    #   The steps below ensure that NodeJS and Franklin are loaded then it
+    #   installs highlight.js which is needed for the prerendering step
+    #   (code highlighting + katex prerendering).
+    #   Then the environment is activated and instantiated to install all
+    #   Julia packages which may be required to successfully build your site.
+    #   The last line should be `optimize()` though you may want to give it
+    #   specific arguments, see the documentation or ?optimize in the REPL.
+    - run: julia -e '
+            using Pkg; Pkg.activate("."); Pkg.instantiate();
+            using NodeJS; run(`$(npm_cmd()) install highlight.js`);
+            using Franklin;
+            optimize()'
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
