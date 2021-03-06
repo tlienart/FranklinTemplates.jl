@@ -123,4 +123,4 @@ begin
     write(joinpath(build, "index.html"), take!(html))
 end
 
-cd(dirname(dirname(pathof(FranklinTemplates))))
+cd(pkgdir(FranklinTemplates))
