@@ -84,7 +84,7 @@ end
 # compile each template with a fullpass of Franklin
 begin
     # Clean up the directory to avoid clashes etc.
-    if isdir(joinpath(build, "templates")) 
+    if isdir(joinpath(build, "templates"))
         rm(joinpath(build, "templates"), recursive=true)
     end
     # Make the template folder.
@@ -103,8 +103,8 @@ end
 
 # build the index page
 begin
-    html = IOBuffer()
-    write(html, read(joinpath(@__DIR__, "index_head.html"), String))
+    io = IOBuffer()
+    write(io, read(joinpath(@__DIR__, "index_head.html"), String))
 
     # One card per template
     for τ ∈ FranklinTemplates.LIST_OF_TEMPLATES
@@ -117,10 +117,10 @@ begin
             </div>
             </a>
             """
-        write(html, c)
+        write(io, c)
     end
-    write(html, read(joinpath(@__DIR__, "index_foot.html"), String))
-    write(joinpath(build, "index.html"), take!(html))
+    write(io, read(joinpath(@__DIR__, "index_foot.html"), String))
+    write(joinpath(build, "index.html"), take!(io))
 end
 
 cd(pkgdir(FranklinTemplates))
