@@ -40,6 +40,11 @@ defining your own `rss_enclosures` variable with a list of string and use that.
   {{isnotempty rss_author}}
   <author> {{rss_author}} </author>
   {{end}}
+  {{isnotempty author}}
+  <atom:author>
+    <atom:name>{{author}}</atom:name>
+  </atom:author>
+  {{end}}
 
   {{isnotempty rss_category}}
   <category> {{rss_category}} </category>
