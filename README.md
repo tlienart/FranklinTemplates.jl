@@ -39,7 +39,7 @@ If it's a new template that you're working on, you can also do that but there's 
 1. in `FranklinTemplates/docs/thumb` add a screenshot of your template in `png` format with **exactly** an 850x850 dimension
 1. in `FranklinTemplates/docs/index_head.html` add a CSS block following the other examples
 
-To locally see changes quickly, use [Changing a single template](#user-content-changing-a-single-template].
+To locally see changes quickly, use [Changing a single template](#user-content-changing-a-single-template).
 To change all templates at the same time, use [Changing multiple templates](#user-content-changing-multiple-templates).
 
 ### Changing a single template
@@ -65,7 +65,7 @@ Thanks!!
 
 ## Misc
 
-* Current version of KaTeX: [0.13.2](https://github.com/KaTeX/KaTeX/releases/tag/v0.13.2)
+* Current version of KaTeX: [0.13.11](https://github.com/KaTeX/KaTeX/releases/tag/v0.13.11)
 * Current version of highlight: [10.7.1](https://github.com/highlightjs/highlight.js/releases/tag/10.7.1) (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
 * Current version of Plotly (used in `sandbox-extended`): 1.58.4
 
