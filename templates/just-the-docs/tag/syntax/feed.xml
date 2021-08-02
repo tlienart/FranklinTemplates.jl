@@ -25,8 +25,8 @@
   <title>
     <![CDATA[  More goodies  ]]>
   </title>
-  <link>  </link>
-  <guid>  </guid>
+  <link> https://tlienart.github.io/FranklinTemplates.jl/menu2/index.html </link>
+  <guid> https://tlienart.github.io/FranklinTemplates.jl/menu2/index.html </guid>
   <description>
     <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg" alt="" />  ]]>
   </description>  
