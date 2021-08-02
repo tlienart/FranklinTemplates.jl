@@ -3,7 +3,8 @@
 ================================================================== */
 
 :root {
-  --block-background: #f8f8f8;
+  --block-background: hsl(0, 0%, 94%);
+  --output-background: hsl(0, 0%, 98%);
   --small: 14px;
   --normal: 19px;
   --text-color: hsv(0, 0%, 20%);
@@ -311,6 +312,11 @@ code {
 .hljs-metas { color: red; }
 
 .hljs-metap { color: rgb(51, 131, 231); }
+
+.code-output {
+  background: var(--output-background);
+  border: 1px dashed #dbdbdb;
+}
 
 /* ==================================================================
     BOXES
