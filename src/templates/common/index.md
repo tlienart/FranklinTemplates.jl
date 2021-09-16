@@ -106,7 +106,7 @@ and use it \bolditalic{here for example}.
 
 Here's another quick one, a command to change the color:
 
-\newcommand{\col}[2]{~~~<span style="color:#1">~~~#2~~~</span>~~~}
+\newcommand{\col}[2]{~~~<span style="color:~~~#1~~~">~~~!#2~~~</span>~~~}
 
 This is \col{blue}{in blue} or \col{#bf37bc}{in #bf37bc}.
 
