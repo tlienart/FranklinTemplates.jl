@@ -26,15 +26,19 @@ This is meant as a collection of simple examples of how you can use Franklin wit
 ~~~
 
 This is numbered
-$$ 1+1 = 2 $$
+$$ 1+1 = 2 \label{eq1} $$
 
 This isn't
 
-@@no-number
+\nonumber{
 $$ 2+2 = 4 $$
+}
 and
+\nonumber{
 $$ 3+3 = 7-1 $$
-@@
+}
 
 Numbered again
-$$ 7 + 1 = 8 $$
+$$ 7 + 1 = 8 \label{eq2} $$
+
+Reference: \eqref{eq1}, \eqref{eq2}.
