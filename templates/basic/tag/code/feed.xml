@@ -9,14 +9,14 @@
 
   <channel>
     <title>
-      <![CDATA[  {{fd2rss website_title}}  ]]>
+      <![CDATA[  Franklin Template  ]]>
     </title>
-    <link> {{website_url}} </link>
+    <link> https://tlienart.github.io/FranklinTemplates.jl/ </link>
     <description>
-      <![CDATA[  {{fd2rss website_description}}  ]]>
+      <![CDATA[  Example website using Franklin  ]]>
     </description>
     <atom:link
-      href="{{fd_rss_feed_url}}"
+      href="https://tlienart.github.io/FranklinTemplates.jl/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
