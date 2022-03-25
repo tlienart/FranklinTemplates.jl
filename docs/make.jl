@@ -72,7 +72,7 @@ function fixdir(τ::String)
             if endswith(file, ".xml")
                 fp  = joinpath(root, file)
                 rss = read(fp, String)
-                rss = replace(rss, r"([a-zA-Z0-9\_-]+\.xsl)" => SubstitutionString("/templates/$τ/\\1"))
+                rss = replace(rss, r"\/([a-zA-Z0-9\_-]+\.xsl)" => SubstitutionString("/FranklinTemplates.jl/templates/$τ/\\1"))
                 write(fp, rss)
             end
             endswith(file, ".html") || continue
