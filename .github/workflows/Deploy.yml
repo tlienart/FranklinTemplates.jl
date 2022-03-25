@@ -25,7 +25,9 @@ jobs:
         version: 1.5
     - name: Build
       run: julia -e '
-            using Pkg; Pkg.add(["NodeJS", "Franklin", "PyPlot", "GR", "Literate", "PlotlyJS", "Hyperscript"]);
+            using Pkg;
+            Pkg.add("Franklin", rev="master");
+            Pkg.add(["NodeJS", "PyPlot", "GR", "Literate", "PlotlyJS", "Hyperscript"]);
             Pkg.develop(path=".");
             using NodeJS; run(`$(npm_cmd()) install highlight.js`);
             using Franklin;
