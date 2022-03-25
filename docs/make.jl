@@ -69,6 +69,12 @@ function fixdir(τ::String)
     html_files = String[]
     for (root, _, files) ∈ walkdir(τ)
         for file ∈ files
+            if endswith(file, ".xml")
+                fp  = joinpath(root, file)
+                rss = read(fp, String)
+                rss = replace(rss, r"([a-zA-Z0-9\_-]+\.xsl)" => SubstitutionString("/templates/$τ/\\1"))
+                write(fp, rss)
+            end
             endswith(file, ".html") || continue
             fp   = joinpath(root, file)
             html = read(fp, String)
