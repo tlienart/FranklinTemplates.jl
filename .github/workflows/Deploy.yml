@@ -26,7 +26,7 @@ jobs:
     - name: Build
       run: julia -e '
             using Pkg;
-            Pkg.add("Franklin", rev="master");
+            Pkg.add(url="https://github.com/tlienart/Franklin.jl", rev="master");
             Pkg.add(["NodeJS", "PyPlot", "GR", "Literate", "PlotlyJS", "Hyperscript"]);
             Pkg.develop(path=".");
             using NodeJS; run(`$(npm_cmd()) install highlight.js`);
