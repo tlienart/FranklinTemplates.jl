@@ -23,42 +23,42 @@
 <p>You can write tutorials using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a> and simply plug them in Franklin where they will be &#40;re&#41;evaluated and the output of code blocks shown assuming you&#39;ve written <code>@def showall &#61; true</code> on the page. Here&#39;s an example:</p>
 <p><h2 id="literate_example"><a href="#literate_example" class="header-anchor">Literate example</a></h2>
 <p>Whatever is in comment can be Franklin-markdown, so for instance you can write maths in much the same way:</p>
-\[ \exp(i\tau) = 1 \]
-<p>This is Euler&#39;s identity following the <a href="https://tauday.com/tau-manifesto">\(\tau\) day manifesto</a>.</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>exp</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>i</mi><mi>τ</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex"> \exp(i\tau) = 1 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span>
+<p>This is Euler&#39;s identity following the <a href="https://tauday.com/tau-manifesto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi></mrow><annotation encoding="application/x-tex">\tau</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span></span></span></span> day manifesto</a>.</p>
 <p>Code:</p>
-<pre><code class="language-julia">a &#61; 5
-a^2</code></pre><pre><code class="plaintext code-output">25</code></pre>
+<pre><code class="julia hljs">a = <span class="hljs-number">5</span>
+a^<span class="hljs-number">2</span></code></pre><pre><code class="plaintext hljs">25</code></pre>
 <p>Any valid code basically:</p>
-<pre><code class="language-julia">v &#61; &#91;&quot;Thom&quot;, &quot;Martha&quot;, &quot;Smith&quot;, &quot;John&quot;&#93;
-f &#61; first.&#40;v&#41;</code></pre><pre><code class="plaintext code-output">4-element Array{Char,1}:
- 'T': ASCII/Unicode U+0054 (category Lu: Letter, uppercase)
- 'M': ASCII/Unicode U+004D (category Lu: Letter, uppercase)
- 'S': ASCII/Unicode U+0053 (category Lu: Letter, uppercase)
- 'J': ASCII/Unicode U+004A (category Lu: Letter, uppercase)</code></pre>
+<pre><code class="julia hljs">v = [<span class="hljs-string">&quot;Thom&quot;</span>, <span class="hljs-string">&quot;Martha&quot;</span>, <span class="hljs-string">&quot;Smith&quot;</span>, <span class="hljs-string">&quot;John&quot;</span>]
+f = first.(v)</code></pre><pre><code class="plaintext hljs">4-element Array{Char,1}:
+ &#x27;T&#x27;: ASCII/Unicode U+0054 (category Lu: Letter, uppercase)
+ &#x27;M&#x27;: ASCII/Unicode U+004D (category Lu: Letter, uppercase)
+ &#x27;S&#x27;: ASCII/Unicode U+0053 (category Lu: Letter, uppercase)
+ &#x27;J&#x27;: ASCII/Unicode U+004A (category Lu: Letter, uppercase)</code></pre>
 <p>So the workflow is to just write a standard Literate document using Franklin markdown in the comments and normal code. You can also hide lines:</p>
-<pre><code class="language-julia">randn&#40;&#41;</code></pre><pre><code class="plaintext code-output">0.2972879845354616</code></pre>
+<pre><code class="julia hljs">randn()</code></pre><pre><code class="plaintext hljs">0.2972879845354616</code></pre>
 <p>Or hide everything &#40;note that for the line to be taken as comment for the code block there should be no whitespace between the <code>#</code> and the <code>h</code>&#41;.</p>
-<pre><code class="plaintext code-output">2.046609693639258</code></pre>
+<pre><code class="plaintext hljs">2.046609693639258</code></pre>
 <p>It still shows the result though since <code>showall &#61; true</code>&#33; If you want to suppress it, just use a <code>;</code> on the last line:</p>
 
 <p>That&#39;s basically it.</p>
-<pre><code class="language-julia">println&#40;&quot;done&#33;&quot;&#41;</code></pre><pre><code class="plaintext code-output">done!
+<pre><code class="julia hljs">println(<span class="hljs-string">&quot;done!&quot;</span>)</code></pre><pre><code class="plaintext hljs">done!
 </code></pre>
  </p>
 <div class="page-foot">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> The Oracle. Last modified: April 22, 2022.
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> The Oracle. Last modified: May 16, 2022.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
 </div>
 </div><!-- CONTENT ENDS HERE -->
     
-        <script src="/FranklinTemplates.jl/templates/sandbox-extended/libs/katex/katex.min.js"></script>
-<script src="/FranklinTemplates.jl/templates/sandbox-extended/libs/katex/auto-render.min.js"></script>
-<script>renderMathInElement(document.body)</script>
+        
+
+
 
     
     
-        <script src="/FranklinTemplates.jl/templates/sandbox-extended/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+        
+
 
     
   </body>
