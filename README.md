@@ -27,6 +27,7 @@ The grid below keeps track of their name, license, the kind of navbar they have 
 | `"lanyon"` | [Lanyon](https://github.com/poole/lanyon) | [MIT](https://github.com/poole/lanyon/blob/master/LICENSE.md) | Side (collapsable) | No |
 | `"just-the-docs"` | [Just the docs](https://github.com/pmarsceill/just-the-docs) | [MIT](https://github.com/pmarsceill/just-the-docs/blob/master/LICENSE.txt) | Side/Top | No |
 | `"minimal-mistakes"` | [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes) | [MIT](https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE) | Side/Top | No |
+| `"celeste"` | [Celeste](https://github.com/nicoelayda/celeste) | [MIT](https://github.com/nicoelayda/celeste/blob/master/LICENSE) | Top | No |
 
 ## Modifying or adding a template
 

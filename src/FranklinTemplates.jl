@@ -16,7 +16,8 @@ const LIST_OF_TEMPLATES = (
     "minimal-mistakes",
     "pure-sm",
     "tufte",
-    "vela")
+    "vela",
+    "celeste")
 
 include("utils.jl")
 
