@@ -1,4 +1,6 @@
-@def title = "Menu 3"
++++
+title = "Menu 3"
++++
 
 # Working with tags
 
@@ -15,7 +17,9 @@
 To mark a page with tags, add:
 
 ```markdown
-@def tags = ["tag1", "tag2"]
++++
+tags = ["tag1", "tag2"]
++++
 ```
 
 then that page, along with all others that have the tag `tag1` will be listed at `/tag/tag1/`.

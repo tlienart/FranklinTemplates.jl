@@ -66,8 +66,8 @@ Thanks!!
 
 ## Misc
 
-* Current version of KaTeX: [0.13.11](https://github.com/KaTeX/KaTeX/releases/tag/v0.13.11)
-* Current version of highlight: [10.7.1](https://github.com/highlightjs/highlight.js/releases/tag/10.7.1) (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
+* Current version of KaTeX: [0.16.0](https://github.com/KaTeX/KaTeX/releases/tag/v0.16.0)
+* Current version of highlight: [11.5.1](https://github.com/highlightjs/highlight.js/releases/tag/10.7.1) (with `css`, `C`, `C++`, `yaml`, `bash`, `ini,TOML`, `markdown`, `html,xml`, `r`, `julia`, `julia-repl`, `plaintext`, `python` and the minified `github` theme).
 * Current version of Plotly (used in `sandbox-extended`): 1.58.4
 
 ## Notes
@@ -82,5 +82,27 @@ This package contains a copy of the relevant KaTeX files and highlight.js files;
 
 ### Maintenance
 
-- if update `highlight.pack.js`, look for `julia>`, replace (so that ‚`pkg>` and `shell>` are recognised)
-- look for `hljs.registerLanguage("julia-repl")` and adjust
+- if update `highlight.min.js`, look for `julia>`, and replace with something like
+
+```
+{name:"Julia REPL",contains:[{className:"meta.prompt",begin:/^julia>/,relevance:10,starts:{end:/^(?![ ]{6})/,
+subLanguage:"julia"}},{className:"meta.pkg",begin:/^\(.*\) pkg>/,relevance:10,starts:{end:/^(?![ ]{6})/,
+subLanguage:"julia"}},{className:"meta.shell",begin:/^shell>/,relevance:10,starts:{end:/^(?![ ]{6})/,
+subLanguage:"julia"}}],aliases:["jldoctest"]}
+```
+
+(copying the case for `julia` and adding a case for pkg and for shell, see also the CSS for `.hljs-meta.pkg_` etc.)
+
+- for testing all layouts jointly (you'll need to have `PlotlyJS` and `Hyperscript` installed)
+
+### Testing before release
+
+```
+include("docs/make.jl")
+import LiveServer
+LiveServer.serve(dir="docs/build")
+```
+
+* check that all templates have a thumbnail
+* check that in basic - more goodies, the shell, pkg and julia prompts are highlighted properly (in case of update of highlight)
+* check that math displays properly (in case of update of katex)
