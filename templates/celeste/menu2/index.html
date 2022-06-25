@@ -1,0 +1,67 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/FranklinTemplates.jl/templates/celeste/libs/highlight/styles/github.min.css"> <link rel=stylesheet  href="/FranklinTemplates.jl/templates/celeste/css/franklin.css"> <link rel=stylesheet  href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700" type="text/css"> <link rel=stylesheet  href="/FranklinTemplates.jl/templates/celeste/css/font-awesome.min.css"> <link rel=stylesheet  href="/FranklinTemplates.jl/templates/celeste/css/celeste.min.css"> <link rel=icon  type="image/png" sizes=192x192  href="/FranklinTemplates.jl/templates/celeste/assets/favicon.png"> <link rel="shortcut icon" href="/FranklinTemplates.jl/templates/celeste/assets/favicon.ico"> <link rel=apple-touch-icon-precomposed  sizes=152x152  href="/FranklinTemplates.jl/templates/celeste/assets/apple-touch-icon.png"> <title>More goodies</title> <header> <nav class=nav-main > <ul> <li class=hvr-underline-reveal ><a href="/FranklinTemplates.jl/templates/celeste/">Home</a> <li class=hvr-underline-reveal ><a href="/FranklinTemplates.jl/templates/celeste/menu1/">Code blocks</a> <li class=logo ><a class=hvr-ripple-out  href="/FranklinTemplates.jl/templates/celeste/">C</a> <li class=hvr-underline-reveal ><a href="/FranklinTemplates.jl/templates/celeste/menu2/">More goodies</a> <li class=hvr-underline-reveal ><a href="/FranklinTemplates.jl/templates/celeste/menu3/">Tags</a> </ul> </nav> </header> <div class=franklin-content > <h1 id=more_goodies ><a href="#more_goodies" class=header-anchor >More goodies</a></h1> <div class=franklin-toc ><ol><li><a href="#more_markdown_support">More markdown support</a><li><a href="#a_bit_more_highlighting">A bit more highlighting</a><li><a href="#more_customisation">More customisation</a><ol><li><a href="#custom_hfun">Custom &quot;hfun&quot;</a><li><a href="#custom_lx">Custom &quot;lx&quot;</a></ol></ol></div> <h2 id=more_markdown_support ><a href="#more_markdown_support" class=header-anchor >More markdown support</a></h2> <p>The Julia Markdown parser in Julia&#39;s stdlib is not exactly complete and Franklin strives to bring useful extensions that are either defined in standard specs such as Common Mark or that just seem like useful extensions.</p> <ul> <li><p>indirect references for instance <a href="http://existentialcomics.com/">like so</a></p> </ul> <p> or also for images</p> <p><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Krul.svg" alt="some image"></p> <p>some people find that useful as it allows referring multiple times to the same link for instance.</p> <ul> <li><p>un-qualified code blocks are allowed and are julia by default, indented code blocks are not supported by default &#40;and there support will disappear completely in later version&#41;</p> </ul> <pre><code class="julia hljs">a = <span class=hljs-number >1</span>
+b = a+<span class=hljs-number >1</span></code></pre> <p>you can specify the default language with <code>@def lang &#61; &quot;julia&quot;</code>. If you actually want a &quot;plain&quot; code block, qualify it as <code>plaintext</code> like</p> <pre><code class="plaintext hljs">so this is plain-text stuff.</code></pre>
+<h2 id=a_bit_more_highlighting ><a href="#a_bit_more_highlighting" class=header-anchor >A bit more highlighting</a></h2>
+<p>Extension of highlighting for <code>pkg</code> an <code>shell</code> mode in Julia:</p>
+<pre><code class="julia-repl hljs"><span class=hljs-metap>(v1.4) pkg&gt;</span> add Franklin
+<span class=hljs-metas>shell&gt;</span> blah
+<span class="hljs-meta prompt_">julia&gt;</span><span class=language-julia > <span class=hljs-number >1</span>+<span class=hljs-number >1</span>
+</span><span class=hljs-metap>(Sandbox) pkg&gt;</span> resolve</code></pre>
+<p>you can tune the colouring in the CSS etc via the following classes:</p>
+<ul>
+<li><p><code>.hljs-meta</code> &#40;for <code>julia&gt;</code>&#41;</p>
+
+<li><p><code>.hljs-metas</code> &#40;for <code>shell&gt;</code>&#41;</p>
+
+<li><p><code>.hljs-metap</code> &#40;for <code>...pkg&gt;</code>&#41;</p>
+
+</ul>
+<h2 id=more_customisation ><a href="#more_customisation" class=header-anchor >More customisation</a></h2>
+<p>Franklin, by design, gives you a lot of flexibility to define how you want stuff be done, this includes doing your own parsing/processing and your own HTML generation using Julia code.</p>
+<p>In order to do this, you can define two types of functions in a <code>utils.jl</code> file which will complement your <code>config.md</code> file:</p>
+<ul>
+<li><p><code>hfun_*</code> allow you to plug custom-generated HTML somewhere</p>
+
+<li><p><code>lx_*</code> allow you to do custom parsing of markdown and generation of HTML</p>
+
+</ul>
+<p>The former &#40;<code>hfun_*</code>&#41; is most likely to be useful.</p>
+<h3 id=custom_hfun ><a href="#custom_hfun" class=header-anchor >Custom &quot;hfun&quot;</a></h3>
+<p>If you define a function <code>hfun_bar</code> in the <code>utils.jl</code> then you have access to a new template function <code>&#123;&#123;bar ...&#125;&#125;</code>. The parameters are passed as a list of strings, for instance variable names but it  could just be strings as well.</p>
+<p>For instance:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >function</span> hfun_bar(vname)
+  val = Meta.parse(vname[<span class=hljs-number >1</span>])
+  <span class=hljs-keyword >return</span> round(sqrt(val), digits=<span class=hljs-number >2</span>)
+<span class=hljs-keyword >end</span></code></pre>
+
+.hf {background-color:black;color:white;font-weight:bold;}
+
+<p>Can be called with <code>&#123;&#123;bar 4&#125;&#125;</code>: <strong>2.0</strong>.</p>
+<p>Usually you will want to pass variable name &#40;either local or global&#41; and collect their value via one of <code>locvar</code>, <code>globvar</code> or <code>pagevar</code> depending on your use case. Let&#39;s have another toy example:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >function</span> hfun_m1fill(vname)
+  var = vname[<span class=hljs-number >1</span>]
+  <span class=hljs-keyword >return</span> pagevar(<span class=hljs-string >&quot;menu1&quot;</span>, var)
+<span class=hljs-keyword >end</span></code></pre>
+<p>Which you can use like this <code>&#123;&#123;m1fill title&#125;&#125;</code>: <strong>Franklin Example</strong>. Of course  in this specific case you could also have used <code>&#123;&#123;fill title menu1&#125;&#125;</code>: <strong>Code blocks</strong>.</p>
+<p>Of course these examples are not very useful, in practice you might want to use it to generate actual HTML in a specific way using Julia code. For instance you can use it to customise how <a href="/FranklinTemplates.jl/templates/celeste/menu3/#customising_tag_pages">tag pages look like</a>.</p>
+<p>A nice example of what you can do is in the <a href="https://juliasymbolics.github.io/SymbolicUtils.jl/api/">SymbolicUtils.jl manual</a> where they use a <code>hfun_</code> to generate HTML encapsulating the content of code docstrings, in a way doing something similar to what Documenter does. See <a href="https://github.com/JuliaSymbolics/SymbolicUtils.jl/blob/website/utils.jl">how they defined it</a>.</p>
+<p><strong>Note</strong>: the  output <strong>will not</strong> be reprocessed by Franklin, if you want to generate markdown which should be processed by Franklin, then use <code>return fd2html&#40;markdown, internal&#61;true&#41;</code> at the end.</p>
+<h3 id=custom_lx ><a href="#custom_lx" class=header-anchor >Custom &quot;lx&quot;</a></h3>
+<p>These commands will look the same as latex commands but what they do with their content is now entirely controlled by your code. You can use this to do your own parsing of specific chunks of your content if you so desire.</p>
+<p>The definition of <code>lx_*</code> commands <strong>must</strong> look like this:</p>
+<pre><code class="julia hljs"><span class=hljs-keyword >function</span> lx_baz(com, _)
+  <span class=hljs-comment ># keep this first line</span>
+  brace_content = Franklin.content(com.braces[<span class=hljs-number >1</span>]) <span class=hljs-comment ># input string</span>
+  <span class=hljs-comment ># do whatever you want here</span>
+  <span class=hljs-keyword >return</span> uppercase(brace_content)
+<span class=hljs-keyword >end</span></code></pre>
+<p>You can call the above with <code>\baz&#123;some string&#125;</code>: SOME STRING.</p>
+<p><strong>Note</strong>: the output <strong>will be</strong> reprocessed by Franklin, if you want to avoid this, then escape the output by using <code>return &quot;~~~&quot; * s * &quot;~~~&quot;</code> and it will be plugged  in as is in the HTML.</p>
+<div class=page-foot >
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Septimia Zenobia. Last modified: June 25, 2022.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div>
+    
+    
+        <script src="/FranklinTemplates.jl/templates/celeste/libs/highlight/highlight.min.js"></script>
+<script>hljs.highlightAll();hljs.configure({tabReplace: '    '});</script>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  Franklin Template  ]]>
+    </title>
+    <link> https://tlienart.github.io/FranklinTemplates.jl/ </link>
+    <description>
+      <![CDATA[  Example website using Franklin  ]]>
+    </description>
+    <atom:link
+      href="https://tlienart.github.io/FranklinTemplates.jl/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  More goodies  ]]>
+  </title>
+  <link> https://tlienart.github.io/FranklinTemplates.jl/menu2/index.html </link>
+  <guid> https://tlienart.github.io/FranklinTemplates.jl/menu2/index.html </guid>
+  <description>
+    <![CDATA[  A short description of the page which would serve as <strong>blurb</strong> in a <code>RSS</code> feed; you can use basic markdown here but the whole description string must be a single line &#40;not a multiline string&#41;. Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don&#39;t expect maths or fancy styling to work; images should be ok though: <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg" alt="" />  ]]>
+  </description>  
+    
+  <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Septimia Zenobia</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>

@@ -308,15 +308,10 @@ code {
   border-radius: 10px;
 }
 
-.hljs-meta,
-.hljs-metas,
-.hljs-metap { font-weight: bold; }
+.hljs-meta { font-weight: bold;}
 
-.hljs-meta { color: rgb(25, 179, 51); }
-
-.hljs-metas { color: red; }
-
-.hljs-metap { color: rgb(51, 131, 231); }
+.hljs-meta.shell_ {color: crimson;}
+.hljs-meta.prompt_ {color: rgb(25, 179, 51);}
 
 .code-output {
   background: var(--output-background);
