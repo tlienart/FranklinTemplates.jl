@@ -4,6 +4,7 @@ authors = ["Thibaut Lienart <tlienart@me.com>"]
 version = "0.9.2"
 
 [deps]
+Franklin = "713c75ef-9fc9-4b05-94a9-213340da978e"
 LiveServer = "16fef848-5104-11e9-1b77-fb7a48bbb589"
 
 [compat]
