@@ -17,7 +17,8 @@ const LIST_OF_TEMPLATES = (
     "pure-sm",
     "tufte",
     "vela",
-    "celeste")
+    "celeste",
+    "bootstrap5")
 
 include("utils.jl")
 

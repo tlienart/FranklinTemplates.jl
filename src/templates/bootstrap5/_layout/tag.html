@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="/libs/color-modes.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{insert style.html}}
+  <title>Tag: {{fill fd_tag}}</title>
+</head>
+<body>
+  {{insert nav.html}}
+  <div class="container py-3 px-3 mx-auto"></div>
+    <div class="{{div_content}}">
+      <h1>Tag: {{fill fd_tag}}</h1>
+      {{taglist}}
+    </div>
+  </div> <!-- end of id=main -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

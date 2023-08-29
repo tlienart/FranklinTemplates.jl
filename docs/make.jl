@@ -53,6 +53,10 @@ descr = Dict{String,String}(
                    <span class="th-name">celeste</span>
                    <p>A lightweight theme that features a minimalist, content-first design. (Adapted from the Jekyll theme.)</p>
                    """,
+    "bootstrap5"=> """
+                    <span class="th-name">bootstrap5</span>
+                    <p>A bootstrap theme that uses Bootstrap 5, Bootstrap Icon 1.10, FontAwesome 6. (CDN base)</p>
+                """,
     )
 
 
