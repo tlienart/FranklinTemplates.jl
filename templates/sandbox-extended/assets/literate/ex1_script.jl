@@ -19,4 +19,3 @@ using LinearAlgebra
 a = dot(randn(5), randn(5));
 
 println("done!")
-
