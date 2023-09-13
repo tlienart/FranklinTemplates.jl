@@ -207,7 +207,16 @@ function filecmp(path1::AbstractString, path2::AbstractString)
     if !(isfile(stat1) && isfile(stat2)) || filesize(stat1) != filesize(stat2)
         return false
     end
-    stat1 == stat2 && return true # same file
+
+    compare_buffers(b1, b2, n) = begin
+        if VERSION > v"1.9"
+            Base.cmp(b1, b2)
+        else
+            Base._memcmp(b1, b2, n)
+        end
+    end
+
+    stat1 == stat2 && return true # same fileq
     open(path1, "r") do file1
         open(path2, "r") do file2
             buf1 = Vector{UInt8}(undef, 32768)
