@@ -209,8 +209,12 @@ function filecmp(path1::AbstractString, path2::AbstractString)
     end
 
     compare_buffers(b1, b2, n) = begin
-        if VERSION > v"1.9"
-            Base.cmp(b1, b2)
+        if VERSION > v"1.10.0-"
+            Base.memcmp(
+                Base.unsafe_convert(Ptr{UInt8}, b1),
+                Base.unsafe_convert(Ptr{UInt8}, b2),
+                n
+            )
         else
             Base._memcmp(b1, b2, n)
         end
@@ -225,7 +229,7 @@ function filecmp(path1::AbstractString, path2::AbstractString)
                 n1 = readbytes!(file1, buf1)
                 n2 = readbytes!(file2, buf2)
                 n1 != n2 && return false
-                0 != Base._memcmp(buf1, buf2, n1) && return false
+                0 != compare_buffers(buf1, buf2, n1) && (@show "hello"; return false)
             end
             return eof(file1) == eof(file2)
         end
