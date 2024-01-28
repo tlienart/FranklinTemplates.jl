@@ -98,7 +98,7 @@ subLanguage:"julia"}}],aliases:["jldoctest"]}
 
 ### Testing before release
 
-```
+```julia
 include("docs/make.jl")
 import LiveServer
 LiveServer.serve(dir="docs/build")
