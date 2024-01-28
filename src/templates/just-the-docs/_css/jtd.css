@@ -435,7 +435,7 @@ MAIN CONTENT
   }
 }
 
-.main-footer {
+.page-foot {
   font-size: 14px;
   color: darkgray;
   border-top: 1px solid #eeebee;
@@ -646,5 +646,4 @@ body { counter-reset: eqnum; }
 franklin-toc {
   /* Avoid clickable elements being too close together. */
   margin: 0.6rem 0;
-}
 }
